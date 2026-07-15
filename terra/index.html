@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1A1A2E">
+  <title>新滉建設株式会社｜まず、話そう。</title>
+  <style>
+    :root {
+      --ink: #1A1A2E;
+      --paper: #F5F5F0;
+      --red: #E94560;
+      --red-dark: #c82f49;
+      --blue: #0F3460;
+      --muted: #6B7280;
+      --line: rgba(26, 26, 46, .12);
+      --shadow: 0 14px 34px rgba(26, 26, 46, .13);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+      font-feature-settings: "palt" 1;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 108px;
+    }
+    a { color: inherit; }
+    .wrap { width: min(100%, 680px); margin: 0 auto; overflow: clip; }
+    .masthead {
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      background: var(--ink);
+      color: #fff;
+      position: relative;
+      z-index: 2;
+    }
+    .brand {
+      letter-spacing: .07em;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .brand i { color: var(--red); font-style: normal; margin-right: 5px; }
+    .open-badge {
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      color: #fff;
+    }
+    .open-badge::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: #ffcc45;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(255, 204, 69, .14);
+    }
+    .hero {
+      position: relative;
+      isolation: isolate;
+      padding: 30px 20px 27px;
+      color: #fff;
+      background: var(--ink);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 290px;
+      height: 290px;
+      border-radius: 50%;
+      background: var(--blue);
+      right: -174px;
+      top: 35px;
+      opacity: .86;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #ffd65a;
+      font-size: 11px;
+      line-height: 1;
+      letter-spacing: .13em;
+      font-weight: 800;
+    }
+    .eyebrow::before { content: ""; width: 27px; height: 2px; background: currentColor; }
+    h1, h2, p { margin-top: 0; }
+    h1 {
+      margin: 15px 0 14px;
+      font-size: clamp(34px, 9.1vw, 53px);
+      line-height: 1.13;
+      letter-spacing: -.065em;
+      font-weight: 900;
+    }
+    h1 em {
+      font-style: normal;
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-color: var(--red);
+      text-decoration-thickness: .17em;
+      text-underline-offset: .1em;
+    }
+    .hero-lead {
+      max-width: 29em;
+      margin-bottom: 18px;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: .02em;
+    }
+    .hero-lead strong { color: #ffd65a; }
+    .condition-strip {
+      border-top: 1px solid rgba(255,255,255,.25);
+      border-bottom: 1px solid rgba(255,255,255,.25);
+      padding: 11px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px 13px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
+    .condition-strip span { display: flex; align-items: center; gap: 7px; }
+    .condition-strip span::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: var(--red);
+      transform: rotate(45deg);
+      flex: 0 0 auto;
+    }
+    .call-panel {
+      position: relative;
+      z-index: 3;
+      margin: -1px 14px 0;
+      padding: 17px 14px 14px;
+      background: #fff;
+      color: var(--ink);
+      border-radius: 0 0 18px 18px;
+      box-shadow: var(--shadow);
+    }
+    .call-kicker {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 8px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .call-kicker .chip {
+      padding: 3px 7px;
+      color: #fff;
+      background: var(--red);
+      border-radius: 99px;
+      font-size: 10px;
+      letter-spacing: .06em;
+    }
+    .call-panel p { margin-bottom: 12px; font-size: 12px; font-weight: 600; }
+    .cta-call, .cta-line {
+      min-height: 56px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font-weight: 900;
+      text-align: center;
+      transition: transform .16s ease, background .16s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .cta-call {
+      background: var(--red);
+      color: #fff;
+      font-size: 16px;
+      letter-spacing: .02em;
+      box-shadow: 0 8px 0 var(--red-dark), 0 12px 20px rgba(233,69,96,.2);
+      padding: 8px 15px;
+    }
+    .cta-call::before {
+      content: "●";
+      margin-right: 9px;
+      font-size: 12px;
+      color: #fff3a7;
+    }
+    .cta-call:active, .cta-line:active { transform: translateY(2px); }
+    .call-note {
+      margin: 12px 0 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin: 15px -2px 0;
+    }
+    .step {
+      position: relative;
+      padding: 0 8px;
+      font-size: 10px;
+      line-height: 1.45;
+      font-weight: 700;
+      color: #4b5563;
+      text-align: center;
+    }
+    .step + .step { border-left: 1px solid var(--line); }
+    .step b { display: block; color: var(--red); font-size: 10px; letter-spacing: .08em; }
+    .statement {
+      padding: 46px 20px 39px;
+      background: var(--paper);
+    }
+    .statement h2 {
+      margin-bottom: 22px;
+      font-size: clamp(25px, 7vw, 36px);
+      line-height: 1.22;
+      letter-spacing: -.055em;
+      font-weight: 900;
+    }
+    .statement h2 small {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--red);
+      font-size: 11px;
+      letter-spacing: .13em;
+      font-weight: 900;
+    }
+    .facts {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .fact {
+      display: grid;
+      grid-template-columns: 43px 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 15px 13px;
+      background: rgba(255,255,255,.7);
+      border: 1px solid var(--line);
+      border-radius: 11px;
+    }
+    .fact-no {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      color: var(--red);
+      background: rgba(233,69,96,.1);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .06em;
+    }
+    .fact h3 { margin: 0 0 2px; font-size: 15px; line-height: 1.35; letter-spacing: .01em; }
+    .fact p { margin: 0; color: var(--muted); font-size: 12px; font-weight: 600; }
+    .room {
+      position: relative;
+      min-height: 370px;
+      display: flex;
+      align-items: end;
+      padding: 20px;
+      color: #fff;
+      background: var(--ink) url("../assets/room.jpg") center / cover no-repeat;
+    }
+    .room::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 52, 96, .08) 23%, rgba(26,26,46,.93) 100%);
+    }
+    .room-copy { position: relative; z-index: 1; max-width: 350px; }
+    .room-label {
+      margin-bottom: 7px;
+      color: #ffd65a;
+      font-size: 11px;
+      letter-spacing: .14em;
+      font-weight: 900;
+    }
+    .room h2 { margin-bottom: 6px; font-size: 28px; line-height: 1.25; letter-spacing: -.05em; }
+    .room p { margin: 0; font-size: 13px; font-weight: 700; }
+    .earn {
+      padding: 43px 20px 45px;
+      background: #fff;
+    }
+    .earn .eyebrow { color: var(--red); }
+    .earn h2 {
+      margin: 12px 0 20px;
+      font-size: clamp(26px, 7vw, 36px);
+      line-height: 1.18;
+      letter-spacing: -.06em;
+      font-weight: 900;
+    }
+    .money-card {
+      position: relative;
+      overflow: hidden;
+      padding: 21px 18px 18px;
+      color: #fff;
+      background: var(--blue);
+      border-radius: 15px;
+    }
+    .money-card::after {
+      content: "¥";
+      position: absolute;
+      right: 7px;
+      top: -25px;
+      color: rgba(255,255,255,.09);
+      font-family: Georgia, serif;
+      font-size: 160px;
+      line-height: 1;
+      font-weight: 700;
+    }
+    .money-card > * { position: relative; z-index: 1; }
+    .money-card small { display: block; margin-bottom: 5px; font-size: 12px; font-weight: 800; letter-spacing: .04em; }
+    .daily { margin: 0; font-size: 18px; font-weight: 900; }
+    .daily strong { font-size: 33px; letter-spacing: -.055em; }
+    .formula {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 10px;
+      border-radius: 7px;
+      background: rgba(255,255,255,.14);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .money-note { margin: 10px 0 0; color: var(--muted); font-size: 11px; font-weight: 600; }
+    .voice {
+      padding: 43px 20px 46px;
+      background: #edf1f5;
+    }
+    .voice .eyebrow { color: var(--red); }
+    .voice h2 { margin: 12px 0 17px; font-size: 26px; line-height: 1.28; letter-spacing: -.05em; }
+    blockquote {
+      position: relative;
+      margin: 0;
+      padding: 23px 18px 18px;
+      background: #fff;
+      border-radius: 0 13px 13px 13px;
+      box-shadow: 0 9px 22px rgba(26,26,46,.07);
+      font-size: 17px;
+      line-height: 1.72;
+      font-weight: 800;
+      letter-spacing: .01em;
+    }
+    blockquote::before {
+      content: "“";
+      position: absolute;
+      left: 12px;
+      top: -27px;
+      color: var(--red);
+      font-family: Georgia, serif;
+      font-size: 78px;
+      line-height: 1;
+    }
+    .quote-source { margin: 13px 2px 0; color: var(--muted); font-size: 11px; font-weight: 700; }
+    .final {
+      padding: 47px 20px 45px;
+      color: #fff;
+      background: var(--ink);
+    }
+    .final h2 { margin: 10px 0 11px; font-size: clamp(28px, 8.2vw, 40px); line-height: 1.19; letter-spacing: -.06em; }
+    .final > p { margin-bottom: 19px; color: rgba(255,255,255,.78); font-size: 13px; font-weight: 700; }
+    .final .cta-call { min-height: 59px; }
+    .line-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      margin-top: 17px;
+      border: 1px solid rgba(255,255,255,.47);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      border-radius: 10px;
+    }
+    .line-link::before { content: "LINE"; margin-right: 8px; color: #c7fb84; font-size: 10px; letter-spacing: .08em; }
+    .company {
+      padding: 26px 20px 29px;
+      color: rgba(255,255,255,.65);
+      border-top: 1px solid rgba(255,255,255,.14);
+      background: var(--ink);
+      font-size: 11px;
+      line-height: 1.75;
+    }
+    .company strong { display: block; color: #fff; font-size: 12px; letter-spacing: .04em; }
+    .fixed-cta {
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 9px max(10px, env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left));
+      background: rgba(245,245,240,.96);
+      border-top: 1px solid rgba(26,26,46,.13);
+      box-shadow: 0 -8px 26px rgba(26,26,46,.12);
+      backdrop-filter: blur(10px);
+    }
+    .fixed-cta__inner {
+      width: min(100%, 660px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 94px;
+      gap: 8px;
+    }
+    .fixed-cta .cta-call { min-height: 48px; padding: 5px 8px; border-radius: 8px; font-size: 13px; box-shadow: 0 5px 0 var(--red-dark); }
+    .fixed-line {
+      min-height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .fixed-line::before { content: "LINE"; display: block; color: #26a65b; font-size: 9px; line-height: .8; letter-spacing: .05em; }
+    @media (min-width: 681px) {
+      body { background: #dfe4e9; }
+      .wrap { box-shadow: 0 0 38px rgba(26,26,46,.14); }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  
+/* final-impl: layout hardening */
+figure{margin:0}
+img{max-width:100%;height:auto}
+@media (min-width:900px){
+  [data-cta="call"], .btn-call, .call-button, .cta-call, .call-cta{
+    max-width:520px;
+  }
+}
+
+figure{margin:0}
+.cta-call{width:100%}
+@media (min-width:900px){
+  .wrap{max-width:680px}
+  .cta-call,.line-link{max-width:520px;margin-left:auto;margin-right:auto}
+  .fixed-cta{display:none}
+  body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="masthead">
+      <div class="brand"><i>◆</i>新滉建設株式会社</div>
+      <div class="open-badge">AI通話 24時間受付</div>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="eyebrow">FIRST, LET'S TALK</div>
+      <h1 id="hero-title">住むことも、<br>働くことも。<br><em>まず話そう。</em></h1>
+      <p class="hero-lead"><strong>所持金0円でも、まず相談OK。</strong><br>新しいことを始める前に、いま気になることを聞かせてください。</p>
+      <div class="condition-strip" aria-label="募集条件">
+        <span>未経験OK</span>
+        <span>日給11,000円〜</span>
+        <span>即入寮OK</span>
+        <span>日払いOK</span>
+      </div>
+    </section>
+
+    <section class="call-panel" aria-label="AI通話で相談">
+      <div class="call-kicker"><span class="chip">24H</span>人と話す前に、AIスタッフと話せます</div>
+      <p>ブラウザだけで通話。アプリ・電話番号は不要です。</p>
+      <a data-cta="call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=terra" class="cta-call">約3分、AIに寮・仕事を相談</a>
+      <p class="call-note">相手はAIスタッフ／約3分／寮・入寮の相談まで進めます</p>
+      <div class="steps" aria-label="通話の流れ">
+        <div class="step"><b>01</b>ブラウザで通話</div>
+        <div class="step"><b>02</b>気になることを相談</div>
+        <div class="step"><b>03</b>入寮相談まで</div>
+      </div>
+    </section>
+
+    <section class="statement" aria-labelledby="points-title">
+      <h2 id="points-title"><small>BEFORE YOU DECIDE</small>まずは、<br>条件をそのまま見てください。</h2>
+      <div class="facts">
+        <article class="fact">
+          <div class="fact-no">01</div>
+          <div><h3>個室寮</h3><p>サウナ・Wi-Fi・食事付き</p></div>
+        </article>
+        <article class="fact">
+          <div class="fact-no">02</div>
+          <div><h3>面接会なし・書類選考なし</h3><p>履歴書不要です</p></div>
+        </article>
+        <article class="fact">
+          <div class="fact-no">03</div>
+          <div><h3>関西一円の現場</h3><p>未経験OK</p></div>
+        </article>
+      </div>
+      <div id="facility-grid" class="facts" style="margin-top:12px" aria-label="寮の設備">
+        <article class="fact"><div class="fact-no">寮</div><div><h3>個室</h3><p>寮の設備</p></div></article>
+        <article class="fact"><div class="fact-no">寮</div><div><h3>サウナ</h3><p>寮の設備</p></div></article>
+        <article class="fact"><div class="fact-no">寮</div><div><h3>Wi-Fi</h3><p>寮の設備</p></div></article>
+        <article class="fact"><div class="fact-no">寮</div><div><h3>食事付き</h3><p>寮の設備</p></div></article>
+      </div>
+    </section>
+
+    <section class="room" aria-labelledby="room-title">
+      <div class="room-copy">
+        <div class="room-label">PRIVATE ROOM</div>
+        <h2 id="room-title">個室寮で、<br>まず整える。</h2>
+        <p>寮の設備：個室・サウナ・Wi-Fi・食事付き／即入寮OK</p>
+      </div>
+    </section>
+
+    
+    <section id="terra-photos" class="statement" aria-label="寮の写真" style="padding-top:0">
+      <div class="facts" style="grid-template-columns:1fr 1fr;gap:10px">
+        <figure style="margin:0;border-radius:12px;overflow:hidden;position:relative;min-height:140px;background:#ddd">
+          <img src="../assets/hero_sauna.jpg" alt="寮のサウナ" width="400" height="280" loading="lazy" style="width:100%;height:160px;object-fit:cover;object-position:center;display:block">
+          <figcaption style="position:absolute;left:8px;bottom:8px;background:rgba(26,26,46,.78);color:#fff;font-size:11px;font-weight:800;padding:4px 8px;border-radius:999px">サウナ（寮の設備）</figcaption>
+        </figure>
+        <figure style="margin:0;border-radius:12px;overflow:hidden;position:relative;min-height:140px;background:#ddd">
+          <img src="../assets/meal.jpg" alt="寮の食事" width="400" height="280" loading="lazy" style="width:100%;height:160px;object-fit:cover;object-position:center;display:block">
+          <figcaption style="position:absolute;left:8px;bottom:8px;background:rgba(26,26,46,.78);color:#fff;font-size:11px;font-weight:800;padding:4px 8px;border-radius:999px">食事（寮の設備）</figcaption>
+        </figure>
+        <figure style="margin:0;border-radius:12px;overflow:hidden;position:relative;min-height:140px;background:#ddd">
+          <img src="../assets/building.jpg" alt="寮外観" width="400" height="280" loading="lazy" style="width:100%;height:160px;object-fit:cover;object-position:center;display:block">
+          <figcaption style="position:absolute;left:8px;bottom:8px;background:rgba(26,26,46,.78);color:#fff;font-size:11px;font-weight:800;padding:4px 8px;border-radius:999px">寮外観</figcaption>
+        </figure>
+        <figure style="margin:0;border-radius:12px;overflow:hidden;position:relative;min-height:140px;background:#ddd">
+          <img src="../assets/room.jpg" alt="個室" width="400" height="280" loading="lazy" style="width:100%;height:160px;object-fit:cover;object-position:center;display:block">
+          <figcaption style="position:absolute;left:8px;bottom:8px;background:rgba(26,26,46,.78);color:#fff;font-size:11px;font-weight:800;padding:4px 8px;border-radius:999px">個室（寮の設備）</figcaption>
+        </figure>
+      </div>
+      <p style="margin:10px 0 0;color:#6B7280;font-size:11px;font-weight:700">Wi-Fiは写真ではなく寮の設備として記載しています。</p>
+    </section>
+    <section class="earn" aria-labelledby="earn-title">
+      <div class="eyebrow">PAY</div>
+      <h2 id="earn-title">仕事のことも、<br>まっすぐに。</h2>
+      <div class="money-card">
+        <small>日給</small>
+        <p class="daily"><strong>11,000円〜</strong></p>
+        <div class="formula">月収例 264,000円（日給11,000円×24日勤務の計算例）</div>
+      </div>
+      <p class="money-note">日払いOK</p>
+    </section>
+
+    <section class="voice" aria-labelledby="voice-title">
+      <div class="eyebrow">VOICE</div>
+      <h2 id="voice-title">続けている人の声。</h2>
+      <blockquote>色々な会社を転々としてきた私ですが、新滉建設株式会社さんが今までで一番長く働いております。</blockquote>
+      <p class="quote-source">公式HP「従業員の声」より</p>
+    </section>
+
+    <section class="final" aria-labelledby="final-title">
+      <div class="eyebrow">24 HOURS</div>
+      <h2 id="final-title">迷ったままで、<br>大丈夫です。</h2>
+      <p>AIスタッフが、寮・入寮の相談まで進めます。</p>
+      <a data-cta="call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=terra" class="cta-call">約3分、AIに寮・仕事を相談</a>
+      <a data-cta="line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener" class="line-link">LINEで相談する</a>
+    </section>
+
+    <footer class="company">
+      <strong>新滉建設株式会社</strong>
+      大阪府茨木市豊川5丁目20-35<br>
+      大阪府知事許可 第136162号
+    </footer>
+  </main>
+
+  <nav class="fixed-cta" aria-label="相談方法">
+    <div class="fixed-cta__inner">
+      <a data-cta="call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=terra" class="cta-call">約3分、AIに寮・仕事を相談</a>
+      <a data-cta="line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener" class="fixed-line">相談</a>
+    </div>
+  </nav>
+  <!-- ANALYTICS_SLOT -->
+</body>
+</html>

@@ -30,7 +30,7 @@
         radial-gradient(circle at 15% 0%, rgba(233,69,96,.18), transparent 34rem),
         radial-gradient(circle at 100% 12%, rgba(255,107,53,.18), transparent 28rem),
         var(--light);
-      padding-bottom:92px;
+      padding-bottom:110px;
     }
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
@@ -300,7 +300,24 @@
       .proof-grid .salary{grid-column:span 2}
       .sticky{display:none}
     }
-  </style>
+  
+/* final-impl: layout hardening */
+figure{margin:0}
+img{max-width:100%;height:auto}
+@media (min-width:900px){
+  [data-cta="call"], .btn-call, .call-button, .cta-call, .call-cta{
+    max-width:520px;
+  }
+}
+
+.photo-tile,.hero-photo{margin:0}
+.photo-tile img,.hero-photo img{object-position:center}
+@media (min-width:900px){
+  .page{max-width:760px}
+  .cta-stack .btn{width:100%;max-width:520px;margin-inline:auto}
+  .sticky{display:none}
+}
+/* final-impl: sticky clearance */\n.final{margin-bottom:8px;padding-bottom:22px}\n.final .cta-stack{margin-bottom:4px}\n@media (max-width:699px){body{padding-bottom:110px}.final{scroll-margin-bottom:90px}}\n</style>
 </head>
 <body>
   <div class="page">
@@ -333,7 +350,7 @@
           </div>
 
           <div class="cta-stack" aria-label="応募導線">
-            <a data-cta="call" class="btn btn-call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=fugu">AI通話を今すぐ始める</a>
+            <a data-cta="call" class="btn btn-call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=fugu">約3分、AIに寮・仕事を相談</a>
             <a data-cta="line" class="btn btn-line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener">LINEで相談する</a>
           </div>
           <p class="micro">24時間受付・約3分・ブラウザだけで通話。アプリ・電話番号不要。相手はAIスタッフです。</p>
@@ -342,7 +359,7 @@
 
       <section class="section" aria-labelledby="reason-title">
         <h2 class="section-title" id="reason-title">迷う前に、不安を減らす。</h2>
-        <p class="section-copy">期間工みたいに面接会へ行く前に、まずブラウザから通話。寮の空き・入寮相談まで、その場で進められます。</p>
+        <p class="section-copy">面接会の前に、まずブラウザから通話。寮・入寮の相談まで、その場で進められます。</p>
         <div class="proof-grid">
           <article class="proof salary">
             <b>収入の目安</b>
@@ -354,30 +371,30 @@
             <p>面接会なし・書類選考なし・履歴書不要。未経験OKです。</p>
           </article>
           <article class="proof">
-            <b>生活の相談から</b>
-            <p>所持金0円でも、まず相談OK。個室寮に即入寮OK、日払いOKです。</p>
+            <b>まず相談から</b>
+            <p>所持金0円でも、まず相談OK。個室寮・即入寮OK・日払いOK。</p>
           </article>
         </div>
       </section>
 
       <section class="call-panel" aria-labelledby="call-title">
-        <h2 id="call-title">人に言いにくい状況でも、AIスタッフにまず話せます。</h2>
-        <p>24時間受付。約3分。ブラウザだけで通話し、その場で寮の空き・入寮相談まで進めます。</p>
-        <a data-cta="call" class="btn btn-call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=fugu">寮の空きと入寮をAI通話で相談</a>
+        <h2 id="call-title">AIスタッフに、まず話せます。</h2>
+        <p>24時間受付。約3分。ブラウザだけで通話し、寮・入寮の相談まで進めます。</p>
+        <a data-cta="call" class="btn btn-call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=fugu">約3分、AIに寮・入寮を相談</a>
         <p class="micro">同一タブで通話ページを開きます。</p>
       </section>
 
       <section class="section" aria-labelledby="dorm-title">
         <h2 class="section-title" id="dorm-title">寮は、ちゃんと生活できる場所。</h2>
-        <p class="section-copy">個室寮、サウナ、Wi-Fi、食事付き。写真で雰囲気を見てから相談できます。</p>
+        <p class="section-copy">寮の設備：個室・サウナ・Wi-Fi・食事付き。写真は実物の様子です（Wi-Fiは設備として記載）。</p>
         <div class="photos" aria-label="寮関連写真">
           <figure class="photo-tile">
             <img src="../assets/hero_sauna.jpg" alt="サウナ" width="360" height="320" loading="lazy">
-            <figcaption class="caption">サウナ</figcaption>
+            <figcaption class="caption">サウナ（寮の設備）</figcaption>
           </figure>
           <figure class="photo-tile">
             <img src="../assets/meal.jpg" alt="食事" width="360" height="320" loading="lazy">
-            <figcaption class="caption">食事付き</figcaption>
+            <figcaption class="caption">食事（寮の設備）</figcaption>
           </figure>
           <figure class="photo-tile">
             <img src="../assets/building.jpg" alt="寮外観" width="360" height="320" loading="lazy">
@@ -385,7 +402,7 @@
           </figure>
           <figure class="photo-tile">
             <img src="../assets/room.jpg" alt="個室" width="360" height="320" loading="lazy">
-            <figcaption class="caption">個室</figcaption>
+            <figcaption class="caption">個室（寮の設備）</figcaption>
           </figure>
         </div>
       </section>
@@ -413,7 +430,7 @@
         <h2 id="final-title">まずは、約3分だけ。</h2>
         <p>ブラウザだけで通話。アプリ・電話番号不要。相手はAIスタッフなので、深く考えすぎず今の状況を話せます。</p>
         <div class="cta-stack">
-          <a data-cta="call" class="btn btn-call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=fugu">AI通話で相談を始める</a>
+          <a data-cta="call" class="btn btn-call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=fugu">約3分、AIに寮・仕事を相談</a>
           <a data-cta="line" class="btn btn-line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener">LINEで相談する</a>
         </div>
       </section>
@@ -426,7 +443,7 @@
 
   <div class="sticky" aria-label="固定応募ボタン">
     <div class="sticky-inner">
-      <a data-cta="call" class="btn btn-call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=fugu">AI通話を始める</a>
+      <a data-cta="call" class="btn btn-call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=fugu">約3分、AIに寮・仕事を相談</a>
       <a data-cta="line" class="btn btn-line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener"><span aria-hidden="true">LINE</span><span class="sr-only">LINEで相談する</span></a>
     </div>
   </div>

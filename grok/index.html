@@ -636,6 +636,22 @@ section{padding:28px 0}
   padding:4px 8px;border-radius:6px;
   margin-bottom:8px;
 }
+
+/* final-impl: layout hardening */
+figure{margin:0}
+img{max-width:100%;height:auto}
+@media (min-width:900px){
+  [data-cta="call"], .btn-call, .call-button, .cta-call, .call-cta{
+    max-width:520px;
+  }
+}
+
+.photo img{object-position:center}
+.btn{width:100%}
+@media (min-width:900px){
+  .wrap,.hero-inner,.fixed-cta-inner{max-width:440px}
+  .cta-stack .btn{width:100%;max-width:440px}
+}
 </style>
 </head>
 <body>
@@ -677,8 +693,8 @@ section{padding:28px 0}
     <div class="cta-stack">
       <a class="btn btn-call" data-cta="call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=grok">
         <span class="btn-call-inner">
-          <span>今すぐ話を聞く（約3分）</span>
-          <span class="btn-sub">ブラウザで通話・アプリ不要・24時間OK</span>
+          <span>約3分、AIに寮・仕事を相談</span>
+          <span class="btn-sub">ブラウザで約3分・アプリ不要・24時間</span>
         </span>
       </a>
       <a class="btn btn-line" data-cta="line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener">
@@ -741,7 +757,7 @@ section{padding:28px 0}
         </figure>
         <figure class="photo">
           <img src="../assets/meal.jpg" alt="寮の食事" width="400" height="250" loading="lazy">
-          <figcaption class="photo-cap">食事付き</figcaption>
+          <figcaption class="photo-cap">食事</figcaption>
         </figure>
       </div>
       <figure class="photo">
@@ -751,10 +767,10 @@ section{padding:28px 0}
     </div>
 
     <div class="feature-grid">
-      <div class="feature"><b>個室</b><span>プライベート確保</span></div>
-      <div class="feature"><b>サウナ</b><span>体を休められる</span></div>
-      <div class="feature"><b>Wi-Fi</b><span>連絡も娯楽も</span></div>
-      <div class="feature"><b>食事付き</b><span>まず食える</span></div>
+      <div class="feature"><b>個室</b><span>寮の設備</span></div>
+      <div class="feature"><b>サウナ</b><span>寮の設備</span></div>
+      <div class="feature"><b>Wi-Fi</b><span>寮の設備</span></div>
+      <div class="feature"><b>食事付き</b><span>寮の設備</span></div>
       <div class="feature"><b>即入寮OK</b><span>今日から相談可</span></div>
       <div class="feature"><b>関西一円</b><span>大阪・茨木拠点</span></div>
     </div>
@@ -850,8 +866,8 @@ section{padding:28px 0}
     <div class="cta-stack mt-18">
       <a class="btn btn-call solid" data-cta="call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=grok">
         <span class="btn-call-inner">
-          <span>今すぐ話を聞く（約3分）</span>
-          <span class="btn-sub">24時間OK・アプリ不要</span>
+          <span>約3分、AIに寮・仕事を相談</span>
+          <span class="btn-sub">約3分・約3分・アプリ不要</span>
         </span>
       </a>
     </div>
@@ -907,8 +923,8 @@ section{padding:28px 0}
     <div class="cta-stack">
       <a class="btn btn-call" data-cta="call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=grok">
         <span class="btn-call-inner">
-          <span>今すぐ話を聞く（約3分）</span>
-          <span class="btn-sub">ブラウザ通話・24時間・アプリ不要</span>
+          <span>約3分、AIに寮・仕事を相談</span>
+          <span class="btn-sub">約3分・ブラウザ通話・24時間</span>
         </span>
       </a>
       <a class="btn btn-line" data-cta="line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener">
@@ -956,8 +972,8 @@ section{padding:28px 0}
     <a class="btn btn-line light" data-cta="line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener">LINE</a>
     <a class="btn btn-call solid" data-cta="call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=grok">
       <span class="btn-call-inner">
-        <span>今すぐ通話（約3分）</span>
-        <span class="btn-sub">24時間・アプリ不要</span>
+        <span>約3分、AIに寮・仕事を相談</span>
+        <span class="btn-sub">約3分・アプリ不要</span>
       </span>
     </a>
   </div>
