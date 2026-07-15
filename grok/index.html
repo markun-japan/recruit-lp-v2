@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="新滉建設の採用。日給11,000円〜・個室寮・即入寮・日払いOK。所持金0円でもまず相談。24時間AI通話で寮の空きまでその場で確認。">
+<title>今夜から住める。明日から稼げる。｜新滉建設 採用</title>
+<style>
+/* ===== Reset & Base ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic UI","Yu Gothic",Meiryo,system-ui,sans-serif;
+  color:#1A1A2E;
+  background:#F5F5F0;
+  line-height:1.6;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:88px;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;border:0;background:none;cursor:pointer}
+ul{list-style:none}
+.wrap{width:min(100%,440px);margin:0 auto;padding:0 16px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+/* ===== Tokens ===== */
+:root{
+  --dark:#1A1A2E;
+  --light:#F5F5F0;
+  --accent:#E94560;
+  --accent-deep:#c7364f;
+  --blue:#0F3460;
+  --gold:#C9A227;
+  --gray:#6B7280;
+  --concrete:#9CA3AF;
+  --orange:#FF6B35;
+  --white:#fff;
+  --card:#fff;
+  --shadow:0 8px 24px rgba(26,26,46,.12);
+  --radius:14px;
+}
+
+/* ===== Top bar ===== */
+.topbar{
+  background:var(--blue);
+  color:#fff;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.04em;
+  text-align:center;
+  padding:8px 12px;
+}
+.topbar span{opacity:.9}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;
+  background:var(--dark);
+  color:#fff;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(26,26,46,.55) 0%,rgba(26,26,46,.78) 55%,rgba(26,26,46,.96) 100%),
+    url("../assets/room.jpg") center/cover no-repeat;
+  z-index:0;
+}
+.hero-inner{
+  position:relative;z-index:1;
+  padding:28px 16px 32px;
+  width:min(100%,440px);
+  margin:0 auto;
+}
+.brand-row{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:18px;gap:10px;
+}
+.hero-note{
+  margin:-4px 0 14px;
+  font-size:11px;
+  font-weight:600;
+  color:rgba(255,255,255,.72);
+  line-height:1.5;
+}
+.brand{
+  font-size:13px;font-weight:800;letter-spacing:.08em;
+  color:#fff;opacity:.92;
+}
+.pill-live{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(233,69,96,.18);
+  border:1px solid rgba(233,69,96,.55);
+  color:#ffd5dc;
+  font-size:11px;font-weight:700;
+  padding:5px 10px;border-radius:999px;
+}
+.pill-live i{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 0 rgba(233,69,96,.7);
+  animation:pulse 1.6s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(233,69,96,.55)}
+  70%{box-shadow:0 0 0 8px rgba(233,69,96,0)}
+  100%{box-shadow:0 0 0 0 rgba(233,69,96,0)}
+}
+.hero-kicker{
+  display:inline-block;
+  background:var(--gold);
+  color:var(--dark);
+  font-size:12px;font-weight:800;
+  padding:5px 10px;border-radius:6px;
+  margin-bottom:12px;letter-spacing:.02em;
+}
+.hero h1{
+  font-size:clamp(28px,8.2vw,36px);
+  line-height:1.22;
+  font-weight:900;
+  letter-spacing:-.02em;
+  margin-bottom:12px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:#ffb3c0;
+}
+.hero-sub{
+  font-size:14.5px;
+  color:rgba(255,255,255,.88);
+  margin-bottom:18px;
+  line-height:1.65;
+}
+.hero-sub strong{color:#fff;font-weight:800}
+.stat-row{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:8px;
+  margin-bottom:18px;
+}
+.stat{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:12px;
+  padding:10px 6px;
+  text-align:center;
+  backdrop-filter:blur(4px);
+}
+.stat b{
+  display:block;
+  font-size:15px;
+  font-weight:900;
+  color:#fff;
+  line-height:1.25;
+}
+.stat span{
+  display:block;
+  margin-top:3px;
+  font-size:10px;
+  color:rgba(255,255,255,.72);
+  font-weight:600;
+}
+.badge-row{
+  display:flex;flex-wrap:wrap;gap:6px;
+  margin-bottom:20px;
+}
+.badge{
+  font-size:11px;font-weight:800;
+  padding:6px 10px;border-radius:999px;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.18);
+  color:#fff;
+}
+.badge.hot{
+  background:rgba(233,69,96,.22);
+  border-color:rgba(233,69,96,.5);
+  color:#ffd0d8;
+}
+
+/* ===== CTA buttons ===== */
+.cta-stack{display:flex;flex-direction:column;gap:10px}
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  min-height:54px;
+  padding:14px 16px;
+  border-radius:14px;
+  font-weight:900;
+  font-size:16px;
+  letter-spacing:.02em;
+  text-align:center;
+  transition:transform .12s ease,opacity .12s ease,background .12s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn:active{transform:scale(.98)}
+.btn-call{
+  background:linear-gradient(180deg,#ff5a75 0%,var(--accent) 55%,var(--accent-deep) 100%);
+  color:#fff;
+  box-shadow:0 10px 24px rgba(233,69,96,.38), inset 0 1px 0 rgba(255,255,255,.25);
+}
+.btn-call .btn-sub{
+  display:block;
+  font-size:11px;
+  font-weight:700;
+  opacity:.92;
+  margin-top:2px;
+  letter-spacing:0;
+}
+.btn-call-inner{display:flex;flex-direction:column;align-items:center;line-height:1.2}
+.btn-line{
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  border:1.5px solid rgba(255,255,255,.28);
+  font-size:14px;
+  min-height:48px;
+  font-weight:800;
+}
+.btn-line.light{
+  background:#fff;
+  color:var(--dark);
+  border:1.5px solid #e5e7eb;
+}
+.btn-call.solid{
+  background:linear-gradient(180deg,#ff5a75 0%,var(--accent) 55%,var(--accent-deep) 100%);
+  color:#fff;
+}
+.cta-note{
+  margin-top:10px;
+  font-size:11.5px;
+  color:rgba(255,255,255,.72);
+  text-align:center;
+  line-height:1.55;
+}
+.cta-note.dark{color:var(--gray)}
+
+/* ===== Sections ===== */
+section{padding:28px 0}
+.sec-title{
+  font-size:20px;
+  font-weight:900;
+  line-height:1.35;
+  margin-bottom:8px;
+  letter-spacing:-.01em;
+}
+.sec-lead{
+  font-size:14px;
+  color:var(--gray);
+  margin-bottom:16px;
+  line-height:1.65;
+}
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  border:1px solid rgba(26,26,46,.06);
+  overflow:hidden;
+}
+
+/* ===== Compare / Why now ===== */
+.why{
+  background:#fff;
+  border-top:1px solid #ecece6;
+  border-bottom:1px solid #ecece6;
+}
+.why-grid{
+  display:grid;
+  gap:10px;
+}
+.why-item{
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:12px;
+  align-items:start;
+  background:var(--light);
+  border-radius:12px;
+  padding:14px;
+  border:1px solid #ebebe4;
+}
+.why-num{
+  width:44px;height:44px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--blue);color:#fff;
+  font-weight:900;font-size:15px;
+}
+.why-item h3{font-size:15px;font-weight:900;margin-bottom:4px}
+.why-item p{font-size:13px;color:var(--gray);line-height:1.55}
+
+/* ===== Dorm ===== */
+.dorm{background:var(--light)}
+.photo-stack{display:grid;gap:10px;margin-bottom:14px}
+.photo{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  background:#ddd;
+}
+.photo img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.photo.tall img{aspect-ratio:4/3}
+.photo-cap{
+  position:absolute;left:10px;bottom:10px;
+  background:rgba(26,26,46,.78);
+  color:#fff;
+  font-size:11px;font-weight:800;
+  padding:5px 9px;border-radius:999px;
+  backdrop-filter:blur(4px);
+}
+.feature-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+.feature{
+  background:#fff;
+  border:1px solid #ebebe4;
+  border-radius:12px;
+  padding:12px 10px;
+  text-align:center;
+}
+.feature b{
+  display:block;
+  font-size:13px;
+  font-weight:900;
+  color:var(--dark);
+  margin-bottom:2px;
+}
+.feature span{
+  font-size:11px;
+  color:var(--gray);
+  line-height:1.4;
+}
+
+/* ===== Money ===== */
+.money{background:#fff}
+.money-box{
+  background:linear-gradient(145deg,#0F3460 0%,#1A1A2E 100%);
+  color:#fff;
+  border-radius:16px;
+  padding:18px 16px;
+  box-shadow:var(--shadow);
+}
+.money-box .label{
+  font-size:12px;font-weight:800;
+  color:var(--gold);
+  letter-spacing:.04em;
+  margin-bottom:6px;
+}
+.money-box .amount{
+  font-size:34px;
+  font-weight:900;
+  letter-spacing:-.02em;
+  line-height:1.1;
+  margin-bottom:4px;
+}
+.money-box .amount small{
+  font-size:16px;
+  font-weight:800;
+  margin-left:2px;
+}
+.money-box .formula{
+  font-size:12.5px;
+  color:rgba(255,255,255,.78);
+  margin-bottom:14px;
+  line-height:1.5;
+}
+.money-points{display:grid;gap:8px}
+.money-points li{
+  display:flex;gap:8px;align-items:flex-start;
+  font-size:13px;
+  color:rgba(255,255,255,.9);
+  line-height:1.45;
+}
+.money-points li::before{
+  content:"";
+  width:8px;height:8px;border-radius:50%;
+  background:var(--accent);
+  margin-top:5px;flex:0 0 auto;
+}
+
+/* ===== Vs period ===== */
+.vs{background:var(--light)}
+.vs-card{
+  background:#fff;
+  border-radius:16px;
+  border:1px solid #ebebe4;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.vs-head{
+  background:var(--dark);
+  color:#fff;
+  padding:12px 14px;
+  font-size:13px;font-weight:800;
+  text-align:center;
+}
+.vs-table{width:100%;border-collapse:collapse}
+.vs-table th,.vs-table td{
+  padding:11px 10px;
+  font-size:12.5px;
+  text-align:center;
+  border-bottom:1px solid #f0f0ea;
+  vertical-align:middle;
+}
+.vs-table th{
+  background:#fafaf6;
+  font-weight:800;
+  color:var(--gray);
+  font-size:11px;
+}
+.vs-table td:first-child{
+  text-align:left;
+  font-weight:700;
+  color:var(--dark);
+  width:34%;
+}
+.vs-table td.win{
+  color:var(--accent);
+  font-weight:900;
+  background:rgba(233,69,96,.05);
+}
+.vs-table td.lose{
+  color:var(--gray);
+}
+.vs-note{
+  padding:12px 14px;
+  font-size:12px;
+  color:var(--gray);
+  line-height:1.55;
+  background:#fafaf6;
+}
+
+/* ===== Flow ===== */
+.flow{background:#fff}
+.steps{display:grid;gap:0;position:relative}
+.step{
+  display:grid;
+  grid-template-columns:36px 1fr;
+  gap:12px;
+  padding:0 0 18px;
+  position:relative;
+}
+.step:last-child{padding-bottom:0}
+.step:not(:last-child)::before{
+  content:"";
+  position:absolute;
+  left:17px;top:36px;bottom:0;
+  width:2px;
+  background:linear-gradient(180deg,var(--accent),rgba(233,69,96,.15));
+}
+.step-num{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--accent);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:14px;
+  box-shadow:0 4px 12px rgba(233,69,96,.3);
+  position:relative;z-index:1;
+}
+.step h3{font-size:15px;font-weight:900;margin-bottom:3px;padding-top:6px}
+.step p{font-size:13px;color:var(--gray);line-height:1.55}
+
+/* ===== Voice ===== */
+.voice{background:var(--light)}
+.quote{
+  background:#fff;
+  border-radius:16px;
+  padding:18px 16px;
+  border:1px solid #ebebe4;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+.quote::before{
+  content:"“";
+  position:absolute;top:6px;left:12px;
+  font-size:48px;line-height:1;
+  color:rgba(233,69,96,.18);
+  font-family:Georgia,serif;
+  font-weight:700;
+}
+.quote p{
+  font-size:14.5px;
+  font-weight:700;
+  line-height:1.7;
+  color:var(--dark);
+  margin-bottom:12px;
+  position:relative;
+}
+.quote footer{
+  font-size:12px;
+  color:var(--gray);
+  font-weight:700;
+}
+.quote footer a{
+  color:var(--blue);
+  text-decoration:underline;
+  text-underline-offset:2px;
+  font-weight:700;
+}
+
+/* ===== FAQ ===== */
+.faq{background:#fff}
+.faq-list{display:grid;gap:8px}
+.faq-item{
+  background:var(--light);
+  border:1px solid #ebebe4;
+  border-radius:12px;
+  padding:14px;
+}
+.faq-item h3{
+  font-size:14px;
+  font-weight:900;
+  margin-bottom:6px;
+  color:var(--dark);
+  display:flex;gap:8px;align-items:flex-start;
+}
+.faq-item h3 span{
+  color:var(--accent);
+  flex:0 0 auto;
+}
+.faq-item p{
+  font-size:13px;
+  color:var(--gray);
+  line-height:1.6;
+  padding-left:22px;
+}
+
+/* ===== Mid CTA band ===== */
+.cta-band{
+  background:linear-gradient(160deg,#1A1A2E 0%,#0F3460 100%);
+  color:#fff;
+  padding:28px 0;
+}
+.cta-band .sec-title{color:#fff;text-align:center}
+.cta-band .sec-lead{color:rgba(255,255,255,.78);text-align:center}
+
+/* ===== Company ===== */
+.company{background:var(--light);padding-bottom:36px}
+.company-card{
+  background:#fff;
+  border-radius:14px;
+  border:1px solid #ebebe4;
+  padding:16px;
+}
+.company-card h2{
+  font-size:15px;font-weight:900;
+  margin-bottom:10px;
+  color:var(--dark);
+}
+.company-card dl{display:grid;gap:8px}
+.company-card dt{
+  font-size:11px;font-weight:800;
+  color:var(--gray);
+  letter-spacing:.04em;
+}
+.company-card dd{
+  font-size:13px;
+  font-weight:700;
+  color:var(--dark);
+  margin-bottom:2px;
+  line-height:1.45;
+}
+.legal{
+  margin-top:14px;
+  font-size:11px;
+  color:var(--gray);
+  line-height:1.6;
+  text-align:center;
+}
+
+/* ===== Fixed bottom bar ===== */
+.fixed-cta{
+  position:fixed;
+  left:0;right:0;bottom:0;
+  z-index:100;
+  background:rgba(245,245,240,.92);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-top:1px solid rgba(26,26,46,.08);
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+  box-shadow:0 -8px 24px rgba(26,26,46,.08);
+}
+.fixed-cta-inner{
+  width:min(100%,440px);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1.55fr;
+  gap:8px;
+}
+.fixed-cta .btn{
+  min-height:50px;
+  font-size:14px;
+  border-radius:12px;
+  padding:10px 8px;
+}
+.fixed-cta .btn-call{font-size:14.5px}
+.fixed-cta .btn-call .btn-sub{font-size:10px}
+
+/* Short viewport: keep hero CTAs above fixed bar (375×667) */
+@media (max-height:700px) and (max-width:430px){
+  .topbar{padding:6px 12px;font-size:11px}
+  .hero-inner{padding:18px 16px 20px}
+  .brand-row{margin-bottom:10px}
+  .hero-kicker{margin-bottom:8px;padding:4px 9px;font-size:11px}
+  .hero h1{font-size:clamp(24px,7.2vw,32px);margin-bottom:8px;line-height:1.18}
+  .hero-note{margin:-2px 0 10px;font-size:10.5px}
+  .hero-sub{font-size:13.5px;margin-bottom:12px;line-height:1.55}
+  .stat-row{gap:6px;margin-bottom:12px}
+  .stat{padding:8px 4px}
+  .stat b{font-size:13.5px}
+  .stat span{font-size:9.5px}
+  .badge-row{gap:5px;margin-bottom:12px}
+  .badge{font-size:10.5px;padding:5px 8px}
+  .cta-stack{gap:8px}
+  .btn{min-height:50px;padding:12px 14px;font-size:15px}
+  .btn-line{min-height:44px;font-size:13.5px}
+  .btn-call .btn-sub{font-size:10.5px}
+  .cta-note{margin-top:8px;font-size:11px}
+}
+
+/* ===== Micro helpers ===== */
+.center{text-align:center}
+.mt-10{margin-top:10px}
+.mt-14{margin-top:14px}
+.mt-18{margin-top:18px}
+.tiny{
+  font-size:11px;
+  color:var(--gray);
+  line-height:1.5;
+}
+.tag-gold{
+  display:inline-block;
+  background:rgba(201,162,39,.15);
+  color:#8a7018;
+  font-size:11px;font-weight:800;
+  padding:4px 8px;border-radius:6px;
+  margin-bottom:8px;
+}
+</style>
+</head>
+<body>
+
+<!-- Top urgency strip -->
+<div class="topbar">大阪・関西一円　｜　面接会なし・履歴書不要　｜　24時間受付</div>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="brand-row">
+      <div class="brand">新滉建設株式会社</div>
+      <div class="pill-live"><i></i>今すぐ通話OK</div>
+    </div>
+
+    <div class="hero-kicker">所持金0円でも、まず相談OK</div>
+    <h1>今夜から、<em>住める</em>。<br>明日から、<em>稼げる</em>。</h1>
+    <p class="hero-note">※寮の空き状況は通話でご案内します</p>
+    <p class="hero-sub">
+      個室寮・サウナ・Wi-Fi・食事付き。<strong>即入寮OK・日払いOK</strong>。<br>
+      期間工みたいに2週間待たない。面接会なし。書類もいらない。
+    </p>
+
+    <div class="stat-row">
+      <div class="stat"><b>日給<br>11,000円〜</b><span>未経験OK</span></div>
+      <div class="stat"><b>即入寮</b><span>個室・食事付き</span></div>
+      <div class="stat"><b>日払いOK</b><span>所持金少なくても</span></div>
+    </div>
+
+    <div class="badge-row">
+      <span class="badge hot">履歴書不要</span>
+      <span class="badge hot">面接会なし</span>
+      <span class="badge">書類選考なし</span>
+      <span class="badge">未経験歓迎</span>
+      <span class="badge">24時間受付</span>
+    </div>
+
+    <div class="cta-stack">
+      <a class="btn btn-call" data-cta="call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=grok">
+        <span class="btn-call-inner">
+          <span>今すぐ話を聞く（約3分）</span>
+          <span class="btn-sub">ブラウザで通話・アプリ不要・24時間OK</span>
+        </span>
+      </a>
+      <a class="btn btn-line" data-cta="line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener">
+        LINEで相談する
+      </a>
+    </div>
+    <p class="cta-note">※AIスタッフが応対。その場で寮の空き・入寮相談まで進められます。</p>
+  </div>
+</header>
+
+<!-- ===== WHY / PAIN ===== -->
+<section class="why">
+  <div class="wrap">
+    <div class="tag-gold">生活を立て直したい人へ</div>
+    <h2 class="sec-title">今夜どこで寝るか。<br>そこからでいい。</h2>
+    <p class="sec-lead">
+      遠方の面接会、2週間待ち、手持ちが足りない——。今すぐ住む場所と仕事が要るなら、順番を変える。
+    </p>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <div>
+          <h3>住む場所が先</h3>
+          <p>個室寮（サウナ・Wi-Fi・食事付き）。即入寮OK。まず寝床を確保してから働ける。</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <div>
+          <h3>待ち時間を削る</h3>
+          <p>面接会なし・書類選考なし・履歴書不要。通話で寮の空きと入寮相談まで進められる。</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <div>
+          <h3>所持金が少なくても</h3>
+          <p>所持金0円でもまず相談OK。日払いOK。日給11,000円〜・未経験OK。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DORM PROOF ===== -->
+<section class="dorm">
+  <div class="wrap">
+    <h2 class="sec-title">個室寮は、ちゃんと住める。</h2>
+    <p class="sec-lead">うちの寮の様子（写真）。サウナ・Wi-Fi・食事付き。</p>
+
+    <div class="photo-stack">
+      <figure class="photo tall">
+        <img src="../assets/room.jpg" alt="個室寮の室内" width="800" height="600" loading="eager">
+        <figcaption class="photo-cap">個室</figcaption>
+      </figure>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <figure class="photo">
+          <img src="../assets/hero_sauna.jpg" alt="寮のサウナ" width="400" height="250" loading="lazy">
+          <figcaption class="photo-cap">サウナ</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="../assets/meal.jpg" alt="寮の食事" width="400" height="250" loading="lazy">
+          <figcaption class="photo-cap">食事付き</figcaption>
+        </figure>
+      </div>
+      <figure class="photo">
+        <img src="../assets/building.jpg" alt="寮の外観" width="800" height="500" loading="lazy">
+        <figcaption class="photo-cap">寮 外観</figcaption>
+      </figure>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature"><b>個室</b><span>プライベート確保</span></div>
+      <div class="feature"><b>サウナ</b><span>体を休められる</span></div>
+      <div class="feature"><b>Wi-Fi</b><span>連絡も娯楽も</span></div>
+      <div class="feature"><b>食事付き</b><span>まず食える</span></div>
+      <div class="feature"><b>即入寮OK</b><span>今日から相談可</span></div>
+      <div class="feature"><b>関西一円</b><span>大阪・茨木拠点</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MONEY ===== -->
+<section class="money">
+  <div class="wrap">
+    <h2 class="sec-title">数字は、これだけ。</h2>
+    <p class="sec-lead">余計な盛りはしない。わかる金額だけ置く。</p>
+    <div class="money-box">
+      <div class="label">日給</div>
+      <div class="amount">11,000円<small>〜</small></div>
+      <p class="formula">月収例 264,000円（日給11,000円×24日勤務の計算例）</p>
+      <ul class="money-points">
+        <li>未経験OK。経験ゼロからで問題なし</li>
+        <li>日払いOK。手元を先に回せる</li>
+        <li>所持金0円でも、まず相談OK</li>
+      </ul>
+    </div>
+    <p class="tiny mt-10">※月収は計算例です。出勤日数により変動します。</p>
+  </div>
+</section>
+
+<!-- ===== VS PERIOD WORKER ===== -->
+<section class="vs">
+  <div class="wrap">
+    <h2 class="sec-title">期間工と比べてるなら。</h2>
+    <p class="sec-lead">入社祝の金額勝負はしない。必要なのは「今日から動けるか」。</p>
+    <div class="vs-card">
+      <div class="vs-head">「今すぐ住む・働く」で見たとき</div>
+      <table class="vs-table">
+        <thead>
+          <tr>
+            <th>項目</th>
+            <th>新滉建設</th>
+            <th>期間工あるある</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>入寮まで</td>
+            <td class="win">即入寮OK</td>
+            <td class="lose">入社まで約2週間</td>
+          </tr>
+          <tr>
+            <td>選考</td>
+            <td class="win">面接会なし<br>履歴書不要</td>
+            <td class="lose">面接会・選考あり</td>
+          </tr>
+          <tr>
+            <td>場所</td>
+            <td class="win">大阪・関西一円</td>
+            <td class="lose">遠方工場が多い</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="vs-note">期間工を否定しない。ただ「今夜の寝床」と「明日の仕事」が先なら、うちの方が噛み合う。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLOW ===== -->
+<section class="flow">
+  <div class="wrap">
+    <h2 class="sec-title">押したら、何が起きる？</h2>
+    <p class="sec-lead">応募フォームもアプリもいらない。ブラウザだけで話せる。</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>ボタンを押す</h3>
+          <p>電話番号不要。その場でブラウザ通話が始まる（約3分）。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>AIスタッフが応対</h3>
+          <p>状況を聞く。未経験でも、所持金が少なくても大丈夫。そのまま質問してOK。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>寮の空き・入寮相談</h3>
+          <p>その場で空きと入寮の相談まで進められる。夜中でも受付。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-stack mt-18">
+      <a class="btn btn-call solid" data-cta="call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=grok">
+        <span class="btn-call-inner">
+          <span>今すぐ話を聞く（約3分）</span>
+          <span class="btn-sub">24時間OK・アプリ不要</span>
+        </span>
+      </a>
+    </div>
+    <p class="cta-note dark">※AIスタッフが応対。その場で寮の空き・入寮相談まで進められます。</p>
+  </div>
+</section>
+
+<!-- ===== VOICE ===== -->
+<section class="voice">
+  <div class="wrap">
+    <h2 class="sec-title">転々としてきた人の声</h2>
+    <p class="sec-lead">公式サイト掲載の原文です。一字もいじっていません。</p>
+    <blockquote class="quote">
+      <p>色々な会社を転々としてきた私ですが、新滉建設株式会社さんが今までで一番長く働いております。入社理由として色々な職種や業種にも募集しましたが、応募時の連絡の対応が丁寧で且つ一番早かったので入社を決めました。また美味しいごはん付きの個室の寮も完備しているため、プライベートも確保されています。また働いている仲間も仲がいいので、社内の環境もすごく良いです。</p>
+      <footer>
+        —— 20代　男性作業員Dさん（入社日：2019年10月）<br>
+        出典: <a href="https://www.sinkoukensetu.co.jp/contents/category/voice/" target="_blank" rel="noopener">公式サイト「従業員の声」</a>
+      </footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq">
+  <div class="wrap">
+    <h2 class="sec-title">よくある不安、先に潰す</h2>
+    <div class="faq-list mt-14">
+      <div class="faq-item">
+        <h3><span>Q.</span>所持金がほとんどない。大丈夫？</h3>
+        <p>大丈夫です。所持金0円でも、まず相談OK。日払いOK。個室寮（食事付き）で、まず住むところから整えられます。</p>
+      </div>
+      <div class="faq-item">
+        <h3><span>Q.</span>履歴書も経験もない。</h3>
+        <p>履歴書不要・書類選考なし・面接会なし。未経験OK。通話で状況を話せば大丈夫です。</p>
+      </div>
+      <div class="faq-item">
+        <h3><span>Q.</span>本当に今日から動ける？</h3>
+        <p>即入寮OK。24時間受付のAI通話で、寮の空きと入寮相談までその場で進められます。空き状況は通話で確認してください。</p>
+      </div>
+      <div class="faq-item">
+        <h3><span>Q.</span>AI通話って何？怪しくない？</h3>
+        <p>ブラウザだけで約3分話す仕組みです。アプリ不要・電話番号不要。相手はAIスタッフ。夜中でもつながります。LINE相談も選べます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2 class="sec-title">今夜の寝床、今日決める。</h2>
+    <p class="sec-lead">日給11,000円〜／個室寮／即入寮／日払いOK／未経験OK</p>
+    <div class="cta-stack">
+      <a class="btn btn-call" data-cta="call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=grok">
+        <span class="btn-call-inner">
+          <span>今すぐ話を聞く（約3分）</span>
+          <span class="btn-sub">ブラウザ通話・24時間・アプリ不要</span>
+        </span>
+      </a>
+      <a class="btn btn-line" data-cta="line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener">
+        まずはLINEで聞く
+      </a>
+    </div>
+    <p class="cta-note">話を聞くだけでもOK。押し売りしません。</p>
+  </div>
+</section>
+
+<!-- ===== COMPANY ===== -->
+<section class="company">
+  <div class="wrap">
+    <div class="company-card">
+      <h2>会社情報</h2>
+      <dl>
+        <div>
+          <dt>会社名</dt>
+          <dd>新滉建設株式会社</dd>
+        </div>
+        <div>
+          <dt>所在地</dt>
+          <dd>大阪府茨木市豊川5丁目20-35</dd>
+        </div>
+        <div>
+          <dt>建設業許可</dt>
+          <dd>大阪府知事許可 第136162号</dd>
+        </div>
+        <div>
+          <dt>勤務エリア</dt>
+          <dd>関西一円の現場</dd>
+        </div>
+      </dl>
+    </div>
+    <p class="legal">
+      © 新滉建設株式会社<br>
+      本ページは採用案内のドラフトです。条件は通話・相談時に最新をご確認ください。
+    </p>
+  </div>
+</section>
+
+<!-- Fixed CTA -->
+<div class="fixed-cta" role="region" aria-label="応募アクション">
+  <div class="fixed-cta-inner">
+    <a class="btn btn-line light" data-cta="line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener">LINE</a>
+    <a class="btn btn-call solid" data-cta="call" href="https://micro-tube-pace-tuning.trycloudflare.com/?src=grok">
+      <span class="btn-call-inner">
+        <span>今すぐ通話（約3分）</span>
+        <span class="btn-sub">24時間・アプリ不要</span>
+      </span>
+    </a>
+  </div>
+</div>
+
+<!-- ANALYTICS_SLOT -->
+
+</body>
+</html>
