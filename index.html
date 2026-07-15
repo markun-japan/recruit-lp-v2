@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>今夜から住める、明日から稼げる | 新滉建設 求人</title>
+<style>
+/* =====================================================
+   CSS Variables — 新滉建設ブランドカラー (brand-guidelines準拠)
+   ===================================================== */
+:root {
+  --dark:   #1A1A2E;
+  --light:  #F5F5F0;
+  --accent: #E94560;
+  --blue:   #0F3460;
+  --gold:   #C9A227;
+  --gray:   #6B7280;
+  --cgray:  #9CA3AF;
+  --orange: #FF6B35;
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+}
+
+/* =====================================================
+   Reset & Base
+   ===================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN',
+               'Noto Sans JP', 'Meiryo', 'Yu Gothic Medium', 'Yu Gothic', sans-serif;
+  background: var(--dark);
+  color: var(--light);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* =====================================================
+   Zone 1: ファーストビュー
+   ===================================================== */
+#zone1 {
+  min-height: 100dvh;
+  min-height: 100svh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--safe-t);
+  padding-bottom: calc(var(--safe-b) + 8px);
+  background: var(--dark);
+}
+
+/* マイクロヘッダー */
+.micro-hdr {
+  padding: 8px 16px 7px;
+  font-size: 11px;
+  color: var(--cgray);
+  text-align: center;
+  letter-spacing: .06em;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  flex-shrink: 0;
+}
+
+/* ------ 写真枠A ------ */
+.photo-a {
+  width: 100%;
+  max-height: 30vh;
+  max-height: 30svh;
+  max-height: 30dvh; 
+  aspect-ratio: 4 / 3;
+  background: #1E1E35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+.photo-lbl {
+  position: relative;
+  text-align: center;
+  color: var(--cgray);
+  font-size: 12px;
+  line-height: 1.6;
+  padding: 8px;
+}
+.photo-lbl .lbl-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: rgba(156,163,175,.9);
+}
+.photo-lbl .lbl-hint {
+  font-size: 10px;
+  opacity: .65;
+}
+
+/* FV コンテンツ本体 */
+.fv-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px 20px 0;
+  gap: 10px;
+}
+
+/* H1 */
+h1 {
+  font-size: clamp(23px, 7vw, 34px);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  color: var(--light);
+}
+h1 em { color: var(--accent); font-style: normal; }
+
+/* 条件チップ3枚 */
+.chips { display: flex; gap: 6px; }
+.chip {
+  flex: 1;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  padding: 7px 6px;
+  border-radius: 5px;
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
+
+/* サブ行 */
+.fv-sub {
+  font-size: 11.5px;
+  color: var(--cgray);
+  line-height: 1.55;
+}
+
+/* CTA誘い文 */
+.cta-lead {
+  font-size: 12.5px;
+  color: var(--cgray);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* CTAグループ */
+.cta-group { display: flex; flex-direction: column; gap: 8px; }
+
+/* メインCTAボタン */
+.btn-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 10px 16px;
+  text-align: center;
+  letter-spacing: .02em;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 4px 18px rgba(233,69,96,.38);
+  transition: box-shadow .15s, transform .1s;
+}
+.btn-main:active { transform: scale(.98); box-shadow: 0 2px 8px rgba(233,69,96,.2); }
+.btn-main .btn-sub { font-size: 13px; font-weight: 600; opacity: .9; }
+
+/* マイクロコピー */
+.micro-copy {
+  font-size: 11px;
+  color: var(--cgray);
+  text-align: center;
+  margin-top: -4px;
+  line-height: 1.5;
+}
+
+/* サブCTAボタン（LINE） */
+.btn-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  background: transparent;
+  color: var(--light);
+  font-size: 15px;
+  font-weight: 600;
+  border: 1.5px solid rgba(245,245,240,.35);
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 10px 16px;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color .15s;
+}
+.btn-line:active { border-color: var(--light); }
+
+/* スクロールヒント */
+.scroll-hint {
+  text-align: center;
+  padding: 8px 0 4px;
+  font-size: 11px;
+  color: var(--cgray);
+  opacity: .55;
+  flex-shrink: 0;
+  animation: bob .9s ease-in-out infinite alternate;
+}
+@keyframes bob {
+  from { transform: translateY(0); }
+  to   { transform: translateY(4px); }
+}
+
+/* =====================================================
+   Zone 2: 認識ゾーン
+   ===================================================== */
+#zone2 {
+  background: #E8E8E3;
+  color: var(--dark);
+  padding: 28px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* 3ステップ */
+.steps { display: flex; align-items: flex-start; gap: 4px; }
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+.step-n {
+  width: 30px; height: 30px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.step-t { font-size: 10.5px; line-height: 1.45; color: var(--dark); }
+.step-t strong { display: block; font-size: 12px; font-weight: 700; }
+.step-arr {
+  padding-top: 4px;
+  color: var(--cgray);
+  font-size: 20px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* 写真行 B/C/D */
+.photo-row { display: flex; gap: 8px; }
+.photo-sm {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  background: #E5E5DF;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.photo-sm .photo-lbl { font-size: 9.5px; }
+.photo-sm .photo-lbl .lbl-title { font-size: 11px; }
+
+/* 月収例ブロック */
+.income-blk {
+  background: var(--dark);
+  color: var(--light);
+  border-radius: 8px;
+  padding: 16px 16px;
+  text-align: center;
+}
+.income-num {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: -.01em;
+}
+.income-note {
+  font-size: 11px;
+  color: var(--cgray);
+  margin-top: 5px;
+  line-height: 1.55;
+}
+
+/* 実話プレースホルダー */
+.quote-ph {
+  border-left: 3px solid var(--accent);
+  padding: 10px 14px;
+  background: rgba(0,0,0,.06);
+  border-radius: 0 4px 4px 0;
+  font-size: 13px;
+  color: var(--gray);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* 差別化行 */
+.diff-line {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--blue);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* どん底OKブロック */
+.donzoko-blk {
+  background: rgba(233,69,96,.07);
+  border: 1px solid rgba(233,69,96,.2);
+  border-radius: 6px;
+  padding: 12px 14px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.donzoko-icon { font-size: 20px; flex-shrink: 0; line-height: 1.4; }
+.donzoko-txt { font-size: 13px; color: var(--dark); line-height: 1.5; }
+
+
+/* Zone2 締めCTA */
+.z2-cta { display: flex; flex-direction: column; gap: 8px; }
+.z2-cta .btn-main { box-shadow: 0 4px 14px rgba(233,69,96,.3); }
+.z2-cta .btn-line { color: var(--dark); border-color: rgba(26,26,46,.3); }
+.z2-cta .micro-copy { color: var(--gray); }
+
+/* =====================================================
+   Zone 3: フッター
+   ===================================================== */
+#zone3 {
+  background: #0D0D1A;
+  color: var(--cgray);
+  font-size: 11px;
+  line-height: 1.85;
+  text-align: center;
+  padding: 18px 20px calc(var(--safe-b) + 18px);
+  border-top: 1px solid rgba(255,255,255,.07);
+}
+#zone3 strong { color: var(--light); font-size: 12px; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     Zone 1: ファーストビュー (100dvh 完結)
+     ============================================================ -->
+<section id="zone1">
+
+  <!-- マイクロヘッダー -->
+  <p class="micro-hdr">新滉建設｜大阪府茨木市の建設会社</p>
+
+  <!-- ============================================
+       PHOTO-FRAME-A  |  id="photo-a"
+       用途: 個室寮（ベッド周り）
+       ★仮アテ画像: assets/room.jpg
+       差し替え方法: img の src="..." を本番写真パスに変更
+       ============================================ -->
+  <div class="photo-a" id="photo-a">
+    <img src="assets/room.jpg" alt="個室寮の様子" style="width:100%;height:100%;object-fit:cover;object-position:center 68%;" loading="eager">
+  </div>
+
+  <div class="fv-body">
+
+    <!-- H1 -->
+    <h1>今夜から、<em>住める。</em><br>明日から、<em>稼げる。</em></h1>
+
+    <!-- 条件チップ 3枚 -->
+    <div class="chips" role="list">
+      <span class="chip" role="listitem">日給11,000円〜</span>
+      <span class="chip" role="listitem">個室寮・即入寮</span>
+      <span class="chip" role="listitem">日払いOK</span>
+    </div>
+
+    <!-- サブ行 -->
+    <p class="fv-sub">未経験OK／大阪府茨木市／寮はWi-Fi・サウナ・食事付き</p>
+
+    <!-- CTA群 -->
+    <div class="cta-group">
+
+      <!-- CTA誘い文 -->
+      <p class="cta-lead">応募を決めてなくて大丈夫。話を聞くだけでOKです。</p>
+
+      <!-- メインCTA: AI通話 — 同一タブ遷移 -->
+      <a href="https://micro-tube-pace-tuning.trycloudflare.com"
+         class="btn-main"
+         id="cta-main-1">
+        とりあえず、通話してみる
+        <span class="btn-sub">24時間OK・応募じゃなくてOK</span>
+      </a>
+      <p class="micro-copy">相手はAIスタッフ。緊張いりません｜約3分｜履歴書・書類いっさい不要</p>
+
+      <!-- サブCTA: LINE — 新規タブ -->
+      <a href="https://lin.ee/XEVQvbw"
+         class="btn-line"
+         id="cta-line-1"
+         target="_blank"
+         rel="noopener">
+        LINEで質問する
+      </a>
+
+    </div>
+  </div>
+
+  <!-- スクロールヒント -->
+  <p class="scroll-hint" aria-hidden="true">▼</p>
+
+</section>
+
+<!-- ============================================================
+     Zone 2: 認識ゾーン (〜1画面)
+     ============================================================ -->
+<section id="zone2">
+
+  <!-- 3ステップフロー -->
+  <div class="steps" aria-label="応募から入寮までの流れ">
+    <div class="step">
+      <div class="step-n">1</div>
+      <p class="step-t"><strong>ボタンを押す</strong>今すぐOK</p>
+    </div>
+    <span class="step-arr" aria-hidden="true">→</span>
+    <div class="step">
+      <div class="step-n">2</div>
+      <p class="step-t"><strong>AIと話す</strong>約3分・質問に答えるだけ</p>
+    </div>
+    <span class="step-arr" aria-hidden="true">→</span>
+    <div class="step">
+      <div class="step-n">3</div>
+      <p class="step-t"><strong>入寮日をご案内</strong>最短、今日</p>
+    </div>
+  </div>
+
+  <!-- 写真枠 B / C / D — 横3連 1:1 -->
+  <div class="photo-row">
+
+    <!-- ============================================
+         PHOTO-FRAME-B  |  id="photo-b"
+         用途: 寮の外観
+         ★仮アテ画像: assets/building.jpg
+         差し替え方法: img の src="..." を本番写真パスに変更
+         ============================================ -->
+    <div class="photo-sm" id="photo-b">
+      <img src="assets/building.jpg" alt="寮の外観" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+    </div>
+
+    <!-- ============================================
+         PHOTO-FRAME-C  |  id="photo-c"
+         用途: サウナ
+         ★仮アテ画像: assets/hero_sauna.jpg
+         差し替え方法: img の src="..." を本番写真パスに変更
+         ============================================ -->
+    <div class="photo-sm" id="photo-c">
+      <img src="assets/hero_sauna.jpg" alt="社員寮のサウナ" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+    </div>
+
+    <!-- ============================================
+         PHOTO-FRAME-D  |  id="photo-d"
+         用途: 食事
+         ★仮アテ画像: assets/meal.jpg
+         差し替え方法: img の src="..." を本番写真パスに変更
+         ============================================ -->
+    <div class="photo-sm" id="photo-d">
+      <img src="assets/meal.jpg" alt="寮の食事" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+    </div>
+
+  </div>
+
+  <!-- 月収例（計算例として明示） -->
+  <div class="income-blk">
+    <div class="income-num">月収例 264,000円</div>
+    <p class="income-note">
+      日給11,000円 × 24日勤務の計算例<br>
+      ※実際の収入は勤務日数により異なります
+    </p>
+  </div>
+
+  <!-- 実話1行: 公式サイト「従業員の声」より原文転載（2026-07-15。差し替え可） -->
+  <div class="quote-ph">
+    「色々な会社を転々としてきた私ですが、新滉建設株式会社さんが今までで一番長く働いております。」
+    <span style="display:block;margin-top:4px;font-size:11px;opacity:.72;">（20代・現場作業員／公式サイト「従業員の声」より）</span>
+  </div>
+
+  <!-- 差別化行 -->
+  <p class="diff-line">面接会なし・書類選考なし。<br>最短、今日入寮。</p>
+
+  <!-- 社長承認済み（2026-07-15）: 「所持金0円でも、まず相談OK」確定表示 -->
+  <div class="donzoko-blk" id="donzoko">
+    <span class="donzoko-icon">💬</span>
+    <div class="donzoko-txt">
+      所持金0円でも、まず相談OK
+    </div>
+  </div>
+
+  <!-- 締めCTA（ゾーン1と同一） -->
+  <div class="z2-cta">
+
+    <!-- メインCTA（再掲）: AI通話 — 同一タブ遷移 -->
+    <a href="https://micro-tube-pace-tuning.trycloudflare.com"
+       class="btn-main"
+       id="cta-main-2">
+      とりあえず、通話してみる
+      <span class="btn-sub">24時間OK・応募じゃなくてOK</span>
+    </a>
+    <p class="micro-copy">相手はAIスタッフ。緊張いりません｜約3分｜履歴書・書類いっさい不要</p>
+
+    <!-- サブCTA（再掲）: LINE — 新規タブ -->
+    <a href="https://lin.ee/XEVQvbw"
+       class="btn-line"
+       id="cta-line-2"
+       target="_blank"
+       rel="noopener">
+      LINEで質問する
+    </a>
+
+  </div>
+
+</section>
+
+<!-- ============================================================
+     Zone 3: フッター
+     ============================================================ -->
+<footer id="zone3">
+  <strong>新滉建設株式会社</strong><br>
+  大阪府茨木市豊川5丁目20-35<br>
+  大阪府知事許可 第136162号<br>
+  <span style="display:inline-block;margin-top:6px;">&copy; 新滉建設株式会社</span>
+</footer>
+
+</body>
+</html>
