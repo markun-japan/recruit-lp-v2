@@ -1,0 +1,15 @@
+# 内部資料・非公開（GitHub Pages公開対象外）
+ads/
+research/
+review/
+ab/
+design_spec.md
+*.bak
+*.bak-r*
+*.bak-r1
+*.bak-r2b
+*.bak-r4
+_tmp*/
+# 未参照の余剰画像（公開対象は参照済み素材のみ）
+assets/team.jpg
+assets/hero_sauna_v2.jpg

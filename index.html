@@ -349,6 +349,26 @@ h1 em { color: var(--accent); font-style: normal; }
   border-top: 1px solid rgba(255,255,255,.07);
 }
 #zone3 strong { color: var(--light); font-size: 12px; }
+
+/* ===== Jobs v2 (全職種) ===== */
+.jobs-v2{padding:0;margin:0}
+.jobs-v2-inner{max-width:100%}
+.jobs-eyebrow{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--accent);margin:0 0 6px}
+.jobs-v2 h2{font-size:clamp(20px,5.5vw,26px);line-height:1.25;margin:0 0 10px;letter-spacing:-.02em;color:var(--dark)}
+.jobs-lead{font-size:12.5px;color:var(--gray);line-height:1.65;margin:0 0 14px}
+.job-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.job-card{background:#fff;border:1px solid rgba(26,26,46,.1);border-radius:10px;padding:12px 11px;min-width:0}
+.job-card.soft{background:rgba(255,255,255,.55)}
+.job-card h3{font-size:13px;margin:0 0 5px;line-height:1.35;color:var(--dark)}
+.job-pay{font-size:12px;font-weight:800;color:var(--blue);margin:0 0 5px}
+.job-pay strong{font-size:14px;color:var(--accent)}
+.job-desc{font-size:11px;color:var(--gray);line-height:1.5;margin:0}
+.job-tag{display:inline-block;margin-top:7px;font-size:10px;font-weight:800;padding:2px 7px;border-radius:999px;background:rgba(15,52,96,.08);color:var(--blue)}
+.job-tag.hot{background:rgba(233,69,96,.12);color:var(--accent)}
+.job-tag.note{background:rgba(201,162,39,.15);color:#8a6d12}
+.jobs-notes{margin:12px 0 0;padding-left:1.1em;font-size:11.5px;line-height:1.65;color:#374151}
+@media(max-width:420px){.job-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -359,7 +379,7 @@ h1 em { color: var(--accent); font-style: normal; }
 <section id="zone1">
 
   <!-- マイクロヘッダー -->
-  <p class="micro-hdr">新滉建設｜大阪府茨木市の建設会社</p>
+  <p class="micro-hdr">新滉建設｜大阪府茨木市の建設会社｜全職種・職人歓迎</p>
 
   <!-- ============================================
        PHOTO-FRAME-A  |  id="photo-a"
@@ -378,13 +398,13 @@ h1 em { color: var(--accent); font-style: normal; }
 
     <!-- 条件チップ 3枚 -->
     <div class="chips" role="list">
-      <span class="chip" role="listitem">日給11,000円〜</span>
+      <span class="chip" role="listitem">日給11,000円〜<br><small style="font-weight:700;opacity:.9;font-size:9px">現場アシスタント基準</small></span>
       <span class="chip" role="listitem">個室寮・即入寮</span>
       <span class="chip" role="listitem">日払いOK</span>
     </div>
 
     <!-- サブ行 -->
-    <p class="fv-sub">未経験OK／大阪府茨木市／寮はWi-Fi・サウナ・食事付き</p>
+    <p class="fv-sub">全職種・職人歓迎／未経験OK／大阪府茨木市／寮はWi-Fi・サウナ・食事付き</p>
 
     <!-- CTA群 -->
     <div class="cta-group">
@@ -448,12 +468,12 @@ h1 em { color: var(--accent); font-style: normal; }
 
     <!-- ============================================
          PHOTO-FRAME-B  |  id="photo-b"
-         用途: 寮の外観
-         ★仮アテ画像: assets/building.jpg
+         用途: 現場作業（職種拡大）
+         ★仮アテ画像: assets/work.jpg
          差し替え方法: img の src="..." を本番写真パスに変更
          ============================================ -->
     <div class="photo-sm" id="photo-b">
-      <img src="assets/building.jpg" alt="寮の外観" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+      <img src="assets/work.jpg" alt="現場の様子" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
     </div>
 
     <!-- ============================================
@@ -482,10 +502,56 @@ h1 em { color: var(--accent); font-style: normal; }
   <div class="income-blk">
     <div class="income-num">月収例 264,000円</div>
     <p class="income-note">
-      日給11,000円 × 24日勤務の計算例<br>
-      ※実際の収入は勤務日数により異なります
+      日給11,000円 × 24日勤務の計算例（現場アシスタント基準）<br>
+      ※実際の収入は勤務日数・職種により異なります
     </p>
   </div>
+
+
+  <!-- 募集職種と給与目安 -->
+  <section class="jobs-v2" id="jobs" aria-label="募集職種と給与目安">
+    <div class="jobs-v2-inner">
+      <p class="jobs-eyebrow">JOBS</p>
+      <h2>募集職種と給与目安</h2>
+      <p class="jobs-lead">日給11,000円〜は<strong>現場アシスタント（未経験入口）基準</strong>です。給与は経験・技能・資格・現場により決定します（確約ではありません）。</p>
+      <div class="job-grid">
+        <article class="job-card">
+          <h3>現場アシスタント（土工）</h3>
+          <p class="job-pay">日給 <strong>11,000円〜</strong></p>
+          <p class="job-desc">未経験OKの入口職種。現場の補助・土工作業から。</p>
+          <span class="job-tag">未経験歓迎</span>
+        </article>
+        <article class="job-card">
+          <h3>解体工</h3>
+          <p class="job-pay">日給 <strong>13,000〜13,500円</strong></p>
+          <p class="job-desc">建物の解体・撤去・廃材整理。経験者歓迎。</p>
+          <span class="job-tag hot">急募</span>
+        </article>
+        <article class="job-card">
+          <h3>重機オペレーター</h3>
+          <p class="job-pay">日給 <strong>14,000〜16,000円</strong></p>
+          <p class="job-desc">ユンボ等。資格と経験で変動。</p>
+        </article>
+        <article class="job-card">
+          <h3>鳶職</h3>
+          <p class="job-pay">日給 <strong>14,000〜20,000円程度</strong></p>
+          <p class="job-desc">鉄骨鳶・足場等。経験と内容によります。</p>
+          <span class="job-tag note">目安</span>
+        </article>
+        <article class="job-card soft">
+          <h3>その他専門職</h3>
+          <p class="job-pay">経験・技能により優遇</p>
+          <p class="job-desc">鉄筋・型枠・大工など。詳細は通話・面接で。</p>
+        </article>
+      </div>
+      <ul class="jobs-notes">
+        <li>通勤希望歓迎（入寮のみではありません）</li>
+        <li>入寮は別途寮費あり（具体額は面接等で確認）</li>
+        <li>熱中症対策として空調服を全員に無料貸与（規定あり）</li>
+        <li>面接場所：茨木市の事務所 または 大阪市西成区の事務所を選択可</li>
+      </ul>
+    </div>
+  </section>
 
   <!-- 実話1行: 公式サイト「従業員の声」より原文転載（2026-07-15。差し替え可） -->
   <div class="quote-ph">
