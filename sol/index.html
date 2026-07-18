@@ -118,7 +118,11 @@ gtag('config','G-L9XED4QV41',{transport_type:'beacon'});
     if(!a)return;
     var t=a.getAttribute('data-cta');
     if(t!=='call'&&t!=='line')return;
-    try{gtag('event','cta_click',{cta_type:t,lane:LANE,destination:a.href,transport_type:'beacon'});}catch(_){}
+    try{var en = (t === 'call') ? 'cta_voice' : 'cta_line';
+      gtag('event', en, {
+        src: LANE,
+        transport_type: 'beacon'
+      });}catch(_){}
   },true);
   var sticky=document.getElementById('sticky');
   var first=document.querySelector('.hero .btn-call');

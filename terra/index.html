@@ -69,7 +69,7 @@
   <script>
     window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
     gtag('js',new Date());gtag('config','G-L9XED4QV41',{transport_type:'beacon'});
-    (function(){var LANE='terra';document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[data-cta]'):null;if(!a)return;var t=a.getAttribute('data-cta');if(t!=='call'&&t!=='line')return;try{gtag('event','cta_click',{cta_type:t,lane:LANE,destination:a.href,transport_type:'beacon'})}catch(_){}} ,true)})();
+    (function(){var LANE='terra';document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[data-cta]'):null;if(!a)return;var t=a.getAttribute('data-cta');if(t!=='call'&&t!=='line')return;try{var en=(t==='call')?'cta_voice':'cta_line';gtag('event',en,{src:LANE,transport_type:'beacon'})}catch(_){}} ,true)})();
   </script>
 <script>
 /* funnel beacon 2026-07-18: non-blocking Image pixel to voice.kuro-ai.org */

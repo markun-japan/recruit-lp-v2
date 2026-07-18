@@ -311,10 +311,9 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
     var t = a.getAttribute('data-cta');
     if (t !== 'call' && t !== 'line') return;
     try {
-      gtag('event', 'cta_click', {
-        cta_type: t,
-        lane: LANE,
-        destination: a.href,
+      var en = (t === 'call') ? 'cta_voice' : 'cta_line';
+      gtag('event', en, {
+        src: LANE,
         transport_type: 'beacon'
       });
     } catch(_){}
