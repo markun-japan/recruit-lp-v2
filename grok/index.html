@@ -977,5 +977,37 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
   }, true);
 })();
 </script>
+<script>
+/* funnel beacon 2026-07-18: non-blocking Image pixel to voice.kuro-ai.org */
+(function(){
+  var BEACON = 'https://voice.kuro-ai.org/beacon';
+  var LANE = (function(){
+    try {
+      var m = location.pathname.match(/\/(grok|fugu|luna|sol|terra)\/?/i);
+      if (m) return m[1].toLowerCase();
+      if (/\/recruit-lp-v2\/?$/i.test(location.pathname) || /\/recruit-lp-v2\/index\.html$/i.test(location.pathname)) return 'main';
+      return 'main';
+    } catch(e){ return 'main'; }
+  })();
+  function fire(ev){
+    try {
+      var url = BEACON + '?ev=' + encodeURIComponent(ev) + '&src=' + encodeURIComponent(LANE) + '&_=' + Date.now();
+      var img = new Image();
+      img.referrerPolicy = 'no-referrer-when-downgrade';
+      img.src = url;
+    } catch(_){}
+  }
+  // page view
+  fire('view');
+  // CTA clicks without delaying navigation
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a[data-cta]') : null;
+    if (!a) return;
+    var t = a.getAttribute('data-cta');
+    if (t === 'call') fire('cta_voice');
+    else if (t === 'line') fire('cta_line');
+  }, true);
+})();
+</script>
 </body>
 </html>
