@@ -75,9 +75,13 @@ ul{list-style:none}
 }
 .hero-bg{
   position:absolute;inset:0;
-  background:
+  background-color:#1a1a2e;
+  background-image:
     linear-gradient(180deg,rgba(26,26,46,.42) 0%,rgba(26,26,46,.72) 48%,rgba(26,26,46,.97) 100%),
-    url("../assets/room_v2.jpg") center 62%/cover no-repeat;
+    url("../assets/room_v2.jpg");
+  background-position:center top, center top;
+  background-size:auto, contain;
+  background-repeat:no-repeat, no-repeat;
   z-index:0;
 }
 .hero-inner{
@@ -265,8 +269,16 @@ section{padding:28px 0}
   background:#ddd;
   box-shadow:var(--shadow);
 }
-.photo img{width:100%;aspect-ratio:16/10;object-fit:cover}
-.photo.tall img{aspect-ratio:4/3;object-position:center 68%}
+.photo img{width:100%;height:auto;display:block}
+.photo.fit-cover img{aspect-ratio:16/10;object-fit:cover;height:auto}
+.photo.tall{background:#1E1E35;line-height:0}
+.photo.tall img{width:100%;height:auto;display:block}
+.photo.building-shot{background:transparent;line-height:0;grid-column:1/-1}
+.photo.building-shot img{width:100%;height:auto;display:block}
+.photo.dog-shot{aspect-ratio:4/3;overflow:hidden;background:#ecece6}
+.photo.dog-shot img{width:100%;height:100%;object-fit:cover;object-position:30% 40%;display:block}
+.photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.photo-pair .photo.building-shot{grid-column:1/-1}
 .photo-cap{
   position:absolute;left:10px;bottom:10px;
   background:rgba(26,26,46,.78);
@@ -654,24 +666,24 @@ section{padding:28px 0}
         <img src="../assets/room_v2.jpg" alt="個室寮の室内" width="800" height="600" loading="eager">
         <figcaption class="photo-cap">個室</figcaption>
       </figure>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-        <figure class="photo">
+      <div class="photo-pair">
+        <figure class="photo fit-cover">
           <img src="../assets/hero_sauna.jpg" alt="寮のサウナ" width="400" height="250" loading="lazy">
           <figcaption class="photo-cap">サウナ</figcaption>
         </figure>
-        <figure class="photo">
+        <figure class="photo fit-cover">
           <img src="../assets/meal_v2.jpg" alt="寮の食事" width="400" height="250" loading="lazy">
           <figcaption class="photo-cap">食事</figcaption>
         </figure>
-        <figure class="photo">
+        <figure class="photo dog-shot">
           <img src="../assets/dog.jpg" alt="寮で飼っている犬" width="400" height="250" loading="lazy">
           <figcaption class="photo-cap">寮の看板犬</figcaption>
         </figure>
+        <figure class="photo building-shot">
+          <img src="../assets/building.jpg" alt="本社外観" width="800" height="500" loading="lazy">
+          <figcaption class="photo-cap">本社外観</figcaption>
+        </figure>
       </div>
-      <figure class="photo">
-        <img src="../assets/building.jpg" alt="寮の外観" width="800" height="500" loading="lazy">
-        <figcaption class="photo-cap">寮 外観</figcaption>
-      </figure>
     </div>
 
     <div class="feature-grid">

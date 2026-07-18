@@ -64,17 +64,15 @@ body {
 /* ------ 写真枠A ------ */
 .photo-a {
   width: 100%;
-  max-height: 30vh;
-  max-height: 30svh;
-  max-height: 30dvh; 
-  aspect-ratio: 4 / 3;
   background: #1E1E35;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
   flex-shrink: 0;
   position: relative;
+  line-height: 0;
+}
+.photo-a img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .photo-lbl {
   position: relative;
@@ -273,6 +271,30 @@ h1 em { color: var(--accent); font-style: normal; }
 }
 .photo-sm .photo-lbl { font-size: 9.5px; }
 .photo-sm .photo-lbl .lbl-title { font-size: 11px; }
+.photo-building {
+  margin-top: 8px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #E5E5DF;
+  line-height: 0;
+}
+.photo-building img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.photo-building .cap {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(26,26,46,.78);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+}
 
 /* 月収例ブロック */
 .income-blk {
@@ -388,7 +410,7 @@ h1 em { color: var(--accent); font-style: normal; }
        差し替え方法: img の src="..." を本番写真パスに変更
        ============================================ -->
   <div class="photo-a" id="photo-a">
-    <img src="assets/room_v2.jpg" alt="個室寮の様子" style="width:100%;height:100%;object-fit:cover;object-position:center 68%;" loading="eager">
+    <img src="assets/room_v2.jpg" alt="個室寮の様子" loading="eager">
   </div>
 
   <div class="fv-body">
@@ -496,6 +518,11 @@ h1 em { color: var(--accent); font-style: normal; }
       <img src="assets/meal_v2.jpg" alt="寮の食事" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
     </div>
 
+  </div>
+
+  <div class="photo-building" id="photo-building">
+    <img src="assets/building.jpg" alt="本社外観" loading="lazy">
+    <span class="cap">本社外観</span>
   </div>
 
   <!-- 月収例（計算例として明示） -->

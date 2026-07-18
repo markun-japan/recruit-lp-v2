@@ -49,8 +49,8 @@
     .accent{color:var(--accent)}
     .lead{position:relative;margin:0 0 14px;font-size:15.5px;font-weight:850;line-height:1.65;color:rgba(255,255,255,.88)}
     .lead strong{color:#fff;background:linear-gradient(transparent 62%,rgba(233,69,96,.48) 0)}
-    .photo{position:relative;margin:14px 0;border-radius:24px;overflow:hidden;background:#121223;border:1px solid rgba(255,255,255,.12);min-height:215px}
-    .photo img{width:100%;height:245px;object-fit:cover}
+    .photo{position:relative;margin:14px 0;border-radius:24px;overflow:hidden;background:#121223;border:1px solid rgba(255,255,255,.12);line-height:0}
+    .photo img{width:100%;height:auto;display:block}
     .shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,46,.88),rgba(26,26,46,.08) 58%,transparent)}
     .photo-copy{position:absolute;left:12px;right:12px;bottom:12px;display:grid;gap:8px;color:#fff}
     .photo-copy b{font-size:22px;line-height:1.2;letter-spacing:-.04em}
@@ -93,9 +93,16 @@
     .calc{border-radius:24px;padding:16px;background:linear-gradient(145deg,var(--dark),var(--blue));color:#fff;box-shadow:var(--shadow);margin-top:12px}
     .calc small{display:block;color:rgba(255,255,255,.72);font-size:12px;font-weight:850}
     .calc strong{display:block;font-size:31px;letter-spacing:-.06em;line-height:1.1;margin:4px 0;color:#fff}
-    .photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-    .tile{position:relative;border-radius:18px;overflow:hidden;background:var(--concrete);min-height:145px;box-shadow:0 10px 24px rgba(26,26,46,.11)}
-    .tile img{width:100%;height:168px;object-fit:cover}
+    .photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;align-items:start}
+    .tile{position:relative;border-radius:18px;overflow:hidden;background:var(--concrete);box-shadow:0 10px 24px rgba(26,26,46,.11);margin:0;width:100%;min-width:0;line-height:0}
+    .tile img{width:100%;height:auto;display:block;max-width:100%}
+    .tile.fit-cover img{width:100%;height:168px;object-fit:cover}
+    .tile.room-shot{background:#e8e8e2}
+    .tile.room-shot img{width:100%;height:auto;display:block}
+    .tile.building-shot{grid-column:1/-1;background:transparent}
+    .tile.building-shot img{width:100%;height:auto;display:block}
+    .tile.dog-shot{aspect-ratio:4/3;overflow:hidden;background:#e8e8e2}
+    .tile.dog-shot img{width:100%;height:100%;object-fit:cover;object-position:30% 40%;display:block}
     .cap{position:absolute;left:8px;right:8px;bottom:8px;background:rgba(26,26,46,.74);backdrop-filter:blur(6px);color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:5px 8px;text-align:center;font-size:11.5px;font-weight:950}
     .ai-box{position:relative;margin:0;border-radius:28px;padding:18px;background:linear-gradient(135deg,var(--accent),var(--orange));color:#fff;overflow:hidden;box-shadow:0 18px 42px rgba(233,69,96,.25)}
     .ai-box:after{content:"3min";position:absolute;right:-8px;top:-28px;font-size:76px;font-weight:950;letter-spacing:-.08em;color:rgba(255,255,255,.14)}
@@ -181,10 +188,11 @@
           </article>
         </div>
         <div class="photos" aria-label="寮設備写真">
-          <figure class="tile"><img src="../assets/hero_sauna.jpg" alt="寮設備のサウナ" width="360" height="320" loading="lazy"><figcaption class="cap">サウナ</figcaption></figure>
-          <figure class="tile"><img src="../assets/meal_v2.jpg" alt="寮の食事" width="360" height="320" loading="lazy"><figcaption class="cap">食事付き</figcaption></figure>
-          <figure class="tile"><img src="../assets/building.jpg" alt="寮の外観" width="360" height="320" loading="lazy"><figcaption class="cap">寮外観</figcaption></figure>
-          <figure class="tile"><img src="../assets/room_v2.jpg" alt="個室寮の部屋" width="360" height="320" loading="lazy"><figcaption class="cap">個室</figcaption></figure><figure class="tile"><img src="../assets/dog.jpg" alt="寮で飼っている犬" width="360" height="320" loading="lazy"><figcaption class="cap">寮の看板犬</figcaption></figure>
+          <figure class="tile fit-cover"><img src="../assets/hero_sauna.jpg" alt="寮設備のサウナ" width="360" height="320" loading="lazy"><figcaption class="cap">サウナ</figcaption></figure>
+          <figure class="tile fit-cover"><img src="../assets/meal_v2.jpg" alt="寮の食事" width="360" height="320" loading="lazy"><figcaption class="cap">食事付き</figcaption></figure>
+          <figure class="tile room-shot"><img src="../assets/room_v2.jpg" alt="個室寮の部屋" width="360" height="320" loading="lazy"><figcaption class="cap">個室</figcaption></figure>
+          <figure class="tile dog-shot"><img src="../assets/dog.jpg" alt="寮で飼っている犬" width="360" height="320" loading="lazy"><figcaption class="cap">寮の看板犬</figcaption></figure>
+          <figure class="tile building-shot"><img src="../assets/building.jpg" alt="本社外観" width="360" height="320" loading="lazy"><figcaption class="cap">本社外観</figcaption></figure>
         </div>
       </section>
 
