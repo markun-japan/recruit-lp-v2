@@ -42,6 +42,19 @@ a.btn-call, a.btn.btn-call, a.cta.call, .cta a.btn-call {
   color:#fff !important;
   border-color:rgba(255,255,255,.4) !important;
 }
+
+/* LINE open fix 2026-07-20: X in-app safe CTA */
+#lp-line-help{display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:80;background:#111827;color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:14px 14px 12px;box-shadow:0 18px 40px rgba(0,0,0,.35);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif}
+#lp-line-help.show{display:block}
+#lp-line-help h2{margin:0 0 6px;font-size:15px;line-height:1.35;font-weight:900}
+#lp-line-help p{margin:0 0 10px;font-size:12.5px;line-height:1.55;color:#d1d5db}
+#lp-line-help .lp-line-help-actions{display:grid;gap:8px}
+#lp-line-help a,#lp-line-help button{appearance:none;-webkit-appearance:none;display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:12px;border:0;padding:10px 12px;font-size:14px;font-weight:900;text-decoration:none;cursor:pointer}
+#lp-line-help .lp-line-help-line{background:#06C755;color:#fff}
+#lp-line-help .lp-line-help-copy{background:#1f2937;color:#fff;border:1px solid rgba(255,255,255,.12)}
+#lp-line-help .lp-line-help-close{background:transparent;color:#9ca3af;min-height:36px;font-size:12px;font-weight:700}
+#lp-line-help .lp-line-help-note{margin:8px 0 0;font-size:11.5px;color:#9ca3af;min-height:1.2em}
+
 </style>
 </head>
 <body>
@@ -61,7 +74,7 @@ a.btn-call, a.btn.btn-call, a.cta.call, .cta a.btn-call {
       <div class="benefit"><b>食事付き</b></div>
     </div>
     <div class="cta-stack">
-      <a class="btn btn-line" data-cta="line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener" id="cta-line-1"><span>LINEで空き確認 → 今日中に返事<small>1分で送信・電話不要・履歴書いらない</small></span></a>
+      <a class="btn btn-line" data-cta="line" href="https://line.me/R/ti/p/@597uhrpy" rel="noopener" id="cta-line-1"><span>LINEで空き確認 → 今日中に返事<small>1分で送信・電話不要・履歴書いらない</small></span></a>
       <p class="cta-note">個室寮の空き・即入寮の相談からでOK。履歴書不要。</p>
       <a class="btn btn-call" data-cta="call" href="https://voice.kuro-ai.org/?src=sol"><span>電話が苦手でも、AI相手に30秒<small>ブラウザだけ・応募じゃなくてOK・24時間</small></span></a>
     </div>
@@ -122,7 +135,7 @@ a.btn-call, a.btn.btn-call, a.cta.call, .cta a.btn-call {
       </ul>
     </div>
     <div class="cta-stack" style="margin-top:18px">
-      <a class="btn btn-line" data-cta="line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener"><span>LINEで空き確認 → 今日中に返事<small>1分で送信・電話不要・履歴書いらない</small></span></a>
+      <a class="btn btn-line" data-cta="line" href="https://line.me/R/ti/p/@597uhrpy" rel="noopener"><span>LINEで空き確認 → 今日中に返事<small>1分で送信・電話不要・履歴書いらない</small></span></a>
       <a class="btn btn-call" data-cta="call" href="https://voice.kuro-ai.org/?src=sol"><span>電話が苦手でも、AI相手に30秒<small>ブラウザだけ・応募じゃなくてOK・24時間</small></span></a>
     </div>
   </div>
@@ -135,7 +148,7 @@ a.btn-call, a.btn.btn-call, a.cta.call, .cta a.btn-call {
   </div>
 </footer>
 <div class="sticky-space" aria-hidden="true"></div>
-<div class="sticky" id="sticky" aria-label="固定LINEボタン"><a class="btn btn-line" data-cta="line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener">LINEで空き確認 → 今日中に返事</a></div>
+<div class="sticky" id="sticky" aria-label="固定LINEボタン"><a class="btn btn-line" data-cta="line" href="https://line.me/R/ti/p/@597uhrpy" rel="noopener">LINEで空き確認 → 今日中に返事</a></div>
 
 <!-- ANALYTICS_SLOT -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9XED4QV41"></script>
@@ -196,5 +209,149 @@ gtag('config','G-L9XED4QV41',{transport_type:'beacon'});
   }, true);
 })();
 </script>
+
+<!-- lp-line-open-fix-20260720 help -->
+<div id="lp-line-help" role="dialog" aria-label="LINEを開く案内" aria-live="polite">
+  <h2>LINEが開かない時</h2>
+  <p>Xの中のブラウザだとLINEがブロックされることがあります。下のボタンか、右上メニュー→Safari/Chromeで開いてからタップしてください。</p>
+  <div class="lp-line-help-actions">
+    <a class="lp-line-help-line" id="lp-line-help-open" href="https://line.me/R/ti/p/@597uhrpy" rel="noopener">もう一度LINEで空き確認</a>
+    <button type="button" class="lp-line-help-copy" id="lp-line-help-copy">LINEリンクをコピー</button>
+    <button type="button" class="lp-line-help-close" id="lp-line-help-close">閉じる</button>
+  </div>
+  <p class="lp-line-help-note" id="lp-line-help-note"></p>
+</div>
+
+
+<script>
+/* lp-line-open-fix-20260720 */
+(function(){
+  var LINE_URL = 'https://line.me/R/ti/p/@597uhrpy';
+  var LINE_SHORT = 'https://lin.ee/XEVQvbw';
+  function detect(){
+    var ua = String(navigator.userAgent || '');
+    var lower = ua.toLowerCase();
+    var isIOS = /iphone|ipad|ipod/i.test(ua);
+    var isAndroid = /android/i.test(ua);
+    var isX = /twitter/i.test(ua) || /twitterandroid/i.test(lower) || (/\bx\//i.test(ua) && (isIOS || isAndroid));
+    var isLine = /line\//i.test(ua);
+    var isFB = /fban|fbav|fb_iab|instagram/i.test(ua);
+    var isAndroidWv = isAndroid && (/\bwv\b/.test(lower) || /;\s*wv\)/i.test(ua));
+    var isIOSWebView = isIOS && /applewebkit/i.test(ua) && !/safari/i.test(ua) && !/crios|fxios|edgios|opios|opt\//i.test(lower);
+    var inApp = !!(isX || isLine || isFB || isAndroidWv || isIOSWebView);
+    return {ua:ua, isIOS:isIOS, isAndroid:isAndroid, isX:isX, inApp:inApp};
+  }
+  function isLineAnchor(a){
+    if (!a || !a.getAttribute) return false;
+    if ((a.getAttribute('data-cta') || '') === 'line') return true;
+    var href = a.getAttribute('href') || '';
+    return /lin\.ee\/XEVQvbw/i.test(href) || /line\.me\/R\/ti\/p\//i.test(href);
+  }
+  function hardenAnchors(){
+    var nodes = document.querySelectorAll('a[data-cta="line"], a[href*="lin.ee/XEVQvbw"], a[href*="line.me/R/ti/p/"]');
+    for (var i = 0; i < nodes.length; i++) {
+      var a = nodes[i];
+      a.setAttribute('href', LINE_URL);
+      a.setAttribute('data-line-url', LINE_URL);
+      a.setAttribute('data-line-short', LINE_SHORT);
+      a.removeAttribute('target');
+      var rel = (a.getAttribute('rel') || '').toLowerCase();
+      if (rel.indexOf('noopener') === -1) a.setAttribute('rel', (rel ? rel + ' ' : '') + 'noopener');
+    }
+  }
+  function showHelp(msg){
+    var box = document.getElementById('lp-line-help');
+    var note = document.getElementById('lp-line-help-note');
+    if (!box) return;
+    box.classList.add('show');
+    if (note) note.textContent = msg || '';
+  }
+  function hideHelp(){
+    var box = document.getElementById('lp-line-help');
+    if (box) box.classList.remove('show');
+  }
+  function copyText(text){
+    return new Promise(function(resolve, reject){
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(resolve).catch(function(){ fallback(); });
+          return;
+        }
+      } catch (e) {}
+      function fallback(){
+        try {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          var ok = document.execCommand('copy');
+          ta.remove();
+          if (ok) resolve(); else reject(new Error('copy failed'));
+        } catch (err) { reject(err); }
+      }
+      fallback();
+    });
+  }
+  function openLine(){
+    var info = detect();
+    // Prefer canonical HTTPS friend-add URL in the same tab.
+    // X/iOS in-app often swallows target=_blank and bounces back to the LP.
+    try {
+      if (info.isAndroid && info.inApp) {
+        var intent = 'intent://ti/p/@597uhrpy#Intent;scheme=line;package=jp.naver.line.android;S.browser_fallback_url=' + encodeURIComponent(LINE_URL) + ';end';
+        window.location.href = intent;
+      } else {
+        window.location.href = LINE_URL;
+      }
+    } catch (e) {
+      try { window.location.assign(LINE_URL); } catch (_) {}
+    }
+    setTimeout(function(){
+      try {
+        if (!document.hidden) {
+          showHelp(info.isX || info.inApp
+            ? 'まだこの画面にいます。右上メニュー→Safari/Chromeで開くか、リンクをコピーしてください。'
+            : '開かない時はリンクをコピーしてLINEで開いてください。');
+        }
+      } catch (_) {}
+    }, 900);
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (!isLineAnchor(a)) return;
+    e.preventDefault();
+    if (e.stopPropagation) e.stopPropagation();
+    openLine();
+  }, true);
+  document.addEventListener('DOMContentLoaded', hardenAnchors);
+  hardenAnchors();
+  document.addEventListener('DOMContentLoaded', function(){
+    var openBtn = document.getElementById('lp-line-help-open');
+    var copyBtn = document.getElementById('lp-line-help-copy');
+    var closeBtn = document.getElementById('lp-line-help-close');
+    if (openBtn) {
+      openBtn.setAttribute('href', LINE_URL);
+      openBtn.addEventListener('click', function(ev){
+        ev.preventDefault();
+        openLine();
+      });
+    }
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function(){
+        copyText(LINE_URL).then(function(){
+          showHelp('コピーした。Safari/ChromeかLINEに貼って開いてください。');
+        }).catch(function(){
+          showHelp('コピー失敗。このリンクを長押し: ' + LINE_URL);
+        });
+      });
+    }
+    if (closeBtn) closeBtn.addEventListener('click', hideHelp);
+  });
+})();
+</script>
+
 </body>
 </html>
