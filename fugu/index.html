@@ -159,6 +159,12 @@ a.btn-call, a.btn.btn-call, a.cta.call, .cta a.btn-call {
 }
 .sticky .btn-line{min-height:54px!important}
 .sticky .btn-call{min-height:54px!important;font-size:13px!important}
+
+/* sticky clearance 20260720 */
+body{padding-bottom:calc(78px + env(safe-area-inset-bottom,0px)) !important}
+.sticky-inner{grid-template-columns:1fr 72px !important;align-items:stretch}
+.sticky .btn-call{font-size:12px !important;padding:8px 6px !important;line-height:1.2;white-space:normal}
+.sticky .btn-line{font-size:14px !important;padding:10px 12px !important;white-space:normal;line-height:1.25}
 </style>
 </head>
 <body>
@@ -336,7 +342,7 @@ a.btn-call, a.btn.btn-call, a.cta.call, .cta a.btn-call {
     <div class="sticky" aria-label="固定応募ボタン">
     <div class="sticky-inner">
       <a data-cta="line" class="btn btn-line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener">LINEで空き確認 → 今日中に返事</a>
-      <a data-cta="call" class="btn btn-call" href="https://voice.kuro-ai.org/?src=fugu" title="AI音声"><span aria-hidden="true">AI</span><span class="sr-only">電話が苦手でも、AI相手に30秒</span></a>
+      <a data-cta="call" class="btn btn-call" href="https://voice.kuro-ai.org/?src=fugu" title="AI音声"><span aria-hidden="true">AI<br>30秒</span><span class="sr-only">電話が苦手でも、AI相手に30秒</span></a>
     </div>
   </div>
   <!-- ANALYTICS_SLOT -->
