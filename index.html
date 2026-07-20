@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>今夜から住める、明日から稼げる | 新滉建設 求人</title>
+<title>今日決まる。今夜、住める。｜新滉建設 求人</title>
 <style>
 /* =====================================================
    CSS Variables — 新滉建設ブランドカラー (brand-guidelines準拠)
@@ -153,22 +153,29 @@ h1 em { color: var(--accent); font-style: normal; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 56px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 18px;
-  font-weight: 800;
-  border-radius: 8px;
+  min-height: 48px;
+  background: transparent;
+  color: rgba(245,245,240,.88);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border-radius: 12px;
   text-decoration: none;
-  padding: 10px 16px;
-  text-align: center;
-  letter-spacing: .02em;
+  border: 1px solid rgba(245,245,240,.28);
+  box-shadow: none;
+  transition: transform .15s, opacity .15s;
   -webkit-tap-highlight-color: transparent;
-  box-shadow: 0 4px 18px rgba(233,69,96,.38);
-  transition: box-shadow .15s, transform .1s;
+  padding: 10px 14px 8px;
 }
-.btn-main:active { transform: scale(.98); box-shadow: 0 2px 8px rgba(233,69,96,.2); }
-.btn-main .btn-sub { font-size: 13px; font-weight: 600; opacity: .9; }
+.btn-main:active { transform: scale(0.98); opacity: .9; }
+.btn-main .btn-sub {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.75;
+  margin-top: 2px;
+  letter-spacing: 0;
+}
 
 /* マイクロコピー */
 .micro-copy {
@@ -182,20 +189,29 @@ h1 em { color: var(--accent); font-style: normal; }
 /* サブCTAボタン（LINE） */
 .btn-line {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  min-height: 44px;
-  background: transparent;
-  color: var(--light);
-  font-size: 15px;
-  font-weight: 600;
-  border: 1.5px solid rgba(245,245,240,.35);
-  border-radius: 8px;
+  gap: 2px;
+  min-height: 58px;
+  background: #06C755;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 900;
+  border-radius: 14px;
   text-decoration: none;
-  padding: 10px 16px;
+  border: none;
+  box-shadow: 0 10px 28px rgba(6,199,85,.40);
   -webkit-tap-highlight-color: transparent;
-  transition: border-color .15s;
+  padding: 12px 16px 10px;
+  letter-spacing: .02em;
+}
+.btn-line .btn-sub {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.9;
+  margin-top: 2px;
 }
 .btn-line:active { border-color: var(--light); }
 
@@ -391,6 +407,12 @@ h1 em { color: var(--accent); font-style: normal; }
 .jobs-notes{margin:12px 0 0;padding-left:1.1em;font-size:11.5px;line-height:1.65;color:#374151}
 @media(max-width:420px){.job-grid{grid-template-columns:1fr}}
 
+
+/* FV sticky LINE 2026-07-20 */
+.lp-sticky-line{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(26,26,46,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.12);box-shadow:0 -8px 28px rgba(0,0,0,.28);transform:translateY(110%);opacity:0;pointer-events:none;transition:transform .22s ease,opacity .22s ease}
+.lp-sticky-line.show{transform:translateY(0);opacity:1;pointer-events:auto}
+.lp-sticky-line a{display:flex;align-items:center;justify-content:center;min-height:54px;border-radius:14px;background:#06C755;color:#fff!important;font-weight:900;font-size:16px;text-decoration:none;letter-spacing:.02em;box-shadow:0 10px 24px rgba(6,199,85,.35)}
+body.lp-has-sticky{padding-bottom:88px}
 </style>
 </head>
 <body>
@@ -416,42 +438,42 @@ h1 em { color: var(--accent); font-style: normal; }
   <div class="fv-body">
 
     <!-- H1 -->
-    <h1>今夜から、<em>住める。</em><br>明日から、<em>稼げる。</em></h1>
+    <h1>今日決まる。<br><em>今夜、住める。</em></h1>
 
     <!-- 条件チップ 3枚 -->
     <div class="chips" role="list">
-      <span class="chip" role="listitem">日給11,000円〜<br><small style="font-weight:700;opacity:.9;font-size:9px">現場アシスタント基準</small></span>
       <span class="chip" role="listitem">個室寮・即入寮</span>
-      <span class="chip" role="listitem">日払いOK</span>
+      <span class="chip" role="listitem">今夜住める相談OK</span>
+      <span class="chip" role="listitem">日払い対応</span>
     </div>
 
     <!-- サブ行 -->
-    <p class="fv-sub">全職種・職人歓迎／未経験OK／大阪府茨木市／寮はWi-Fi・サウナ・食事付き</p>
+    <p class="fv-sub">サウナ・Wi-Fi・食事付き／所持金0でも相談OK／未経験OK／日給11,000円〜（現場アシスタント基準）／大阪府茨木市</p>
 
-    <!-- CTA群 -->
+    <!-- CTA群: 主CTA=LINE / voiceは第二導線 -->
     <div class="cta-group">
 
-      <!-- CTA誘い文 -->
-      <p class="cta-lead">応募を決めてなくて大丈夫。話を聞くだけでOKです。</p>
+      <p class="cta-lead">応募を決めてなくて大丈夫。空きだけ先に確認してOK。</p>
 
-      <!-- メインCTA: AI通話 — 同一タブ遷移 -->
-      <a href="https://voice.kuro-ai.org/?src=main"
-         class="btn-main"
-         data-cta="call"
-         id="cta-main-1">
-        とりあえず、通話してみる
-        <span class="btn-sub">24時間OK・応募じゃなくてOK</span>
-      </a>
-      <p class="micro-copy">相手はAIスタッフ。緊張いりません｜約3分｜履歴書・書類いっさい不要</p>
-
-      <!-- サブCTA: LINE — 新規タブ -->
+      <!-- メインCTA: LINE -->
       <a href="https://lin.ee/XEVQvbw"
          class="btn-line"
          data-cta="line"
          id="cta-line-1"
          target="_blank"
          rel="noopener">
-        LINEで質問する
+        LINEで空き確認 → 今日中に返事
+        <span class="btn-sub">1分で送信・電話不要・履歴書いらない</span>
+      </a>
+      <p class="micro-copy">個室寮の空き・即入寮の相談からでOK｜履歴書不要</p>
+
+      <!-- 第二導線: AI音声 -->
+      <a href="https://voice.kuro-ai.org/?src=main"
+         class="btn-main"
+         data-cta="call"
+         id="cta-main-1">
+        電話が苦手でも、AI相手に30秒
+        <span class="btn-sub">ブラウザだけ・応募じゃなくてOK・24時間</span>
       </a>
 
     </div>
@@ -606,23 +628,24 @@ h1 em { color: var(--accent); font-style: normal; }
   <div class="z2-cta">
 
     <!-- メインCTA（再掲）: AI通話 — 同一タブ遷移 -->
-    <a href="https://voice.kuro-ai.org/?src=main"
-       class="btn-main"
-       data-cta="call"
-       id="cta-main-2">
-      とりあえず、通話してみる
-      <span class="btn-sub">24時間OK・応募じゃなくてOK</span>
-    </a>
-    <p class="micro-copy">相手はAIスタッフ。緊張いりません｜約3分｜履歴書・書類いっさい不要</p>
-
-    <!-- サブCTA（再掲）: LINE — 新規タブ -->
     <a href="https://lin.ee/XEVQvbw"
        class="btn-line"
        data-cta="line"
        id="cta-line-2"
        target="_blank"
        rel="noopener">
-      LINEで質問する
+      LINEで空き確認 → 今日中に返事
+      <span class="btn-sub">1分で送信・電話不要・履歴書いらない</span>
+    </a>
+    <p class="micro-copy">個室寮の空き・即入寮の相談からでOK｜履歴書不要</p>
+
+    <!-- 第二導線: AI音声 -->
+    <a href="https://voice.kuro-ai.org/?src=main"
+       class="btn-main"
+       data-cta="call"
+       id="cta-main-2">
+      電話が苦手でも、AI相手に30秒
+      <span class="btn-sub">ブラウザだけ・応募じゃなくてOK・24時間</span>
     </a>
 
   </div>
@@ -693,6 +716,29 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
     if (t === 'call') fire('cta_voice');
     else if (t === 'line') fire('cta_line');
   }, true);
+})();
+</script>
+
+<!-- sticky LINE CTA 2026-07-20 -->
+<div class="lp-sticky-line" id="lp-sticky-line" aria-label="LINEで空き確認">
+  <a href="https://lin.ee/XEVQvbw" data-cta="line" target="_blank" rel="noopener">LINEで空き確認 → 今日中に返事</a>
+</div>
+<script>
+(function(){
+  try {
+    document.documentElement.classList.add('lp-has-sticky');
+    document.body.classList.add('lp-has-sticky');
+    var sticky = document.getElementById('lp-sticky-line');
+    var primary = document.querySelector('#cta-line-1');
+    if (!sticky) return;
+    if ('IntersectionObserver' in window && primary) {
+      new IntersectionObserver(function(entries){
+        sticky.classList.toggle('show', !entries[0].isIntersecting);
+      }, {threshold: 0, rootMargin: '0px'}).observe(primary);
+    } else {
+      sticky.classList.add('show');
+    }
+  } catch(_){}
 })();
 </script>
 </body>
