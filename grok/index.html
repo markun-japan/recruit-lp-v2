@@ -596,6 +596,18 @@ a.btn-call, a.btn.btn-call, a.cta.call, .cta a.btn-call {
 .foot-cta,.footer-cta,.bar-cta,.fixed-bar,.bottom-bar{flex-wrap:wrap}
 .btn.btn-line.light,.btn.btn-call{white-space:normal;line-height:1.25;padding:10px 12px}
 .btn .btn-sub{white-space:normal}
+
+/* grok sticky single 20260720b */
+.lp-sticky-line a{font-size:15px;padding:0 14px;white-space:normal;line-height:1.25;text-align:center}
+.foot-cta{position:fixed;left:0;right:0;bottom:0;z-index:35;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(26,26,46,.94);display:none}
+/* prefer lp-sticky-line; hide duplicate foot if both */
+body.lp-has-sticky .foot-cta{display:none !important}
+
+/* grok fixed line only 20260720c */
+.fixed-cta-inner{grid-template-columns:1fr !important}
+.fixed-cta .btn-line{min-height:54px !important;font-size:15px !important;background:#06C755 !important;color:#fff !important;border:none !important;box-shadow:0 10px 24px rgba(6,199,85,.35) !important;white-space:normal;line-height:1.25}
+body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+.lp-sticky-line{display:none !important} /* avoid double bar; fixed-cta is primary */
 </style>
 </head>
 <body>
@@ -1002,13 +1014,9 @@ a.btn-call, a.btn.btn-call, a.cta.call, .cta a.btn-call {
 </section>
 
 <!-- Fixed CTA -->
-<div class="fixed-cta" role="region" aria-label="応募アクション">
+<div class="fixed-cta" role="region" aria-label="LINEで空き確認">
   <div class="fixed-cta-inner">
     <a class="btn btn-line light" data-cta="line" href="https://lin.ee/XEVQvbw" target="_blank" rel="noopener">LINEで空き確認 → 今日中に返事</a>
-    <a class="btn btn-call" data-cta="call" href="https://voice.kuro-ai.org/?src=grok">
-      AIに30秒
-      <span class="btn-sub">電話苦手OK</span>
-    </a>
   </div>
 </div>
 
@@ -1069,27 +1077,5 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
 })();
 </script>
 
-<!-- sticky LINE CTA 2026-07-20 -->
-<div class="lp-sticky-line" id="lp-sticky-line" aria-label="LINEで空き確認">
-  <a href="https://lin.ee/XEVQvbw" data-cta="line" target="_blank" rel="noopener">LINEで空き確認 → 今日中に返事</a>
-</div>
-<script>
-(function(){
-  try {
-    document.documentElement.classList.add('lp-has-sticky');
-    document.body.classList.add('lp-has-sticky');
-    var sticky = document.getElementById('lp-sticky-line');
-    var primary = document.querySelector('#cta-line-1');
-    if (!sticky) return;
-    if ('IntersectionObserver' in window && primary) {
-      new IntersectionObserver(function(entries){
-        sticky.classList.toggle('show', !entries[0].isIntersecting);
-      }, {threshold: 0, rootMargin: '0px'}).observe(primary);
-    } else {
-      sticky.classList.add('show');
-    }
-  } catch(_){}
-})();
-</script>
 </body>
 </html>
