@@ -1,1037 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="robots" content="noindex">
-<meta name="description" content="今日決まる。今夜住める相談OK。個室寮（サウナ・Wi-Fi・食事付き）・即入寮・日払い対応・所持金0でも相談OK・未経験OK。日給11,000円〜（現場アシスタント基準）。大阪府茨木市。">
-<title>今日決まる。今夜、住める。｜新滉建設 採用</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="description" content="求人票の前に、生活の話を。釣り、食卓、個室寮、サウナ、Wi-Fi、筋トレルーム、仲間の時間まで含めて、新滉建設の働き方を写真で紹介します。日給11,000円〜、未経験OK、即入寮相談OK。" />
+<title>求人票の前に、生活の話を。｜新滉建設 採用</title>
+<link rel="preload" as="image" href="../assets/fishing_bplus_20260722_hero_catch.webp" />
 <style>
-/* =========================================================
-   GROK LANE — 新滉建設 採用LP v2
-   作風: 数字先出し・直球・おもろくてちゃんとしてる
-   ========================================================= */
 :root{
-  --dark:#1A1A2E;
-  --light:#F5F5F0;
-  --accent:#E94560;
-  --accent-deep:#c7364f;
-  --blue:#0F3460;
-  --gold:#C9A227;
-  --gray:#6B7280;
-  --cgray:#9CA3AF;
-  --orange:#FF6B35;
+  --coal:#121b1f;
+  --deep:#071d2a;
+  --sea:#0b3146;
+  --sea2:#124b5e;
+  --paper:#f4eadb;
+  --paper2:#fff8ea;
+  --ink:#241f1b;
+  --muted:#6f665d;
+  --amber:#d08344;
+  --gold:#caa157;
+  --line:#06c755;
+  --line2:#04a946;
+  --cream:#fff4df;
   --white:#fff;
-  --card:#fff;
-  --soft:#E8E8E3;
-  --shadow:0 10px 28px rgba(26,26,46,.14);
-  --radius:14px;
-  --safe-t:env(safe-area-inset-top,0px);
+  --stroke:rgba(36,31,27,.13);
+  --shadow:0 22px 70px rgba(18,27,31,.24);
   --safe-b:env(safe-area-inset-bottom,0px);
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{
-  font-family:'Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic UI','Yu Gothic',Meiryo,system-ui,sans-serif;
-  background:var(--dark);
-  color:var(--light);
-  line-height:1.55;
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-  padding-bottom:calc(78px + var(--safe-b));
-}
-img{display:block;max-width:100%;height:auto}
-a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
-ul{list-style:none}
-.wrap{width:min(100%,440px);margin:0 auto;padding:0 16px}
-
-/* Top bar */
-.topbar{
-  background:var(--blue);
-  color:#fff;
-  font-size:11.5px;
-  font-weight:800;
-  letter-spacing:.04em;
-  text-align:center;
-  padding:calc(8px + var(--safe-t)) 12px 8px;
-}
-.lane-tag{
-  position:fixed;top:calc(10px + var(--safe-t));right:10px;z-index:40;
-  font-size:10px;font-weight:900;letter-spacing:.1em;
-  padding:4px 8px;border-radius:999px;
-  background:rgba(255,255,255,.12);color:rgba(255,255,255,.75);
-  pointer-events:none;
-}
-
-/* Hero */
-.hero{
-  position:relative;
-  background:var(--dark);
-  color:#fff;
-  overflow:hidden;
-  min-height:min(100svh,760px);
-  display:flex;
-  flex-direction:column;
-}
-.hero-bg{
-  position:absolute;inset:0;
-  background-color:#1a1a2e;
-  background-image:
-    linear-gradient(180deg,rgba(26,26,46,.42) 0%,rgba(26,26,46,.72) 48%,rgba(26,26,46,.97) 100%),
-    url("../assets/room_v2.jpg");
-  background-position:center top, center top;
-  background-size:auto, contain;
-  background-repeat:no-repeat, no-repeat;
-  z-index:0;
-}
-.hero-inner{
-  position:relative;z-index:1;
-  width:min(100%,440px);
-  margin:0 auto;
-  padding:18px 16px 24px;
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  gap:12px;
-}
-.brand-row{
-  display:flex;align-items:center;justify-content:space-between;gap:10px;
-  margin-bottom:2px;
-}
-.brand{font-size:12.5px;font-weight:900;letter-spacing:.08em;opacity:.94}
-.live{
-  display:inline-flex;align-items:center;gap:6px;
-  font-size:11px;font-weight:800;
-  padding:5px 10px;border-radius:999px;
-  background:rgba(233,69,96,.18);
-  border:1px solid rgba(233,69,96,.55);
-  color:#ffd5dc;
-}
-.live i{
-  width:7px;height:7px;border-radius:50%;background:var(--accent);
-  box-shadow:0 0 0 0 rgba(233,69,96,.65);
-  animation:pulse 1.6s infinite;
-}
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(233,69,96,.55)}
-  70%{box-shadow:0 0 0 8px rgba(233,69,96,0)}
-  100%{box-shadow:0 0 0 0 rgba(233,69,96,0)}
-}
-.kicker{
-  display:inline-block;align-self:flex-start;
-  background:var(--gold);color:var(--dark);
-  font-size:12px;font-weight:900;
-  padding:5px 10px;border-radius:6px;letter-spacing:.02em;
-}
-.hero h1{
-  font-size:clamp(28px,8.4vw,36px);
-  line-height:1.18;
-  font-weight:900;
-  letter-spacing:-.03em;
-}
-.hero h1 em{font-style:normal;color:#ffb3c0}
-.hero-sub{
-  font-size:14px;
-  color:rgba(255,255,255,.88);
-  line-height:1.65;
-}
-.hero-sub strong{color:#fff;font-weight:900}
-.stat-row{
-  display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;
-}
-.stat{
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.15);
-  border-radius:12px;
-  padding:10px 6px;
-  text-align:center;
-  backdrop-filter:blur(4px);
-}
-.stat b{
-  display:block;
-  font-size:13.5px;
-  font-weight:900;
-  line-height:1.25;
-  color:#fff;
-}
-.stat span{
-  display:block;margin-top:3px;
-  font-size:10px;font-weight:700;
-  color:rgba(255,255,255,.72);
-}
-.badge-row{display:flex;flex-wrap:wrap;gap:6px}
-.badge{
-  font-size:11px;font-weight:800;
-  padding:6px 10px;border-radius:999px;
-  background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.18);
-}
-.badge.hot{
-  background:rgba(233,69,96,.22);
-  border-color:rgba(233,69,96,.5);
-  color:#ffd0d8;
-}
-
-/* CTA */
-.cta-stack{display:flex;flex-direction:column;gap:9px}
-.btn{
-  display:flex;align-items:center;justify-content:center;
-  min-height:54px;
-  padding:12px 14px;
-  border-radius:14px;
-  font-weight:900;
-  font-size:16px;
-  letter-spacing:.02em;
-  text-align:center;
-  transition:transform .12s ease;
-}
-.btn:active{transform:scale(.98)}
-.btn-call{
-  background:linear-gradient(180deg,#ff5a75 0%,var(--accent) 55%,var(--accent-deep) 100%);
-  color:#fff;
-  box-shadow:0 10px 24px rgba(233,69,96,.38), inset 0 1px 0 rgba(255,255,255,.22);
-  flex-direction:column;gap:2px;
-}
-.btn-call .btn-sub{
-  font-size:11px;font-weight:700;opacity:.92;letter-spacing:0;
-}
-.btn-line{
-  min-height:48px;
-  background:rgba(255,255,255,.08);
-  border:1.5px solid rgba(255,255,255,.28);
-  color:#fff;
-  font-size:14.5px;font-weight:800;
-}
-.btn-line.light{
-  background:#fff;color:var(--dark);border-color:#e5e7eb;
-}
-.cta-note{
-  font-size:11.5px;
-  color:rgba(255,255,255,.72);
-  text-align:center;
-  line-height:1.55;
-}
-.cta-note.dark{color:var(--gray)}
-
-/* Sections */
-section{padding:28px 0}
-.sec-title{
-  font-size:clamp(20px,5.6vw,24px);
-  font-weight:900;
-  line-height:1.3;
-  letter-spacing:-.02em;
-  margin-bottom:8px;
-  color:var(--dark);
-}
-.sec-lead{
-  font-size:13.5px;
-  color:var(--gray);
-  line-height:1.65;
-  margin-bottom:16px;
-}
-.tag-gold{
-  display:inline-block;
-  background:rgba(201,162,39,.16);
-  color:#8a7018;
-  font-size:11px;font-weight:900;
-  padding:4px 8px;border-radius:6px;
-  margin-bottom:8px;
-}
-
-/* Why */
-.why{background:var(--light);color:var(--dark)}
-.why-grid{display:grid;gap:10px}
-.why-item{
-  display:grid;grid-template-columns:44px 1fr;gap:12px;
-  background:#fff;
-  border:1px solid #ebebe4;
-  border-radius:12px;
-  padding:14px;
-  box-shadow:0 4px 14px rgba(26,26,46,.04);
-}
-.why-num{
-  width:44px;height:44px;border-radius:12px;
-  background:var(--blue);color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  font-weight:900;font-size:14px;
-}
-.why-item h3{font-size:15px;font-weight:900;margin-bottom:3px}
-.why-item p{font-size:13px;color:var(--gray);line-height:1.55}
-
-/* Dorm */
-.dorm{background:#fff;color:var(--dark)}
-.photo-stack{display:grid;gap:10px;margin-bottom:14px}
-.photo{
-  position:relative;
-  border-radius:14px;
-  overflow:hidden;
-  background:#ddd;
-  box-shadow:var(--shadow);
-}
-.photo img{width:100%;height:auto;display:block}
-.photo.fit-cover img{aspect-ratio:16/10;object-fit:cover;height:auto}
-.photo.tall{background:#1E1E35;line-height:0}
-.photo.tall img{width:100%;height:auto;display:block}
-.photo.building-shot{background:transparent;line-height:0;grid-column:1/-1}
-.photo.building-shot img{width:100%;height:auto;display:block}
-.photo.dog-shot{aspect-ratio:4/3;overflow:hidden;background:#ecece6}
-.photo.dog-shot img{width:100%;height:100%;object-fit:cover;object-position:30% 40%;display:block}
-.photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.photo-pair .photo.building-shot{grid-column:1/-1}
-.photo-cap{
-  position:absolute;left:10px;bottom:10px;
-  background:rgba(26,26,46,.78);
-  color:#fff;
-  font-size:11px;font-weight:800;
-  padding:5px 9px;border-radius:999px;
-}
-.feature-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:8px;
-}
-.feature{
-  background:var(--light);
-  border:1px solid #ebebe4;
-  border-radius:12px;
-  padding:12px 10px;
-  text-align:center;
-}
-.feature b{display:block;font-size:13px;font-weight:900;margin-bottom:2px}
-.feature span{font-size:11px;color:var(--gray);line-height:1.4}
-.tiny{font-size:11px;color:var(--gray);line-height:1.55}
-
-/* Money */
-.money{background:var(--soft);color:var(--dark)}
-.money-box{
-  background:linear-gradient(145deg,#0F3460 0%,#1A1A2E 100%);
-  color:#fff;
-  border-radius:16px;
-  padding:18px 16px;
-  box-shadow:var(--shadow);
-}
-.money-box .label{
-  font-size:12px;font-weight:900;color:var(--gold);
-  letter-spacing:.04em;margin-bottom:6px;
-}
-.money-box .amount{
-  font-size:34px;font-weight:900;letter-spacing:-.02em;line-height:1.1;margin-bottom:4px;
-}
-.money-box .amount small{font-size:16px;font-weight:800}
-.money-box .formula{
-  font-size:12.5px;color:rgba(255,255,255,.78);margin-bottom:14px;line-height:1.5;
-}
-.money-points{display:grid;gap:8px}
-.money-points li{
-  display:flex;gap:8px;align-items:flex-start;
-  font-size:13px;color:rgba(255,255,255,.92);line-height:1.45;
-}
-.money-points li::before{
-  content:"";width:8px;height:8px;border-radius:50%;
-  background:var(--accent);margin-top:5px;flex:0 0 auto;
-}
-
-/* Jobs */
-.jobs-v2{
-  background:#fff;
-  color:var(--dark);
-  padding:28px 0;
-  border-top:1px solid #ecece6;
-  border-bottom:1px solid #ecece6;
-}
-.jobs-eyebrow{
-  font-size:11px;font-weight:900;letter-spacing:.14em;
-  color:var(--accent);margin:0 0 6px;
-}
-.jobs-v2 h2{
-  font-size:clamp(20px,5.6vw,26px);
-  line-height:1.25;margin:0 0 10px;letter-spacing:-.02em;
-}
-.jobs-lead{
-  font-size:13px;color:var(--gray);line-height:1.65;margin:0 0 14px;
-}
-.job-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.job-card{
-  background:var(--light);
-  border:1px solid rgba(26,26,46,.1);
-  border-radius:12px;
-  padding:13px 11px;
-  min-width:0;
-}
-.job-card.soft{background:#fafaf6}
-.job-card.wide{grid-column:1 / -1}
-.job-card h3{font-size:13.5px;margin:0 0 5px;line-height:1.35;font-weight:900}
-.job-pay{font-size:12.5px;font-weight:800;color:var(--blue);margin:0 0 5px}
-.job-pay strong{font-size:15px;color:var(--accent)}
-.job-desc{font-size:11.5px;color:var(--gray);line-height:1.5;margin:0}
-.job-tag{
-  display:inline-block;margin-top:7px;
-  font-size:10px;font-weight:900;
-  padding:3px 8px;border-radius:999px;
-  background:rgba(15,52,96,.08);color:var(--blue);
-}
-.job-tag.hot{background:rgba(233,69,96,.12);color:var(--accent)}
-.job-tag.note{background:rgba(201,162,39,.15);color:#8a6d12}
-.jobs-notes{
-  margin:12px 0 0;padding:12px;
-  background:var(--light);
-  border:1px solid #ebebe4;
-  border-radius:12px;
-}
-.jobs-notes li{
-  position:relative;
-  padding-left:14px;
-  font-size:12px;color:var(--gray);line-height:1.6;
-  margin-bottom:4px;
-}
-.jobs-notes li:last-child{margin-bottom:0}
-.jobs-notes li::before{
-  content:"";position:absolute;left:0;top:.55em;
-  width:6px;height:6px;border-radius:50%;background:var(--accent);
-}
-
-/* VS */
-.vs{background:var(--light);color:var(--dark)}
-.vs-card{
-  background:#fff;
-  border-radius:16px;
-  border:1px solid #ebebe4;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-}
-.vs-head{
-  background:var(--dark);color:#fff;
-  padding:12px 14px;font-size:13px;font-weight:900;text-align:center;
-}
-.vs-table{width:100%;border-collapse:collapse}
-.vs-table th,.vs-table td{
-  padding:11px 9px;font-size:12.5px;text-align:center;
-  border-bottom:1px solid #f0f0ea;vertical-align:middle;
-}
-.vs-table th{
-  background:#fafaf6;font-weight:800;color:var(--gray);font-size:11px;
-}
-.vs-table td:first-child{
-  text-align:left;font-weight:800;color:var(--dark);width:30%;
-}
-.vs-table td.win{
-  color:var(--accent);font-weight:900;background:rgba(233,69,96,.05);
-}
-.vs-table td.lose{color:var(--gray)}
-.vs-note{
-  padding:12px 14px;font-size:12px;color:var(--gray);
-  line-height:1.55;background:#fafaf6;
-}
-
-/* Flow */
-.flow{background:#fff;color:var(--dark)}
-.steps{display:grid;gap:0}
-.step{
-  display:grid;grid-template-columns:36px 1fr;gap:12px;
-  padding:0 0 18px;position:relative;
-}
-.step:last-child{padding-bottom:0}
-.step:not(:last-child)::before{
-  content:"";position:absolute;left:17px;top:36px;bottom:0;width:2px;
-  background:linear-gradient(180deg,var(--accent),rgba(233,69,96,.15));
-}
-.step-num{
-  width:36px;height:36px;border-radius:50%;
-  background:var(--accent);color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  font-weight:900;font-size:14px;
-  box-shadow:0 4px 12px rgba(233,69,96,.3);
-  position:relative;z-index:1;
-}
-.step h3{font-size:15px;font-weight:900;margin-bottom:3px;padding-top:6px}
-.step p{font-size:13px;color:var(--gray);line-height:1.55}
-
-/* Quote */
-.voice{background:var(--soft);color:var(--dark)}
-.quote{
-  background:#fff;
-  border-radius:16px;
-  padding:18px 16px;
-  border:1px solid #ebebe4;
-  box-shadow:var(--shadow);
-  position:relative;
-}
-.quote::before{
-  content:"“";
-  position:absolute;top:4px;left:12px;
-  font-size:48px;line-height:1;
-  color:rgba(233,69,96,.18);
-  font-family:Georgia,serif;font-weight:700;
-}
-.quote p{
-  font-size:14px;font-weight:700;line-height:1.7;
-  color:var(--dark);margin-bottom:12px;position:relative;
-}
-.quote footer{font-size:12px;color:var(--gray);font-weight:700}
-
-/* FAQ */
-.faq{background:#fff;color:var(--dark)}
-.faq-list{display:grid;gap:8px}
-.faq-item{
-  background:var(--light);
-  border:1px solid #ebebe4;
-  border-radius:12px;
-  padding:14px;
-}
-.faq-item h3{
-  font-size:14px;font-weight:900;margin-bottom:6px;
-  display:flex;gap:8px;align-items:flex-start;
-}
-.faq-item h3 span{color:var(--accent);flex:0 0 auto}
-.faq-item p{
-  font-size:13px;color:var(--gray);line-height:1.6;padding-left:22px;
-}
-
-/* CTA band */
-.cta-band{
-  background:linear-gradient(160deg,#1A1A2E 0%,#0F3460 100%);
-  color:#fff;
-  padding:30px 0;
-}
-.cta-band .sec-title{color:#fff;text-align:center}
-.cta-band .sec-lead{color:rgba(255,255,255,.78);text-align:center}
-
-/* Donzoko */
-.donzoko{
-  margin-top:14px;
-  background:rgba(233,69,96,.08);
-  border:1px solid rgba(233,69,96,.22);
-  border-radius:10px;
-  padding:12px 14px;
-  font-size:13.5px;
-  font-weight:800;
-  color:var(--dark);
-  text-align:center;
-}
-
-/* Company */
-.company{background:var(--light);color:var(--dark);padding-bottom:36px}
-.company-card{
-  background:#fff;
-  border-radius:14px;
-  border:1px solid #ebebe4;
-  padding:16px;
-}
-.company-card h2{font-size:15px;font-weight:900;margin-bottom:10px}
-.company-card dl{display:grid;gap:8px}
-.company-card dt{
-  font-size:11px;font-weight:800;color:var(--gray);letter-spacing:.04em;
-}
-.company-card dd{
-  font-size:13px;font-weight:700;color:var(--dark);line-height:1.45;margin-bottom:2px;
-}
-.legal{
-  margin-top:14px;font-size:11px;color:var(--gray);
-  line-height:1.6;text-align:center;
-}
-
-/* Fixed CTA */
-.fixed-cta{
-  position:fixed;left:0;right:0;bottom:0;z-index:100;
-  background:rgba(245,245,240,.94);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  border-top:1px solid rgba(26,26,46,.08);
-  padding:10px 12px calc(10px + var(--safe-b));
-  box-shadow:0 -8px 24px rgba(26,26,46,.08);
-}
-.fixed-cta-inner{
-  width:min(100%,440px);margin:0 auto;
-  display:grid;grid-template-columns:1fr 1.55fr;gap:8px;
-}
-.fixed-cta .btn{min-height:50px;font-size:14px;border-radius:12px;padding:10px 8px}
-.fixed-cta .btn-call{font-size:14px}
-.fixed-cta .btn-call .btn-sub{font-size:10px}
-
-/* Mobile tighten */
-@media (max-width:420px){
-  .job-grid{grid-template-columns:1fr}
-}
-@media (max-height:700px) and (max-width:430px){
-  .hero{min-height:auto}
-  .hero-inner{padding:14px 16px 18px;gap:9px}
-  .hero h1{font-size:clamp(24px,7.2vw,32px)}
-  .stat b{font-size:12.5px}
-  .btn{min-height:50px;font-size:15px}
-}
-
-/* FV sticky LINE 2026-07-20 */
-.lp-sticky-line{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(26,26,46,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.12);box-shadow:0 -8px 28px rgba(0,0,0,.28);transform:translateY(110%);opacity:0;pointer-events:none;transition:transform .22s ease,opacity .22s ease}
-.lp-sticky-line.show{transform:translateY(0);opacity:1;pointer-events:auto}
-.lp-sticky-line a{display:flex;align-items:center;justify-content:center;min-height:54px;border-radius:14px;background:#06C755;color:#fff!important;font-weight:900;font-size:16px;text-decoration:none;letter-spacing:.02em;box-shadow:0 10px 24px rgba(6,199,85,.35)}
-body.lp-has-sticky{padding-bottom:88px}
-
-/* FV CTA priority 20260720 */
-a.btn-line, a.btn.btn-line, a.cta.line, .cta a.btn-line {
-  background:#06C755 !important;
-  color:#fff !important;
-  border-color:transparent !important;
-  box-shadow:0 10px 28px rgba(6,199,85,.38) !important;
-  font-weight:900 !important;
-  min-height:56px !important;
-}
-a.btn-call, a.btn.btn-call, a.cta.call, .cta a.btn-call {
-  background:transparent !important;
-  color:inherit !important;
-  border:1.5px solid rgba(255,255,255,.35) !important;
-  box-shadow:none !important;
-  font-weight:700 !important;
-  min-height:48px !important;
-}
-/* when on light section, voice secondary needs dark border */
-.section a.btn-call, .bottom a.btn-call, .wrap a.btn-call, main a.btn-call {
-  border-color:rgba(26,26,46,.28) !important;
-  color:var(--ink,#1A1A2E) !important;
-}
-.hero a.btn-call, .hero a.cta.call, header.hero a.btn-call {
-  color:#fff !important;
-  border-color:rgba(255,255,255,.4) !important;
-}
-
-/* footer bar wrap 20260720 */
-.foot-cta,.footer-cta,.bar-cta,.fixed-bar,.bottom-bar{flex-wrap:wrap}
-.btn.btn-line.light,.btn.btn-call{white-space:normal;line-height:1.25;padding:10px 12px}
-.btn .btn-sub{white-space:normal}
-
-/* grok sticky single 20260720b */
-.lp-sticky-line a{font-size:15px;padding:0 14px;white-space:normal;line-height:1.25;text-align:center}
-.foot-cta{position:fixed;left:0;right:0;bottom:0;z-index:35;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(26,26,46,.94);display:none}
-/* prefer lp-sticky-line; hide duplicate foot if both */
-body.lp-has-sticky .foot-cta{display:none !important}
-
-/* grok fixed line only 20260720c */
-.fixed-cta-inner{grid-template-columns:1fr !important}
-.fixed-cta .btn-line{min-height:54px !important;font-size:15px !important;background:#06C755 !important;color:#fff !important;border:none !important;box-shadow:0 10px 24px rgba(6,199,85,.35) !important;white-space:normal;line-height:1.25}
-body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
-.lp-sticky-line{display:none !important} /* avoid double bar; fixed-cta is primary */
-
-/* LINE open fix 2026-07-20: X in-app safe CTA */
-#lp-line-help{display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:80;background:#111827;color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:14px 14px 12px;box-shadow:0 18px 40px rgba(0,0,0,.35);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif}
-#lp-line-help.show{display:block}
-#lp-line-help h2{margin:0 0 6px;font-size:15px;line-height:1.35;font-weight:900}
-#lp-line-help p{margin:0 0 10px;font-size:12.5px;line-height:1.55;color:#d1d5db}
-#lp-line-help .lp-line-help-actions{display:grid;gap:8px}
-#lp-line-help a,#lp-line-help button{appearance:none;-webkit-appearance:none;display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:12px;border:0;padding:10px 12px;font-size:14px;font-weight:900;text-decoration:none;cursor:pointer}
-#lp-line-help .lp-line-help-line{background:#06C755;color:#fff}
-#lp-line-help .lp-line-help-copy{background:#1f2937;color:#fff;border:1px solid rgba(255,255,255,.12)}
-#lp-line-help .lp-line-help-close{background:transparent;color:#9ca3af;min-height:36px;font-size:12px;font-weight:700}
-#lp-line-help .lp-line-help-note{margin:8px 0 0;font-size:11.5px;color:#9ca3af;min-height:1.2em}
-
+*{box-sizing:border-box}
+html{background:var(--coal);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--ink);background:var(--coal);font-family:"Yu Gothic","Hiragino Kaku Gothic ProN","BIZ UDPGothic",Meiryo,sans-serif;line-height:1.82;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}.mincho{font-family:"Yu Mincho","Hiragino Mincho ProN","BIZ UDPMincho",serif}.page{max-width:520px;margin-inline:auto;background:var(--paper);overflow-x:clip;box-shadow:0 0 0 1px rgba(255,255,255,.05)}
+.issue-strip{position:fixed;z-index:20;top:10px;left:50%;transform:translateX(-50%);width:min(calc(100% - 24px),496px);display:flex;justify-content:space-between;gap:10px;pointer-events:none;color:#ffe1b8;font-size:10px;letter-spacing:.16em;text-transform:uppercase}.issue-strip span{padding:5px 8px;border-radius:999px;background:rgba(7,29,42,.52);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(10px)}
+.hero{min-height:100svh;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:20px 18px 26px;color:#fff8ea;background:var(--coal);overflow:hidden}.hero::before{content:"";position:absolute;inset:0;background:url("../assets/fishing_bplus_20260722_hero_catch.webp") center/cover no-repeat;filter:saturate(1.08) contrast(1.04);transform:scale(1.04);z-index:0}.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,18,23,.26),rgba(8,18,23,.54) 42%,rgba(8,18,23,.96)),radial-gradient(circle at 14% 22%,rgba(208,131,68,.28),transparent 36%);z-index:1}.hero>*{position:relative;z-index:2}.hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;color:#ffe3c3}.brand{font-weight:900;font-size:12px;letter-spacing:.16em;padding:7px 10px;border:1px solid rgba(255,255,255,.32);border-radius:999px;background:rgba(255,255,255,.08)}.lane{font-size:10px;letter-spacing:.14em;opacity:.8;text-align:right}.vertical{writing-mode:vertical-rl;letter-spacing:.2em;position:absolute;right:16px;top:92px;font-size:12px;color:#f3c690}.hero-copy{margin-top:auto;padding-top:160px}.label{display:inline-block;border:1px solid rgba(255,255,255,.46);border-radius:999px;padding:5px 10px;font-size:11px;letter-spacing:.18em;margin-bottom:18px;background:rgba(255,255,255,.09)}h1{font-size:clamp(44px,13.4vw,70px);line-height:1.03;letter-spacing:-.08em;margin:0 0 16px;font-weight:900;text-shadow:0 18px 50px rgba(0,0,0,.58)}.subtitle{font-size:17px;line-height:1.72;margin:0;color:#fff0d7;font-weight:700}.not-job{display:inline-block;margin-top:16px;font-size:12px;border-radius:14px;padding:9px 10px;background:rgba(255,249,237,.13);border:1px solid rgba(255,249,237,.18);color:#ffe5c6}.scroll{margin-top:24px;font-size:11px;letter-spacing:.18em;color:#cce2e8;display:flex;gap:9px;align-items:center}.scroll::before{content:"";width:38px;height:1px;background:#cce2e8}
+.chapter{padding:68px 18px;position:relative}.chapter.light{background:var(--paper2)}.chapter.paper{background:var(--paper)}.chapter.dark{background:var(--coal);color:#fff8ea}.chapter.sea{background:linear-gradient(180deg,var(--sea),var(--coal));color:#fff8ea}.chapter.green{background:#263f36;color:#fff8ea}.chapter::before{content:attr(data-no);position:absolute;right:16px;top:22px;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:48px;line-height:1;color:rgba(36,31,27,.09)}.chapter.dark::before,.chapter.sea::before,.chapter.green::before{color:rgba(255,248,234,.12)}.chapter-inner{display:grid;gap:26px}.deck{font-size:12px;font-weight:900;letter-spacing:.18em;color:var(--amber);text-transform:uppercase;margin:0 0 12px}.dark .deck,.sea .deck,.green .deck{color:#efb06f}.headline{font-size:clamp(30px,9vw,48px);line-height:1.16;letter-spacing:-.06em;margin:0 0 18px;font-weight:900}.body{font-size:15px;color:#4d473f;margin:0}.dark .body,.sea .body,.green .body{color:#dce7e2}.small{font-size:12px;color:#7a7168;margin:12px 0 0;line-height:1.65}.dark .small,.sea .small,.green .small{color:#acc0be}.pull{border-left:3px solid var(--amber);padding-left:16px;margin:28px 0 0;font-size:22px;line-height:1.45;font-weight:900;letter-spacing:-.04em}.dark .pull,.sea .pull,.green .pull{border-color:#efb06f;color:#fff7e8}
+.photo{margin:0;border-radius:10px;overflow:hidden;box-shadow:var(--shadow);background:#222;position:relative;border:1px solid rgba(255,255,255,.1)}.photo img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover}.photo.wide img{aspect-ratio:16/10}.photo.square img{aspect-ratio:1/1}.caption{font-size:12px;line-height:1.55;margin:8px 2px 0;color:#786d61}.dark .caption,.sea .caption,.green .caption{color:#bed0cf}.editorial-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:12px;align-items:start}.editorial-grid .photo:nth-child(2){margin-top:42px}.photo-stack{display:grid;gap:16px}.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}.story-grid .photo:nth-child(even){margin-top:28px}.album{display:grid;gap:14px;margin-top:26px}.album-card{background:rgba(255,249,237,.88);border:1px solid var(--stroke);padding:16px;border-radius:18px;box-shadow:0 12px 32px rgba(29,25,20,.08)}.album-card b{display:block;font-size:17px;color:var(--sea2);line-height:1.3}.album-card span{font-size:12px;color:#675f56}.dark .album-card,.green .album-card{background:rgba(255,249,237,.08);border-color:rgba(255,249,237,.16)}.dark .album-card b,.green .album-card b{color:#ffe0b5}.dark .album-card span,.green .album-card span{color:#c4d6d0}.mini-line{display:inline-flex;align-items:center;gap:9px;margin-top:22px;color:#fff8ea;font-weight:900;font-size:13px;border-bottom:1px solid rgba(255,248,234,.8)}.mini-line::before{content:"";width:10px;height:10px;background:var(--line);border-radius:50%}.mini-ai{display:inline-flex;margin-left:14px;color:#d9e8ef;border-bottom:1px solid rgba(217,232,239,.7)}
+.conditions{display:grid;gap:10px;margin-top:26px}.condition{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:#fff9ed;border:1px solid var(--stroke);border-radius:20px;padding:15px;box-shadow:0 12px 28px rgba(35,31,26,.07)}.num{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--sea2);color:#fff;font-size:12px;font-weight:900}.condition b{display:block;line-height:1.25;font-size:18px}.condition p{margin:4px 0 0;font-size:12px;color:#665e55;line-height:1.55}.job-note{margin-top:18px;padding:14px;border-radius:18px;background:rgba(18,75,94,.08);border:1px solid rgba(18,75,94,.18);font-size:12px;color:#5f574f;line-height:1.7}.faq-list{display:grid;gap:12px;margin-top:22px}.faq-item{background:#fff9ed;border:1px solid var(--stroke);border-radius:18px;padding:15px}.faq-item h3{font-size:14px;margin:0 0 7px;color:var(--sea2)}.faq-item p{font-size:12.5px;margin:0;color:#615950;line-height:1.65}
+.final-cta{margin-top:28px;border-radius:12px;background:#121b1f;color:#fff8ea;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.12)}.cta-img{height:260px;background:url("../assets/fishing_bplus_20260722_meal_sashimi_set.webp") center/cover no-repeat;position:relative}.cta-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(18,27,31,.9))}.cta-body{padding:22px}.cta-body h2{font-size:34px;line-height:1.2;margin:0 0 12px;letter-spacing:-.06em}.cta-buttons{display:grid;gap:11px;margin-top:22px}.btn{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:100%;min-height:58px;border-radius:999px;padding:15px 18px;font-weight:900;letter-spacing:.02em;line-height:1.28;transition:transform .12s ease,opacity .12s ease}.btn:active{transform:scale(.985)}.btn-line{background:linear-gradient(180deg,var(--line),var(--line2));color:#fff;box-shadow:0 16px 36px rgba(6,199,85,.34)}.btn-call{background:transparent;color:#f3fbff;border:1.4px solid rgba(243,251,255,.38);font-weight:800}.btn small{display:block;font-size:11px;font-weight:700;opacity:.82;margin-top:2px;letter-spacing:0}.foot{background:#121b1f;color:#aebbb6;padding:28px 18px 64px;font-size:12px;line-height:1.65}.foot b{color:#fff8ea}.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}.reveal.is-visible{opacity:1;transform:none}.delay1{transition-delay:.08s}.delay2{transition-delay:.16s}.delay3{transition-delay:.24s}
+#lp-line-help{display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + var(--safe-b));z-index:80;background:#111827;color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:14px 14px 12px;box-shadow:0 18px 40px rgba(0,0,0,.35)}#lp-line-help.show{display:block}#lp-line-help h2{margin:0 0 6px;font-size:15px;line-height:1.35;font-weight:900}#lp-line-help p{margin:0 0 10px;font-size:12.5px;line-height:1.55;color:#d1d5db}#lp-line-help .lp-line-help-actions{display:grid;gap:8px}#lp-line-help a,#lp-line-help button{appearance:none;-webkit-appearance:none;display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:12px;border:0;padding:10px 12px;font-size:14px;font-weight:900;text-decoration:none;cursor:pointer}#lp-line-help .lp-line-help-line{background:#06c755;color:#fff}#lp-line-help .lp-line-help-copy{background:#1f2937;color:#fff;border:1px solid rgba(255,255,255,.12)}#lp-line-help .lp-line-help-close{background:transparent;color:#9ca3af;min-height:36px;font-size:12px;font-weight:700}#lp-line-help .lp-line-help-note{margin:8px 0 0;font-size:11.5px;color:#9ca3af;min-height:1.2em}
+@media(min-width:860px){.page{max-width:1100px}.hero{padding:34px;min-height:860px}.hero-copy{max-width:720px}h1{font-size:92px}.chapter{padding:108px 9vw}.chapter-inner{grid-template-columns:.92fr 1.08fr;gap:56px;align-items:center}.chapter-inner.reverse{grid-template-columns:1.08fr .92fr}.chapter-inner.reverse .copy{order:2}.chapter-inner.reverse .visual{order:1}.album,.conditions{grid-template-columns:repeat(2,1fr)}.faq-list{grid-template-columns:repeat(2,1fr)}.photo img{aspect-ratio:4/5}.final-cta{display:grid;grid-template-columns:.86fr 1.14fr}.cta-img{height:auto;min-height:420px}.cta-body{padding:42px}.issue-strip{max-width:1040px}}
+@media(max-width:380px){.chapter{padding-inline:15px}.headline{font-size:29px}.story-grid{gap:9px}.btn{font-size:14px;padding-inline:13px}.mini-ai{display:block;margin-left:0;margin-top:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
 </style>
 </head>
-<body>
-
-<div class="lane-tag" aria-hidden="true">GROK</div>
-<div class="topbar">大阪・関西一円｜面接会なし・履歴書不要｜24時間受付</div>
-
-<!-- ===== HERO ===== -->
-<header class="hero">
-  <div class="hero-bg" aria-hidden="true"></div>
-  <div class="hero-inner">
-    <div class="brand-row">
+<body data-variant="fishing_bplus_20260722" data-lane="grok">
+<div class="issue-strip" aria-hidden="true"><span>SHINKO FIELD NOTES</span><span>GROK LANE</span></div>
+<main class="page">
+  <section class="hero" aria-label="ファーストビュー">
+    <div class="hero-top">
       <div class="brand">新滉建設株式会社</div>
-      <div class="live"><i></i>LINE相談OK</div>
+      <div class="lane">FISHING / DORM / WORK<br>2026 RECRUIT</div>
     </div>
+    <div class="vertical">一緒に暮らし、遊ぶ仲間を探す。</div>
+    <div class="hero-copy reveal">
+      <span class="label">求人票の前に、生活の話を。</span>
+      <h1 class="mincho">遊びのある会社で、働く。</h1>
+      <p class="subtitle">釣りが好き。海が好き。外で食べる飯が好き。そんな人と、仕事終わりの話まで共有したい。</p>
+      <span class="not-job">※もちろん仕事は建設現場の応援です。</span>
+      <div class="scroll">SCROLL FIELD NOTES</div>
+    </div>
+  </section>
 
-    <div class="kicker">所持金0でも相談OK｜生活立て直し可</div>
-    <h1>今日決まる。<br><em>今夜、住める。</em></h1>
-    <p class="hero-sub">
-      個室寮（サウナ・Wi-Fi・食事付き）・即入寮OK・日払い対応・所持金0でも相談OK・未経験OK。<br>
-      期間工みたいに2週間待たない。面接会なし。書類もいらない。日給11,000円〜は現場アシスタント基準。
-    </p>
-
-    <div class="stat-row" role="list">
-      <div class="stat" role="listitem">
-        <b>即入寮</b>
-        <span>個室・食事付き</span>
+  <section class="chapter light" data-no="01">
+    <div class="chapter-inner">
+      <div class="copy reveal">
+        <p class="deck">A small magazine</p>
+        <h2 class="headline mincho">これは、会社案内というより、暮らしのアルバム。</h2>
+        <p class="body">新滉建設の採用を、求人サイトの言葉だけで作るとたぶん伝わらない。釣果、食卓、寮、サウナ、筋トレルーム、BBQ、看板犬。ここにあるのは「働く場所」だけじゃなく、帰ってきてからの時間です。</p>
+        <div class="pull mincho">仕事を探している人へ。<br>でも、できれば釣り仲間にもなってほしい。</div>
       </div>
-      <div class="stat" role="listitem">
-        <b>日払い対応</b>
-        <span>生活立て直し可</span>
-      </div>
-      <div class="stat" role="listitem">
-        <b>日給<br>11,000円〜</b>
-        <span>現場アシスタント基準</span>
+      <div class="visual reveal delay1">
+        <figure class="photo wide"><img src="../assets/fishing_bplus_20260722_catch_cooler.webp" loading="lazy" decoding="async" alt="クーラーボックスに入った釣果" width="900" height="675"><figcaption class="caption">釣果がある日は、会話が早い。</figcaption></figure>
       </div>
     </div>
+  </section>
 
-    <div class="badge-row">
-      <span class="badge hot">履歴書不要</span>
-      <span class="badge hot">面接会なし</span>
-      <span class="badge">書類選考なし</span>
-      <span class="badge">未経験歓迎</span>
-      <span class="badge">全職種歓迎</span>
+  <section class="chapter sea" data-no="02">
+    <div class="chapter-inner reverse">
+      <div class="copy reveal">
+        <p class="deck">Sea side</p>
+        <h2 class="headline mincho">海に行ける人は、たぶん少し強い。</h2>
+        <p class="body">早起きして、潮を見て、準備して、帰ったら片付ける。釣りや船遊びは、自由に見えて段取りと安全がいる。だからこそ、現場の仕事とも相性がいい。</p>
+        <p class="small">船・ジェットスキー・釣り道具の利用は、資格、法令、社内ルール、安全管理、保険確認の範囲で運用します。勝手に使えるという意味ではありません。</p>
+      </div>
+      <div class="visual editorial-grid reveal delay1">
+        <figure class="photo square"><img src="../assets/fishing_bplus_20260722_sea_boat_privacy.webp" loading="lazy" decoding="async" alt="海辺と船のある風景" width="1100" height="825"><figcaption class="caption">海へ行く理由が、会社にある。</figcaption></figure>
+        <figure class="photo square"><img src="../assets/fishing_bplus_20260722_fishing_tools.webp" loading="lazy" decoding="async" alt="釣り道具" width="900" height="1200"><figcaption class="caption">釣り道具の話で盛り上がれる人、歓迎。</figcaption></figure>
+      </div>
     </div>
+  </section>
 
-    <div class="cta-stack">
-      <a class="btn btn-line" data-cta="line" href="https://lin.ee/XEVQvbw" rel="noopener" id="cta-line-1">
-        LINEで空き確認 → 今日中に返事
-        <span class="btn-sub">1分で送信・電話不要・履歴書いらない</span>
-      </a>
-      <p class="cta-note">個室寮の空き・即入寮の相談からでOK。履歴書不要。</p>
-      <a class="btn btn-call" data-cta="call" href="https://voice.kuro-ai.org/?src=grok">
-        電話が苦手でも、AI相手に30秒
-        <span class="btn-sub">ブラウザだけ・応募じゃなくてOK・24時間</span>
-      </a>
+  <section class="chapter paper" data-no="03">
+    <div class="copy reveal">
+      <p class="deck">From catch to table</p>
+      <h2 class="headline mincho">釣る。さばく。食べる。</h2>
+      <p class="body">釣った魚が、寮のご飯になる。大きな福利厚生の言葉より、こういう写真のほうが信じやすい。</p>
     </div>
-  </div>
-</header>
+    <div class="story-grid" style="margin-top:26px">
+      <figure class="photo reveal"><img src="../assets/fishing_bplus_20260722_catch_board.webp" loading="lazy" decoding="async" alt="まな板に並んだ釣果" width="900" height="1200"><figcaption class="caption">まずは、釣れるとうれしい。</figcaption></figure>
+      <figure class="photo reveal delay1"><img src="../assets/fishing_bplus_20260722_meal_sashimi_set.webp" loading="lazy" decoding="async" alt="刺身定食" width="900" height="1200"><figcaption class="caption">それが夜には、食卓の話題になる。</figcaption></figure>
+      <figure class="photo square reveal delay2"><img src="../assets/fishing_bplus_20260722_meal_grilled_fish.webp" loading="lazy" decoding="async" alt="焼き魚定食" width="900" height="1200"><figcaption class="caption">魚好きには、だいぶええ環境です。</figcaption></figure>
+      <figure class="photo square reveal delay3"><img src="../assets/fishing_bplus_20260722_meal_stewed_fish.webp" loading="lazy" decoding="async" alt="煮魚定食" width="900" height="1200"><figcaption class="caption">食事付き。あったかいご飯がある安心。</figcaption></figure>
+    </div>
+  </section>
 
-<!-- ===== WHY ===== -->
-<section class="why">
-  <div class="wrap">
-    <div class="tag-gold">生活を立て直したい人へ</div>
-    <h2 class="sec-title">今夜どこで寝るか。<br>そこからでいい。</h2>
-    <p class="sec-lead">
-      遠方の面接会、2週間待ち、手持ちが足りない——。<br>
-      今すぐ住む場所と仕事が要るなら、順番を変える。
-    </p>
-    <div class="why-grid">
-      <div class="why-item">
-        <div class="why-num">01</div>
-        <div>
-          <h3>住む場所が先</h3>
-          <p>個室寮（サウナ・Wi-Fi・食事付き）。即入寮OK。まず寝床を確保してから働ける。</p>
+  <section class="chapter green" data-no="04">
+    <div class="chapter-inner">
+      <div class="copy reveal">
+        <p class="deck">Dorm / Sauna / Wi‑Fi</p>
+        <h2 class="headline mincho">暮らしの土台があると、人はちょっと落ち着く。</h2>
+        <p class="body">個室寮、食事、Wi‑Fi、サウナ。仕事の条件だけじゃなく、今日寝る場所と明日の飯があること。住み込みで働く人にとって、そこはかなり大事です。</p>
+        <div class="album">
+          <div class="album-card reveal delay1"><b>個室寮</b><span>即入寮OK。自分の空間を確保。</span></div>
+          <div class="album-card reveal delay2"><b>食事付き</b><span>魚の日も、普通のご飯の日も。</span></div>
+          <div class="album-card reveal delay3"><b>サウナ</b><span>仕事のあとに整える。</span></div>
+          <div class="album-card reveal delay3"><b>Wi‑Fi</b><span>生活に必要なネット環境。</span></div>
         </div>
       </div>
-      <div class="why-item">
-        <div class="why-num">02</div>
-        <div>
-          <h3>待ち時間を削る</h3>
-          <p>面接会なし・書類選考なし・履歴書不要。通話で寮の空きと入寮相談まで進められる。</p>
-        </div>
-      </div>
-      <div class="why-item">
-        <div class="why-num">03</div>
-        <div>
-          <h3>所持金が少なくても</h3>
-          <p>所持金0円でもまず相談OK。日払いOK。日給11,000円〜（現場アシスタント基準）・未経験OK。</p>
-        </div>
+      <div class="visual photo-stack reveal delay1">
+        <figure class="photo"><img src="../assets/fishing_bplus_20260722_dorm_room.webp" loading="lazy" decoding="async" alt="寮の個室" width="900" height="1200"><figcaption class="caption">鍵のかかる、自分の部屋。</figcaption></figure>
+        <figure class="photo wide"><img src="../assets/fishing_bplus_20260722_common_lounge.webp" loading="lazy" decoding="async" alt="寮の共用スペース" width="900" height="675"><figcaption class="caption">一人になれる場所も、誰かと話せる場所も。</figcaption></figure>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== DORM ===== -->
-<section class="dorm">
-  <div class="wrap">
-    <h2 class="sec-title">個室寮は、ちゃんと住める。</h2>
-    <p class="sec-lead">
-      最大の武器は寮。即入寮OK。職人さんの入寮も歓迎。<br>
-      通勤希望も歓迎です。
-    </p>
-
-    <div class="photo-stack">
-      <figure class="photo tall">
-        <img src="../assets/room_v2.jpg" alt="個室寮の室内" width="800" height="600" loading="eager">
-        <figcaption class="photo-cap">個室</figcaption>
-      </figure>
-      <div class="photo-pair">
-        <figure class="photo fit-cover">
-          <img src="../assets/hero_sauna.jpg" alt="寮のサウナ" width="400" height="250" loading="lazy">
-          <figcaption class="photo-cap">サウナ</figcaption>
-        </figure>
-        <figure class="photo fit-cover">
-          <img src="../assets/meal_v2.jpg" alt="寮の食事" width="400" height="250" loading="lazy">
-          <figcaption class="photo-cap">食事</figcaption>
-        </figure>
-        <figure class="photo dog-shot">
-          <img src="../assets/dog.jpg" alt="寮で飼っている犬" width="400" height="250" loading="lazy">
-          <figcaption class="photo-cap">寮の看板犬</figcaption>
-        </figure>
-        <figure class="photo building-shot">
-          <img src="../assets/building.jpg" alt="本社外観" width="800" height="500" loading="lazy">
-          <figcaption class="photo-cap">本社外観</figcaption>
-        </figure>
+  <section class="chapter dark" data-no="05">
+    <div class="chapter-inner reverse">
+      <div class="copy reveal">
+        <p class="deck">Sauna / Training room</p>
+        <h2 class="headline mincho">汗をかいたあとに、整える場所がある。</h2>
+        <p class="body">サウナで休む。筋トレルームで体を動かす。生活の場所に、回復と遊びの余白があると、明日の現場にも向かいやすい。</p>
+        <p class="small">筋トレルーム写真は元素材 `S__7700523_0.jpg` 由来。人物・顔・個人情報なしを確認してWeb用に軽量化しています。</p>
+      </div>
+      <div class="visual editorial-grid reveal delay1">
+        <figure class="photo square"><img src="../assets/fishing_bplus_20260722_sauna.webp" loading="lazy" decoding="async" alt="サウナの木製内装" width="900" height="675"><figcaption class="caption">仕事のあとに、ととのう。</figcaption></figure>
+        <figure class="photo square"><img src="../assets/fishing_bplus_20260722_gym_room.webp" loading="lazy" decoding="async" alt="筋トレルーム" width="900" height="675"><figcaption class="caption">筋トレルーム。体を整える場所。</figcaption></figure>
       </div>
     </div>
+  </section>
 
-    <div class="feature-grid">
-      <div class="feature"><b>個室</b><span>プライベート確保</span></div>
-      <div class="feature"><b>サウナ</b><span>寮の設備</span></div>
-      <div class="feature"><b>Wi-Fi</b><span>寮の設備</span></div>
-      <div class="feature"><b>食事付き</b><span>寮の設備</span></div>
-      <div class="feature"><b>即入寮OK</b><span>空き状況は通話で</span></div>
-      <div class="feature"><b>通勤歓迎</b><span>通いでの勤務OK</span></div>
+  <section class="chapter sea" data-no="06">
+    <div class="copy reveal">
+      <p class="deck">BBQ & friends</p>
+      <h2 class="headline mincho">釣り、BBQ、仲間。<br>人の温度がちゃんとある。</h2>
+      <p class="body">仕事以外の時間も、一緒に笑える仲間がいる。公開写真は人物の顔や写り込みをWeb用コピーで加工し、元画像は変更していません。</p>
     </div>
-    <p class="tiny" style="margin-top:10px">※入寮は別途寮費あり（具体額は面接等で確認）。空き状況は通話でご案内します。</p>
-  </div>
-</section>
-
-<!-- ===== MONEY ===== -->
-<section class="money">
-  <div class="wrap">
-    <h2 class="sec-title">盛りすぎない。数字だけ。</h2>
-    <p class="sec-lead">わかる金額だけ置く。計算例も明示する。</p>
-    <div class="money-box">
-      <div class="label">日給（現場アシスタント基準）</div>
-      <div class="amount">11,000円<small>〜</small></div>
-      <p class="formula">月収例 264,000円（日給11,000円×24日勤務の計算例）</p>
-      <ul class="money-points">
-        <li>未経験OK。経験ゼロから現場アシスタントで問題なし</li>
-        <li>日払いOK。生活を立て直す前提で相談できる</li>
-        <li>空調服を全員に無料貸与（規定あり）</li>
-        <li>所持金0円でも、まず相談OK</li>
-      </ul>
+    <div class="editorial-grid" style="margin-top:26px">
+      <figure class="photo reveal delay1"><img src="../assets/fishing_bplus_20260722_bbq_privacy.webp" loading="lazy" decoding="async" alt="BBQの様子（人物は加工済み）" width="900" height="1200"><figcaption class="caption">火と飯のまわりに、人が集まる。</figcaption></figure>
+      <figure class="photo reveal delay2"><img src="../assets/fishing_bplus_20260722_group_privacy.webp" loading="lazy" decoding="async" alt="仲間の集合写真（人物は加工済み）" width="1100" height="507"><figcaption class="caption">集合写真はプライバシー配慮済み。</figcaption></figure>
     </div>
-    <p class="tiny" style="margin-top:10px">※月収は計算例です。出勤日数・職種により異なります。日給11,000円〜は現場アシスタント（未経験入口）基準であり、全職種の最低保証ではありません。</p>
-  </div>
-</section>
+    <a class="mini-line" href="https://lin.ee/XEVQvbw" data-cta="line" rel="noopener" aria-label="LINEで軽く相談する">最後にLINEがあります</a>
+  </section>
 
-<!-- ===== JOBS ===== -->
-<section class="jobs-v2" id="jobs" aria-label="募集職種と給与目安">
-  <div class="wrap">
-    <p class="jobs-eyebrow">JOBS</p>
-    <h2>募集職種と給与目安</h2>
-    <p class="jobs-lead">日給11,000円〜は<strong>現場アシスタント（未経験入口）基準</strong>です。給与は経験・技能・資格・現場により決定します（確約ではありません）。</p>
-    <div class="job-grid">
-      <article class="job-card">
-        <h3>現場アシスタント（土工）</h3>
-        <p class="job-pay">日給 <strong>11,000円〜</strong></p>
-        <p class="job-desc">未経験OKの入口職種。現場の補助・土工作業から。</p>
-        <span class="job-tag">未経験歓迎</span>
-      </article>
-            <article class="job-card">
-        <h3>現場運転手</h3>
-        <p class="job-pay">日給 <strong>12,000円〜</strong></p>
-        <p class="job-desc">現場への送迎・運転業務。</p>
-      </article>
-<article class="job-card">
-        <h3>解体工</h3>
-        <p class="job-pay">日給 <strong>13,000〜15,000円</strong></p>
-        <p class="job-desc">建物の解体・撤去・廃材整理。経験者歓迎。</p>
-        <span class="job-tag hot">急募</span>
-      </article>
-      <article class="job-card">
-        <h3>重機オペレーター</h3>
-        <p class="job-pay">日給 <strong>14,000〜18,000円</strong></p>
-        <p class="job-desc">ユンボ等。資格と経験で変動。</p>
-      </article>
-      <article class="job-card">
-        <h3>鳶職</h3>
-        <p class="job-pay">日給 <strong>14,000〜18,000円程度</strong></p>
-        <p class="job-desc">鉄骨鳶・足場等。経験と内容によります。</p>
-        <span class="job-tag note">目安</span>
-      </article>
-      <article class="job-card soft wide">
-        <h3>鉄筋工・型枠工・大工 ほか専門職</h3>
-        <p class="job-pay">経験・技能により優遇</p>
-        <p class="job-desc">金額の根拠がない職種は数字を書きません。詳細は通話・面接で。</p>
-      </article>
-    </div>
-    <ul class="jobs-notes">
-      <li>通勤希望歓迎（入寮のみではありません）</li>
-      <li>入寮は別途寮費あり（具体額は面接等で確認）</li>
-      <li>熱中症対策として空調服を全員に無料貸与（規定あり）</li>
-      <li>面接場所：茨木市の事務所 または 大阪市西成区の事務所を選択可</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ===== VS ===== -->
-<section class="vs">
-  <div class="wrap">
-    <h2 class="sec-title">期間工と比べてるなら。</h2>
-    <p class="sec-lead">入社祝の金額勝負はしない。必要なのは「今日から動けるか」。</p>
-    <div class="vs-card">
-      <div class="vs-head">「今すぐ住む・働く」で見たとき</div>
-      <table class="vs-table">
-        <thead>
-          <tr>
-            <th>項目</th>
-            <th>新滉建設</th>
-            <th>期間工あるある</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>入寮まで</td>
-            <td class="win">即入寮OK</td>
-            <td class="lose">入社まで約2週間</td>
-          </tr>
-          <tr>
-            <td>選考</td>
-            <td class="win">面接会なし<br>履歴書不要</td>
-            <td class="lose">面接会・選考あり</td>
-          </tr>
-          <tr>
-            <td>場所</td>
-            <td class="win">大阪・関西一円</td>
-            <td class="lose">遠方工場が多い</td>
-          </tr>
-          <tr>
-            <td>日払い</td>
-            <td class="win">日払いOK</td>
-            <td class="lose">締め支払いが多い</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="vs-note">期間工を否定しない。ただ「今夜の寝床」と「明日の仕事」が先なら、うちの方が噛み合う。</p>
-    </div>
-    <div class="donzoko">所持金0円でも、まず相談OK</div>
-  </div>
-</section>
-
-<!-- ===== FLOW ===== -->
-<section class="flow">
-  <div class="wrap">
-    <h2 class="sec-title">押したら、何が起きる？</h2>
-    <p class="sec-lead">応募フォームもアプリもいらない。ブラウザだけで話せる。</p>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div>
-          <h3>ボタンを押す</h3>
-          <p>電話番号不要。その場でブラウザ通話が始まる（約3分）。</p>
+  <section class="chapter light" data-no="07">
+    <div class="chapter-inner reverse">
+      <div class="copy reveal">
+        <p class="deck">The work</p>
+        <h2 class="headline mincho">ここで、ちゃんと仕事の話。</h2>
+        <p class="body">仕事は建設現場の応援が中心。未経験でも始められますが、現場なので安全と時間は大切です。大げさな技術者像を装わず、できることを増やしていく働き方です。</p>
+        <div class="album">
+          <div class="album-card reveal delay1"><b>正直に働く</b><span>現場の応援。安全第一。</span></div>
+          <div class="album-card reveal delay2"><b>未経験OK</b><span>最初から完璧じゃなくていい。</span></div>
         </div>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div>
-          <h3>AIスタッフが応対</h3>
-          <p>状況を聞く。未経験でも、所持金が少なくても大丈夫。そのまま質問してOK。</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div>
-          <h3>寮の空き・入寮相談</h3>
-          <p>その場で空きと入寮の相談まで進められる。夜中でも受付。</p>
-        </div>
+      <div class="visual photo-stack reveal delay1">
+        <figure class="photo wide"><img src="../assets/fishing_bplus_20260722_building_privacy.webp" loading="lazy" decoding="async" alt="会社または建物外観" width="1000" height="805"><figcaption class="caption">求人っぽく盛りすぎない。会社のリアルを見せる。</figcaption></figure>
+        <figure class="photo square"><img src="../assets/fishing_bplus_20260722_catch_big_one.webp" loading="lazy" decoding="async" alt="大物を含む釣果" width="900" height="1200"><figcaption class="caption">働いて、暮らして、遊ぶまでがセット。</figcaption></figure>
       </div>
     </div>
+  </section>
 
-    <div class="cta-stack" style="margin-top:18px">
-      <a class="btn btn-line" data-cta="line" href="https://lin.ee/XEVQvbw" rel="noopener">
-        LINEで空き確認 → 今日中に返事
-        <span class="btn-sub">1分で送信・電話不要・履歴書いらない</span>
-      </a>
-      <a class="btn btn-call" data-cta="call" href="https://voice.kuro-ai.org/?src=grok">
-        電話が苦手でも、AI相手に30秒
-        <span class="btn-sub">ブラウザだけ・応募じゃなくてOK・24時間</span>
-      </a>
-    </div>
-    <p class="cta-note dark">※AIスタッフが応対。その場で寮の空き・入寮相談まで進められます。</p>
-  </div>
-</section>
-
-<!-- ===== VOICE ===== -->
-<section class="voice">
-  <div class="wrap">
-    <h2 class="sec-title">転々としてきた人の声</h2>
-    <p class="sec-lead">公式サイト掲載の原文。一字もいじっていません。</p>
-    <blockquote class="quote">
-      <p>色々な会社を転々としてきた私ですが、新滉建設株式会社さんが今までで一番長く働いております。</p>
-      <footer>—— 20代・現場作業員／公式サイト「従業員の声」より</footer>
-    </blockquote>
-  </div>
-</section>
-
-<!-- ===== FAQ ===== -->
-<section class="faq">
-  <div class="wrap">
-    <h2 class="sec-title">よくある不安、先に潰す</h2>
-    <div class="faq-list" style="margin-top:14px">
-      <div class="faq-item">
-        <h3><span>Q.</span>所持金がほとんどない。大丈夫？</h3>
-        <p>大丈夫です。所持金0円でも、まず相談OK。日払いOK。個室寮（食事付き）で、まず住むところから整えられます。</p>
+  <section class="chapter green" data-no="08">
+    <div class="chapter-inner">
+      <div class="copy reveal">
+        <p class="deck">Next field</p>
+        <h2 class="headline mincho">海の次は、山や畑の話もしている。</h2>
+        <p class="body">アクアポニックス、鶏の飼育、卵を会社の食料にすること。将来は山・畑・漁業など、自然と暮らす構想へ。狩猟免許などが必要なものは、法令・資格・安全管理の範囲で段階的に。</p>
+        <p class="small">これは将来構想です。資格や許可が必要な活動を無断で行う案内ではありません。</p>
+        <a class="mini-line" href="https://lin.ee/XEVQvbw" data-cta="line" rel="noopener" aria-label="LINEで生活や寮のことを相談する">寮や生活のことをLINEで聞く</a>
+        <a class="mini-ai" href="https://voice.kuro-ai.org/?src=grok" data-cta="call" aria-label="AI音声で相談する">AI音声で聞く</a>
       </div>
-      <div class="faq-item">
-        <h3><span>Q.</span>履歴書も経験もない。</h3>
-        <p>履歴書不要・書類選考なし・面接会なし。未経験OK。通話で状況を話せば大丈夫です。</p>
-      </div>
-      <div class="faq-item">
-        <h3><span>Q.</span>日給11,000円〜は全職種？</h3>
-        <p>いいえ。現場アシスタント（未経験入口）基準です。現場運転手は12,000円〜、解体は13,000〜15,000円、重機オペは14,000〜18,000円、鳶は14,000〜18,000円程度（目安）。鉄筋・型枠・大工は経験・技能により優遇。</p>
-      </div>
-      <div class="faq-item">
-        <h3><span>Q.</span>本当に今日から動ける？</h3>
-        <p>即入寮OK。24時間受付のAI通話で、寮の空きと入寮相談までその場で進められます。空き状況は通話で確認してください。</p>
-      </div>
-      <div class="faq-item">
-        <h3><span>Q.</span>面接はどこで受けられる？</h3>
-        <p>茨木市の事務所／大阪市西成区の事務所から選べます。都合のよい方をご案内します。</p>
-      </div>
-      <div class="faq-item">
-        <h3><span>Q.</span>寮と通勤、どちらでもいい？</h3>
-        <p>入寮歓迎です（職人さんの入寮も歓迎・即入寮OK）。通勤も歓迎。寮利用は別途寮費あり（具体額は面接等で確認）。</p>
-      </div>
-      <div class="faq-item">
-        <h3><span>Q.</span>AI通話って何？怪しくない？</h3>
-        <p>ブラウザだけで約3分話す仕組みです。アプリ不要・電話番号不要。相手はAIスタッフ。夜中でもつながります。LINE相談も選べます。</p>
+      <div class="visual reveal delay1">
+        <figure class="photo square"><img src="../assets/fishing_bplus_20260722_dog.webp" loading="lazy" decoding="async" alt="寮の看板犬" width="800" height="600"><figcaption class="caption">看板犬も、たぶん歓迎してくれます。</figcaption></figure>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== CTA BAND ===== -->
-<section class="cta-band">
-  <div class="wrap">
-    <h2 class="sec-title">今夜の寝床、今日決める。</h2>
-    <p class="sec-lead">日給11,000円〜（現場アシスタント基準）／個室寮・即入寮／日払いOK／未経験OK／全職種歓迎</p>
-    <div class="cta-stack">
-      <a class="btn btn-line" data-cta="line" href="https://lin.ee/XEVQvbw" rel="noopener">
-        LINEで空き確認 → 今日中に返事
-        <span class="btn-sub">1分で送信・電話不要・履歴書いらない</span>
-      </a>
-      <a class="btn btn-call" data-cta="call" href="https://voice.kuro-ai.org/?src=grok">
-        電話が苦手でも、AI相手に30秒
-        <span class="btn-sub">ブラウザだけ・応募じゃなくてOK・24時間</span>
-      </a>
+  <section class="chapter light" data-no="09" id="entry">
+    <div class="copy reveal">
+      <p class="deck">Recruit info</p>
+      <h2 class="headline mincho">最後に、条件をはっきり。</h2>
+      <p class="body">ここまで読んで「ちょっと合うかも」と思った人だけ、LINEかAI音声で話してください。釣りの話からでも、寮の質問からでも大丈夫です。</p>
     </div>
-    <p class="cta-note">話を聞くだけでもOK。押し売りしません。</p>
-  </div>
-</section>
-
-<!-- ===== COMPANY ===== -->
-<section class="company">
-  <div class="wrap">
-    <div class="company-card">
-      <h2>会社情報</h2>
-      <dl>
-        <div>
-          <dt>会社名</dt>
-          <dd>新滉建設株式会社</dd>
-        </div>
-        <div>
-          <dt>所在地</dt>
-          <dd>大阪府茨木市豊川5丁目20-35</dd>
-        </div>
-        <div>
-          <dt>建設業許可</dt>
-          <dd>大阪府知事許可 第136162号</dd>
-        </div>
-        <div>
-          <dt>勤務エリア</dt>
-          <dd>関西一円の現場</dd>
-        </div>
-        <div>
-          <dt>面接場所</dt>
-          <dd>茨木市の事務所／大阪市西成区の事務所から選択可</dd>
-        </div>
-        <div>
-          <dt>待遇メモ</dt>
-          <dd>空調服を無料貸与（規定あり）／寮利用は別途寮費あり（詳細は面接で）</dd>
-        </div>
-      </dl>
+    <div class="conditions">
+      <div class="condition reveal"><div class="num">1</div><div><b>日給11,000円〜</b><p>現場アシスタント（未経験入口）基準。経験職種は別条件あり。</p></div></div>
+      <div class="condition reveal delay1"><div class="num">2</div><div><b>個室寮・即入寮OK</b><p>食事付き、Wi‑Fiあり。まず生活の土台を用意。</p></div></div>
+      <div class="condition reveal delay2"><div class="num">3</div><div><b>サウナ・筋トレルーム</b><p>仕事終わりに整える場所があります。</p></div></div>
+      <div class="condition reveal delay3"><div class="num">4</div><div><b>未経験OK・履歴書不要</b><p>建設現場の応援からスタート。安全と時間は大切に。</p></div></div>
     </div>
-    <p class="legal">
-      © 新滉建設株式会社<br>
-      本ページは採用案内です。条件は通話・相談時に最新をご確認ください。
-    </p>
-  </div>
-</section>
+    <div class="job-note reveal delay2">現場運転手は12,000円〜、解体は13,000〜15,000円、重機オペは14,000〜18,000円、鳶は14,000〜18,000円程度が目安。鉄筋・型枠・大工は経験・技能により優遇。寮利用は別途寮費等あり、空き状況・食事提供日・細部条件は面談時に正確に説明します。</div>
+    <div class="faq-list">
+      <div class="faq-item reveal"><h3>Q. 所持金が少なくても相談できる？</h3><p>所持金0円でも、まず相談OK。日払いの相談もできます。今夜の寝床と明日の仕事から一緒に確認します。</p></div>
+      <div class="faq-item reveal delay1"><h3>Q. AI音声って何？</h3><p>ブラウザだけで話せる相談窓口です。アプリ不要・電話番号不要。LINE相談も選べます。</p></div>
+      <div class="faq-item reveal delay2"><h3>Q. 船やジェットスキーは自由に使える？</h3><p>いいえ。資格、法令、社内ルール、安全管理、保険確認の範囲での運用です。</p></div>
+      <div class="faq-item reveal delay3"><h3>Q. 面接はどこ？</h3><p>茨木市の事務所／大阪市西成区の事務所から都合のよい方をご案内します。</p></div>
+    </div>
+    <div class="final-cta reveal delay1" aria-label="応募・相談導線">
+      <div class="cta-img" role="img" aria-label="食卓の写真"></div>
+      <div class="cta-body">
+        <p class="deck">LINE / AI VOICE</p>
+        <h2 class="mincho">一緒に働く前に、まず話そう。</h2>
+        <p class="body" style="color:#dce7e2">「釣り好きです」「寮に入りたい」「未経験です」だけでOK。応募するかどうかは、話してから決めてください。</p>
+        <div class="cta-buttons">
+          <a class="btn btn-line" href="https://lin.ee/XEVQvbw" data-cta="line" rel="noopener" aria-label="LINEで相談または応募する">LINEで相談／応募する<small>1分で送信・電話不要・履歴書いらない</small></a>
+          <a class="btn btn-call" href="https://voice.kuro-ai.org/?src=grok" data-cta="call" aria-label="AI音声相談を開く">AI音声で30秒だけ聞く<small>ブラウザだけ・24時間・応募じゃなくてOK</small></a>
+        </div>
+        <p class="small">話を聞くだけでもOK。押し売りしません。</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="foot"><b>© 新滉建設株式会社</b><br>大阪府茨木市豊川5丁目20-35 / 大阪府知事許可 第136162号<br>LP variant: fishing_bplus_20260722 / lane: grok</footer>
 
-<!-- Fixed CTA -->
-<div class="fixed-cta" role="region" aria-label="LINEで空き確認">
-  <div class="fixed-cta-inner">
-    <a class="btn btn-line light" data-cta="line" href="https://lin.ee/XEVQvbw" rel="noopener">LINEで空き確認 → 今日中に返事</a>
+<div id="lp-line-help" role="dialog" aria-label="LINEを開く案内" aria-live="polite">
+  <h2>LINEが開かない時</h2>
+  <p>Xの中のブラウザだとLINEがブロックされることがあります。下のボタンか、右上メニュー→Safari/Chromeで開いてからタップしてください。</p>
+  <div class="lp-line-help-actions">
+    <a class="lp-line-help-line" id="lp-line-help-open" href="https://lin.ee/XEVQvbw" rel="noopener">もう一度LINEで開く</a>
+    <button type="button" class="lp-line-help-copy" id="lp-line-help-copy">LINEリンクをコピー</button>
+    <button type="button" class="lp-line-help-close" id="lp-line-help-close">閉じる</button>
   </div>
+  <p class="lp-line-help-note" id="lp-line-help-note"></p>
 </div>
+
+<script>
+(function(){
+  window.__LP_VARIANT = 'fishing_bplus_20260722';
+  window.__LP_LANE = 'grok';
+  var reduced = false;
+  try { reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch(_){ }
+  var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if (reduced || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('is-visible'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('is-visible'); io.unobserve(en.target); } });
+    }, { threshold:.12, rootMargin:'0px 0px -9% 0px' });
+    els.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
 
 <!-- ANALYTICS_SLOT -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9XED4QV41"></script>
@@ -1039,9 +257,11 @@ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
+gtag('set', { lp_variant: window.__LP_VARIANT || 'fishing_bplus_20260722', src: window.__LP_LANE || 'grok' });
 gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
 (function(){
-  var LANE = "grok";
+  var LANE = window.__LP_LANE || 'grok';
+  var VARIANT = window.__LP_VARIANT || 'fishing_bplus_20260722';
   document.addEventListener('click', function(e){
     var a = e.target && e.target.closest ? e.target.closest('a[data-cta]') : null;
     if (!a) return;
@@ -1049,37 +269,26 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
     if (t !== 'call' && t !== 'line') return;
     try {
       var en = (t === 'call') ? 'cta_voice' : 'cta_line';
-      gtag('event', en, {
-        src: LANE,
-        transport_type: 'beacon'
-      });
-    } catch(_){}
+      gtag('event', en, { src: LANE, lp_variant: VARIANT, transport_type: 'beacon' });
+    } catch(_){ }
   }, true);
 })();
 </script>
 <script>
-/* funnel beacon 2026-07-18: non-blocking Image pixel to voice.kuro-ai.org */
+/* funnel beacon: non-blocking Image pixel to voice.kuro-ai.org */
 (function(){
   var BEACON = 'https://voice.kuro-ai.org/beacon';
-  var LANE = (function(){
-    try {
-      var m = location.pathname.match(/\/(grok|fugu|luna|sol|terra)\/?/i);
-      if (m) return m[1].toLowerCase();
-      if (/\/recruit-lp-v2\/?$/i.test(location.pathname) || /\/recruit-lp-v2\/index\.html$/i.test(location.pathname)) return 'main';
-      return 'main';
-    } catch(e){ return 'main'; }
-  })();
+  var LANE = window.__LP_LANE || 'grok';
+  var VARIANT = window.__LP_VARIANT || 'fishing_bplus_20260722';
   function fire(ev){
     try {
-      var url = BEACON + '?ev=' + encodeURIComponent(ev) + '&src=' + encodeURIComponent(LANE) + '&_=' + Date.now();
+      var url = BEACON + '?ev=' + encodeURIComponent(ev) + '&src=' + encodeURIComponent(LANE) + '&variant=' + encodeURIComponent(VARIANT) + '&_=' + Date.now();
       var img = new Image();
       img.referrerPolicy = 'no-referrer-when-downgrade';
       img.src = url;
-    } catch(_){}
+    } catch(_){ }
   }
-  // page view
   fire('view');
-  // CTA clicks without delaying navigation
   document.addEventListener('click', function(e){
     var a = e.target && e.target.closest ? e.target.closest('a[data-cta]') : null;
     if (!a) return;
@@ -1089,23 +298,8 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
   }, true);
 })();
 </script>
-
-
-<!-- lp-line-open-fix-20260720 help -->
-<div id="lp-line-help" role="dialog" aria-label="LINEを開く案内" aria-live="polite">
-  <h2>LINEが開かない時</h2>
-  <p>Xの中のブラウザだとLINEがブロックされることがあります。下のボタンか、右上メニュー→Safari/Chromeで開いてからタップしてください。</p>
-  <div class="lp-line-help-actions">
-    <a class="lp-line-help-line" id="lp-line-help-open" href="https://lin.ee/XEVQvbw" rel="noopener">もう一度LINEで空き確認</a>
-    <button type="button" class="lp-line-help-copy" id="lp-line-help-copy">LINEリンクをコピー</button>
-    <button type="button" class="lp-line-help-close" id="lp-line-help-close">閉じる</button>
-  </div>
-  <p class="lp-line-help-note" id="lp-line-help-note"></p>
-</div>
-
-
 <script>
-/* lp-line-open-fix-20260720 */
+/* LINE open fix: X/in-app browser safe CTA */
 (function(){
   var LINE_URL = 'https://lin.ee/XEVQvbw';
   var LINE_SHORT = 'https://lin.ee/XEVQvbw';
@@ -1120,7 +314,7 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
     var isAndroidWv = isAndroid && (/\bwv\b/.test(lower) || /;\s*wv\)/i.test(ua));
     var isIOSWebView = isIOS && /applewebkit/i.test(ua) && !/safari/i.test(ua) && !/crios|fxios|edgios|opios|opt\//i.test(lower);
     var inApp = !!(isX || isLine || isFB || isAndroidWv || isIOSWebView);
-    return {ua:ua, isIOS:isIOS, isAndroid:isAndroid, isX:isX, inApp:inApp};
+    return { ua:ua, isIOS:isIOS, isAndroid:isAndroid, isX:isX, inApp:inApp };
   }
   function isLineAnchor(a){
     if (!a || !a.getAttribute) return false;
@@ -1130,7 +324,7 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
   }
   function hardenAnchors(){
     var nodes = document.querySelectorAll('a[data-cta="line"], a[href*="lin.ee/XEVQvbw"], a[href*="line.me/R/ti/p/"]');
-    for (var i = 0; i < nodes.length; i++) {
+    for (var i=0; i<nodes.length; i++) {
       var a = nodes[i];
       a.setAttribute('href', LINE_URL);
       a.setAttribute('data-line-url', LINE_URL);
@@ -1158,28 +352,26 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
           navigator.clipboard.writeText(text).then(resolve).catch(function(){ fallback(); });
           return;
         }
-      } catch (e) {}
+      } catch(e) { }
       function fallback(){
         try {
           var ta = document.createElement('textarea');
           ta.value = text;
-          ta.setAttribute('readonly', '');
-          ta.style.position = 'fixed';
-          ta.style.left = '-9999px';
+          ta.setAttribute('readonly','');
+          ta.style.position='fixed';
+          ta.style.left='-9999px';
           document.body.appendChild(ta);
           ta.select();
           var ok = document.execCommand('copy');
           ta.remove();
           if (ok) resolve(); else reject(new Error('copy failed'));
-        } catch (err) { reject(err); }
+        } catch(err) { reject(err); }
       }
       fallback();
     });
   }
   function openLine(){
     var info = detect();
-    // Prefer canonical HTTPS friend-add URL in the same tab.
-    // X/iOS in-app often swallows target=_blank and bounces back to the LP.
     try {
       if (info.isAndroid && info.inApp) {
         var intent = 'intent://line.me/R/ti/p/@597uhrpy#Intent;scheme=https;package=jp.naver.line.android;S.browser_fallback_url=' + encodeURIComponent(LINE_URL) + ';end';
@@ -1187,17 +379,13 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
       } else {
         window.location.href = LINE_URL;
       }
-    } catch (e) {
-      try { window.location.assign(LINE_URL); } catch (_) {}
-    }
+    } catch(e) { try { window.location.assign(LINE_URL); } catch(_) { } }
     setTimeout(function(){
       try {
         if (!document.hidden) {
-          showHelp(info.isX || info.inApp
-            ? 'まだこの画面にいます。右上メニュー→Safari/Chromeで開くか、リンクをコピーしてください。'
-            : '開かない時はリンクをコピーしてLINEで開いてください。');
+          showHelp(info.isX || info.inApp ? 'まだこの画面にいます。右上メニュー→Safari/Chromeで開くか、リンクをコピーしてください。' : '開かない時はリンクをコピーしてLINEで開いてください。');
         }
-      } catch (_) {}
+      } catch(_) { }
     }, 900);
   }
   document.addEventListener('click', function(e){
@@ -1213,26 +401,11 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
     var openBtn = document.getElementById('lp-line-help-open');
     var copyBtn = document.getElementById('lp-line-help-copy');
     var closeBtn = document.getElementById('lp-line-help-close');
-    if (openBtn) {
-      openBtn.setAttribute('href', LINE_URL);
-      openBtn.addEventListener('click', function(ev){
-        ev.preventDefault();
-        openLine();
-      });
-    }
-    if (copyBtn) {
-      copyBtn.addEventListener('click', function(){
-        copyText(LINE_URL).then(function(){
-          showHelp('コピーした。Safari/ChromeかLINEに貼って開いてください。');
-        }).catch(function(){
-          showHelp('コピー失敗。このリンクを長押し: ' + LINE_URL);
-        });
-      });
-    }
+    if (openBtn) { openBtn.setAttribute('href', LINE_URL); openBtn.addEventListener('click', function(ev){ ev.preventDefault(); openLine(); }); }
+    if (copyBtn) { copyBtn.addEventListener('click', function(){ copyText(LINE_URL).then(function(){ showHelp('コピーしました。Safari/ChromeかLINEに貼って開いてください。'); }).catch(function(){ showHelp('コピー失敗。このリンクを長押し: ' + LINE_URL); }); }); }
     if (closeBtn) closeBtn.addEventListener('click', hideHelp);
   });
 })();
 </script>
-
 </body>
 </html>
