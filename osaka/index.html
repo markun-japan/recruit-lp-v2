@@ -95,7 +95,7 @@ a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
   box-shadow:var(--shadow);border:3px solid rgba(255,252,247,.9);
   transition:transform .35s ease;
 }
-.stack-card img{width:100%;height:100%;object-fit:cover}
+.stack-card img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .stack-main{
   inset:0 18% 8% 0;z-index:2;
   transform:rotate(-1.5deg);
@@ -189,7 +189,7 @@ h1 em{
 .cta-note{margin:9px 0 0;text-align:center;font-size:11px;color:var(--muted)}
 
 /* sections */
-.section{padding:56px 0;position:relative;z-index:1}
+.section{padding:56px 0 64px;position:relative;z-index:1}
 .section.alt{
   background:
     linear-gradient(180deg, rgba(255,252,247,.55), rgba(255,252,247,.92) 18%, rgba(255,252,247,.92) 82%, rgba(247,243,236,.2));
@@ -220,33 +220,31 @@ h1 em{
   box-shadow:var(--shadow-soft);line-height:0;
   transform:translateZ(0);
 }
-.photo img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+.photo img{
+  width:100%;height:100%;object-fit:cover;object-position:center;
+  transition:transform .55s ease;display:block;
+}
 .photo:hover img{transform:scale(1.04)}
 .photo .cap{
-  position:absolute;left:8px;bottom:8px;padding:6px 10px;border-radius:999px;
+  position:absolute;left:8px;bottom:8px;z-index:2;padding:6px 10px;border-radius:999px;
   background:rgba(26,26,46,.72);color:#fff;font-size:11px;font-weight:800;
   backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
 }
-.b1{grid-column:1;grid-row:span 2;min-height:220px}
-.b2{min-height:105px}
-.b3{min-height:105px}
-.b4{grid-column:1/-1;min-height:160px}
-.b4 img{aspect-ratio:16/10;height:auto}
-.b5,.b6{min-height:130px}
-.b7{grid-column:1/-1;min-height:150px}
-.b7 img{aspect-ratio:16/9;height:auto}
-.b8{min-height:140px}
-.b9{min-height:140px}
-.b-tall{min-height:180px}
-.b-wide{grid-column:1/-1;min-height:150px}
-.b-wide img{aspect-ratio:16/10;height:auto}
+.b1{grid-column:1;grid-row:span 2;min-height:240px;aspect-ratio:3/4}
+.b2,.b3{min-height:118px;aspect-ratio:1/1}
+.b4{grid-column:1/-1;min-height:170px;aspect-ratio:16/10}
+.b5,.b6{min-height:140px;aspect-ratio:1/1}
+.b7{grid-column:1/-1;min-height:150px;aspect-ratio:16/9}
+.b8,.b9{min-height:140px;aspect-ratio:1/1}
+.b-tall{min-height:180px;aspect-ratio:3/4}
+.b-wide{grid-column:1/-1;min-height:150px;aspect-ratio:16/10}
 
 .mosaic{
   margin-top:12px;
   display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
 }
-.mosaic .photo{min-height:100px;border-radius:14px}
-.mosaic .photo.span2{grid-column:span 2;min-height:120px}
+.mosaic .photo{aspect-ratio:1/1;min-height:0;border-radius:14px}
+.mosaic .photo.span2{grid-column:span 2;aspect-ratio:16/10}
 
 .filmstrip{
   margin-top:14px;display:grid;grid-auto-flow:column;grid-auto-columns:72%;
@@ -366,9 +364,11 @@ h1 em{
 .final-body .cta-stack{margin-bottom:4px}
 
 .foot{
-  padding:28px 18px 130px;font-size:12px;color:var(--muted);line-height:1.7;position:relative;z-index:1;
+  padding:28px 18px 140px;font-size:12px;color:var(--muted);line-height:1.7;position:relative;z-index:1;
 }
-#entry{padding-bottom:18px}
+#entry{padding-bottom:28px}
+.section.alt + .section,
+.section + .section.alt{scroll-margin-top:64px}
 .foot b{color:var(--ink)}
 .foot dl{margin:14px 0 0;display:grid;grid-template-columns:72px 1fr;gap:6px 10px}
 .foot dt{color:#8b919c}
@@ -377,6 +377,7 @@ h1 em{
 /* sticky LINE */
 .lp-sticky-line{
   position:fixed;left:0;right:0;bottom:0;z-index:50;
+  /* keep above content, never cover section labels via padding on page end */
   padding:10px 12px calc(10px + var(--safe-b));
   background:rgba(247,243,236,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
   border-top:1px solid var(--line);box-shadow:0 -8px 28px rgba(26,26,46,.08);
@@ -429,8 +430,8 @@ h1 em{
   .b4{grid-column:span 2;min-height:200px}
   .b7{grid-column:1/-1}
   .mosaic{grid-template-columns:repeat(6,1fr);gap:10px}
-  .mosaic .photo{min-height:160px}
-  .mosaic .photo.span2{grid-column:span 2;min-height:170px}
+  .mosaic .photo{aspect-ratio:1/1;min-height:0}
+  .mosaic .photo.span2{grid-column:span 2;aspect-ratio:16/10}
   .filmstrip{grid-auto-columns:30%}
   .feature{grid-template-columns:1fr 1fr}
   .job-list{grid-template-columns:1fr 1fr}
