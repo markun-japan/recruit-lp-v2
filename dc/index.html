@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
-<link rel="preload" as="image" href="img/hero_server.jpg" />
+<link rel="preload" as="image" href="img/hero_electrical.jpg" />
 <style>
 :root{
   --ink:#1A1A2E;
@@ -81,15 +81,15 @@ a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
   box-shadow:var(--shadow);background:#1A1A2E;
 }
 .hero-visual img{
-  width:100%;height:100%;object-fit:cover;object-position:center;
-  filter:saturate(.62) contrast(1.04) brightness(.88);
-  transform:scale(1.04);
+  width:100%;height:100%;object-fit:cover;object-position:center 45%;
+  filter:saturate(.92) contrast(1.01) brightness(1.06);
+  transform:scale(1.01);
 }
 .hero-visual::after{
   content:"";position:absolute;inset:0;
   background:
-    linear-gradient(180deg, rgba(26,26,46,.22) 0%, rgba(26,26,46,.42) 45%, rgba(26,26,46,.72) 100%),
-    linear-gradient(120deg, rgba(15,52,96,.28), rgba(233,69,96,.10));
+    linear-gradient(180deg, rgba(26,26,46,.04) 0%, rgba(26,26,46,.14) 55%, rgba(26,26,46,.42) 100%),
+    linear-gradient(120deg, rgba(15,52,96,.08), rgba(233,69,96,.04));
   pointer-events:none;
 }
 .hero-visual .hero-tag{
@@ -223,16 +223,16 @@ h2{
 }
 .photo.wide{grid-column:1 / -1;aspect-ratio:16/9}
 .photo img{
-  width:100%;height:100%;object-fit:cover;
-  filter:saturate(.58) contrast(1.06) brightness(.82);
-  transform:scale(1.03);
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:saturate(.78) contrast(1.04) brightness(.94);
+  transform:scale(1.02);
 }
-.photo.soft img{filter:saturate(.92) contrast(1.02) brightness(.98)}
+.photo.soft img{filter:saturate(1) contrast(1.02) brightness(1.05);transform:none}
 .photo.work::after{
   content:"";position:absolute;inset:0;
   background:
-    linear-gradient(180deg, rgba(26,26,46,.18), rgba(26,26,46,.42)),
-    linear-gradient(135deg, rgba(15,52,96,.28), rgba(26,26,46,.15));
+    linear-gradient(180deg, rgba(26,26,46,.08), rgba(26,26,46,.28)),
+    linear-gradient(135deg, rgba(15,52,96,.14), rgba(26,26,46,.08));
   pointer-events:none;
 }
 .photo .cap{
@@ -304,9 +304,17 @@ h2{
   display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;
 }
 .dorm-photos .photo{aspect-ratio:1}
+.dorm-photos .photo.wide{grid-column:1 / -1;aspect-ratio:16/10}
 .dorm-photos .photo.dog-tile{aspect-ratio:1}
 .dorm-photos .photo.dog-tile img{filter:none;object-position:center}
 .dorm-photos .photo.dog-tile::after{display:none}
+.free-note{
+  margin:12px 0 0;font-size:12.5px;line-height:1.65;color:#4b5160;font-weight:600;
+  padding:10px 12px;border-radius:12px;background:rgba(15,52,96,.05);border:1px dashed rgba(15,52,96,.16);
+}
+.quit-soft{
+  margin:10px 0 0;font-size:12px;line-height:1.6;color:var(--muted);font-weight:600;
+}
 
 /* docs */
 .docs-list{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px;counter-reset:doc}
@@ -334,6 +342,10 @@ h2{
 .company-card p{margin:0;font-size:14px;line-height:1.75;color:#3f4452}
 .company-photos{
   display:grid;grid-template-columns:2fr 1fr;gap:8px;margin-top:14px;
+}
+.company-photos.more{
+  grid-template-columns:1fr 1fr;
+  margin-top:8px;
 }
 .company-photos .photo{aspect-ratio:4/3}
 .company-photos .photo.dog-tile{aspect-ratio:1;align-self:end}
@@ -448,7 +460,7 @@ h2{
     <!-- 1. FV -->
     <section class="hero" aria-label="ファーストビュー">
       <div class="hero-visual">
-        <img src="img/hero_server.jpg" width="1600" height="900" alt="データセンター設備のイメージ" fetchpriority="high" />
+        <img src="img/hero_electrical.jpg" width="1600" height="900" alt="建設中の建物内のケーブルラックと電気配線のイメージ" fetchpriority="high" />
         <span class="hero-tag">箕面市 · 大型DC新築</span>
         <span class="img-note">※写真はイメージです</span>
       </div>
@@ -462,6 +474,7 @@ h2{
           <span class="badge">2026年8月→2027年3月</span>
           <span class="badge">未経験・無資格OK</span>
         </div>
+        <p class="quit-soft reveal reveal-d2">途中で辞めるのも自由。早めに言うてくれたらOK、無理に縛りません。</p>
         <div class="cta-stack reveal reveal-d3">
           <a class="btn btn-line" id="cta-line-1" href="https://lin.ee/XEVQvbw" data-cta="line" rel="noopener" aria-label="LINEでかんたん応募する">
             ▶ LINEでかんたん応募（30秒）
@@ -553,28 +566,28 @@ h2{
         </div>
         <div class="mosaic">
           <figure class="photo work reveal">
-            <img src="img/hero_server.jpg" loading="lazy" decoding="async" width="1200" height="800" alt="サーバルームのイメージ" />
-            <span class="cap">屋内・設備系</span>
+            <img src="img/hero_elec_cables.jpg" loading="lazy" decoding="async" width="1200" height="800" alt="ケーブルラックに並ぶ電気ケーブルのイメージ" />
+            <span class="cap">ケーブルラック</span>
             <span class="note-img">※写真はイメージです</span>
           </figure>
           <figure class="photo work reveal reveal-d1">
-            <img src="img/work_cables3.jpg" loading="lazy" decoding="async" width="1200" height="800" alt="ケーブル配線のイメージ" />
-            <span class="cap">ケーブル・配線</span>
+            <img src="img/work_wires_hand.jpg" loading="lazy" decoding="async" width="1200" height="800" alt="分電盤まわりの配線作業のイメージ" />
+            <span class="cap">配線・盤周り</span>
             <span class="note-img">※写真はイメージです</span>
           </figure>
           <figure class="photo work wide reveal">
-            <img src="img/work_server2.jpg" loading="lazy" decoding="async" width="1400" height="900" alt="データセンター設備のイメージ" />
-            <span class="cap">大型現場の雰囲気</span>
+            <img src="img/work_cable_tray.jpg" loading="lazy" decoding="async" width="1400" height="900" alt="建設中建物内のケーブルトレイと配線のイメージ" />
+            <span class="cap">大型現場の配線工事</span>
             <span class="note-img">※写真はイメージです</span>
           </figure>
           <figure class="photo work reveal">
-            <img src="img/work_rack.jpg" loading="lazy" decoding="async" width="1200" height="800" alt="ラック周りのイメージ" />
-            <span class="cap">ラック周り</span>
+            <img src="img/work_panel_v21.jpg" loading="lazy" decoding="async" width="1200" height="800" alt="分電盤と色分け配線のイメージ" />
+            <span class="cap">盤・配線</span>
             <span class="note-img">※写真はイメージです</span>
           </figure>
           <figure class="photo work reveal reveal-d1">
-            <img src="img/work_cables2.jpg" loading="lazy" decoding="async" width="1200" height="800" alt="ネットワーク機器のイメージ" />
-            <span class="cap">通線・入線イメージ</span>
+            <img src="img/work_cable_pull_v21.jpg" loading="lazy" decoding="async" width="1200" height="800" alt="ケーブルトレイへの通線作業イメージ" />
+            <span class="cap">通線・入線</span>
             <span class="note-img">※写真はイメージです</span>
           </figure>
         </div>
@@ -626,6 +639,7 @@ h2{
           <p>ゴールが決まってるから、金の計画が立つ。<br>
           「8ヶ月だけ本気で稼いで、次のステージへ」— そういう使い方をしてほしい現場。<br>
           終わったあと「もっと続けたい」なら、他の現場を紹介します。うちは現場を切らさん会社です。</p>
+          <p class="free-note">途中で辞めるのも自由です。現場の段取りがあるので早めに言うてくれたらOK。無理に縛りません。</p>
         </div>
       </div>
     </section>
@@ -655,17 +669,21 @@ h2{
           </div>
         </div>
         <div class="dorm-photos">
-          <figure class="photo soft reveal">
-            <img src="../assets/room_v2.jpg" loading="lazy" decoding="async" width="900" height="1200" alt="寮の個室" />
+          <figure class="photo soft wide reveal">
+            <img src="img/dorm_room.jpg" loading="lazy" decoding="async" width="900" height="1200" alt="寮の個室（部屋全体）" style="object-position:center 55%" />
             <span class="cap">個室</span>
           </figure>
-          <figure class="photo soft reveal reveal-d1">
-            <img src="../assets/meal_v2.jpg" loading="lazy" decoding="async" width="900" height="900" alt="寮の食事" />
+          <figure class="photo soft reveal">
+            <img src="img/dorm_meal.jpg" loading="lazy" decoding="async" width="900" height="900" alt="寮の食事" />
             <span class="cap">食事</span>
           </figure>
-          <figure class="photo soft reveal">
-            <img src="../assets/hero_sauna_v2.jpg" loading="lazy" decoding="async" width="1200" height="900" alt="寮のサウナ" />
+          <figure class="photo soft reveal reveal-d1">
+            <img src="img/dorm_sauna.jpg" loading="lazy" decoding="async" width="1200" height="900" alt="寮のサウナ（木製ベンチ）" />
             <span class="cap">サウナ</span>
+          </figure>
+          <figure class="photo soft reveal">
+            <img src="img/dorm_gym.jpg" loading="lazy" decoding="async" width="900" height="675" alt="寮のトレーニングルーム" />
+            <span class="cap">筋トレルーム</span>
           </figure>
           <figure class="photo dog-tile reveal reveal-d1">
             <img src="../assets/dog.jpg" loading="lazy" decoding="async" width="600" height="600" alt="寮の看板犬" />
@@ -715,6 +733,16 @@ h2{
               <span class="cap">看板犬</span>
             </figure>
           </div>
+          <div class="company-photos more">
+            <figure class="photo soft">
+              <img src="img/life_meal.jpg" loading="lazy" decoding="async" width="900" height="700" alt="寮の食事イメージ" />
+              <span class="cap">メシ付き</span>
+            </figure>
+            <figure class="photo soft">
+              <img src="img/life_facility.jpg" loading="lazy" decoding="async" width="900" height="700" alt="寮の設備（シャワー・サウナ）" />
+              <span class="cap">設備</span>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -747,7 +775,7 @@ h2{
           </div>
           <div class="faq-item reveal">
             <h3>Q. 2027年3月より前に辞めたくなったら？</h3>
-            <p>A. まず相談してください。無理に縛ることはしません。</p>
+            <p>A. いつでも辞めれます。現場の段取りがあるので早めに相談してもらえたら助かります。無理に縛ることはしません。</p>
           </div>
         </div>
       </div>
