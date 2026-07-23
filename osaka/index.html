@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" />
-<link rel="preload" as="image" href="../assets/osaka_v2_hero_room.webp" />
+<link rel="preload" as="image" href="../assets/osaka_v2_hero_room_clean.webp" />
 <style>
 :root{
   --ink:#1A1A2E;
@@ -207,44 +207,50 @@ h1 em{
 }
 .section-lead{margin:0;color:var(--muted);font-size:14.5px;line-height:1.8}
 
-/* bento gallery */
-.bento{
+/* gallery */
+.gallery{
   margin-top:22px;
   display:grid;
-  grid-template-columns:1.15fr .85fr;
-  grid-auto-rows:minmax(92px, auto);
+  grid-template-columns:1fr 1fr;
   gap:10px;
 }
 .photo{
-  position:relative;border-radius:var(--radius-sm);overflow:hidden;background:#e7e1d7;
-  box-shadow:var(--shadow-soft);line-height:0;
-  transform:translateZ(0);
+  position:relative;
+  margin:0;
+  border-radius:var(--radius-sm);
+  overflow:hidden;
+  background:#e7e1d7;
+  box-shadow:var(--shadow-soft);
+  line-height:0;
 }
 .photo img{
-  width:100%;height:100%;object-fit:cover;object-position:center;
-  transition:transform .55s ease;display:block;
+  width:100%;
+  aspect-ratio:1/1;
+  height:auto;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  transition:transform .55s ease;
 }
-.photo:hover img{transform:scale(1.04)}
+.photo:hover img{transform:scale(1.035)}
 .photo .cap{
   position:absolute;left:8px;bottom:8px;z-index:2;padding:6px 10px;border-radius:999px;
   background:rgba(26,26,46,.72);color:#fff;font-size:11px;font-weight:800;
   backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
 }
-.b1{grid-column:1;grid-row:span 2;min-height:240px;aspect-ratio:3/4}
-.b2,.b3{min-height:118px;aspect-ratio:1/1}
-.b4{grid-column:1/-1;min-height:170px;aspect-ratio:16/10}
-.b5,.b6{min-height:140px;aspect-ratio:1/1}
-.b7{grid-column:1/-1;min-height:150px;aspect-ratio:16/9}
-.b8,.b9{min-height:140px;aspect-ratio:1/1}
-.b-tall{min-height:180px;aspect-ratio:3/4}
-.b-wide{grid-column:1/-1;min-height:150px;aspect-ratio:16/10}
+.photo.wide{grid-column:1/-1}
+.photo.wide img{aspect-ratio:16/10}
+.photo.tall img{aspect-ratio:4/5}
 
 .mosaic{
-  margin-top:12px;
-  display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+  margin-top:10px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
 }
-.mosaic .photo{aspect-ratio:1/1;min-height:0;border-radius:14px}
-.mosaic .photo.span2{grid-column:span 2;aspect-ratio:16/10}
+.mosaic .photo img{aspect-ratio:1/1}
+.mosaic .photo.wide{grid-column:1/-1}
+.mosaic .photo.wide img{aspect-ratio:16/10}
 
 .filmstrip{
   margin-top:14px;display:grid;grid-auto-flow:column;grid-auto-columns:72%;
@@ -425,13 +431,12 @@ h1 em{
   .hero-copy{padding:0 8px 0 0}
   h1{font-size:48px}
   .badge-row{margin-left:0;margin-right:0}
-  .bento{grid-template-columns:1.25fr .95fr 1fr;grid-auto-rows:minmax(130px,auto);gap:12px}
-  .b1{grid-row:span 2;min-height:300px}
-  .b4{grid-column:span 2;min-height:200px}
-  .b7{grid-column:1/-1}
-  .mosaic{grid-template-columns:repeat(6,1fr);gap:10px}
-  .mosaic .photo{aspect-ratio:1/1;min-height:0}
-  .mosaic .photo.span2{grid-column:span 2;aspect-ratio:16/10}
+  .gallery{grid-template-columns:repeat(4,1fr);gap:12px}
+  .gallery .photo.wide{grid-column:span 2}
+  .gallery .photo.wide img{aspect-ratio:16/11}
+  .mosaic{grid-template-columns:repeat(4,1fr);gap:12px}
+  .mosaic .photo.wide{grid-column:span 2}
+  .mosaic .photo.wide img{aspect-ratio:16/10}
   .filmstrip{grid-auto-columns:30%}
   .feature{grid-template-columns:1fr 1fr}
   .job-list{grid-template-columns:1fr 1fr}
@@ -461,7 +466,7 @@ h1 em{
         <div class="hero-collage" aria-hidden="false">
           <span class="stack-badge">個室寮 × 食事 × サウナ</span>
           <figure class="stack-card stack-main">
-            <img src="../assets/osaka_v2_hero_room.webp" width="1200" height="750" alt="新滉建設の個室寮（広告クリエイティブ）" fetchpriority="high" />
+            <img src="../assets/osaka_v2_hero_room_clean.webp" width="1200" height="750" alt="新滉建設の個室寮" fetchpriority="high" />
           </figure>
           <figure class="stack-card stack-side">
             <img src="../assets/osaka_v2_meal_a.webp" width="900" height="900" alt="寮の食事" loading="eager" />
@@ -520,35 +525,39 @@ h1 em{
         <h2 class="reveal">住む場所と、今日の飯。<br>写真で先に見ておく。</h2>
         <p class="section-lead reveal">寮を使う人には、個室・食事・Wi‑Fi・サウナがあります。通いの人も、会社の空気感をそのままどうぞ。</p>
 
-        <div class="bento reveal">
-          <figure class="photo b1">
+        <div class="gallery reveal">
+          <figure class="photo tall">
             <img src="../assets/osaka_v2_room_a.webp" loading="lazy" decoding="async" width="900" height="1200" alt="個室寮の室内" />
             <span class="cap">個室寮</span>
           </figure>
-          <figure class="photo b2">
+          <figure class="photo">
             <img src="../assets/osaka_v2_meal_b.webp" loading="lazy" decoding="async" width="900" height="900" alt="食事の一例" />
             <span class="cap">食事</span>
           </figure>
-          <figure class="photo b3">
+          <figure class="photo">
             <img src="../assets/osaka_v2_sauna_a.webp" loading="lazy" decoding="async" width="1200" height="900" alt="寮のサウナ" />
             <span class="cap">サウナ</span>
           </figure>
-          <figure class="photo b4">
-            <img src="../assets/osaka_v2_meal_ad.webp" loading="lazy" decoding="async" width="1200" height="1200" alt="寮の食事イメージ" />
-            <span class="cap">食事付き</span>
-          </figure>
-          <figure class="photo b5">
+          <figure class="photo">
             <img src="../assets/osaka_v2_dog_a.webp" loading="lazy" decoding="async" width="800" height="600" alt="寮の看板犬" />
             <span class="cap">看板犬</span>
           </figure>
-          <figure class="photo b6">
+          <figure class="photo wide">
+            <img src="../assets/osaka_v2_meal_ad.webp" loading="lazy" decoding="async" width="1200" height="1200" alt="寮の食事イメージ" />
+            <span class="cap">食事付き</span>
+          </figure>
+          <figure class="photo">
             <img src="../assets/osaka_v2_room_ad.webp" loading="lazy" decoding="async" width="1024" height="1024" alt="個室寮の広告ビジュアル" />
             <span class="cap">今夜住める</span>
+          </figure>
+          <figure class="photo">
+            <img src="../assets/osaka_v2_facility_ad.webp" loading="lazy" decoding="async" width="1080" height="1080" alt="設備のビジュアル" />
+            <span class="cap">設備</span>
           </figure>
         </div>
 
         <div class="mosaic reveal">
-          <figure class="photo span2">
+          <figure class="photo wide">
             <img src="../assets/osaka_v2_building.webp" loading="lazy" decoding="async" width="1400" height="875" alt="大阪府茨木市の事務所外観" />
             <span class="cap">茨木・外観</span>
           </figure>
@@ -558,22 +567,27 @@ h1 em{
           </figure>
           <figure class="photo">
             <img src="../assets/osaka_v2_meal_c.webp" loading="lazy" decoding="async" width="900" height="900" alt="寮の食事" />
+            <span class="cap">食事</span>
           </figure>
           <figure class="photo">
             <img src="../assets/osaka_v2_sauna_b.webp" loading="lazy" decoding="async" width="1200" height="857" alt="サウナ内部" />
+            <span class="cap">サウナ</span>
           </figure>
-          <figure class="photo span2">
+          <figure class="photo">
             <img src="../assets/osaka_v2_room_c.webp" loading="lazy" decoding="async" width="900" height="1200" alt="個室の別アングル" />
             <span class="cap">個室</span>
           </figure>
           <figure class="photo">
             <img src="../assets/osaka_v2_dog_b.webp" loading="lazy" decoding="async" width="800" height="600" alt="看板犬" />
-          </figure>
-          <figure class="photo">
-            <img src="../assets/osaka_v2_facility_ad.webp" loading="lazy" decoding="async" width="1080" height="1080" alt="設備のビジュアル" />
+            <span class="cap">看板犬</span>
           </figure>
           <figure class="photo">
             <img src="../assets/osaka_v2_meal_raw.webp" loading="lazy" decoding="async" width="1068" height="1200" alt="食事の盛り付け" />
+            <span class="cap">ご飯</span>
+          </figure>
+          <figure class="photo wide">
+            <img src="../assets/osaka_v2_hero_room_clean.webp" loading="lazy" decoding="async" width="900" height="1200" alt="明るい個室" />
+            <span class="cap">個室</span>
           </figure>
         </div>
 
@@ -687,7 +701,7 @@ h1 em{
         </div>
 
         <div class="mosaic reveal" style="margin-top:18px">
-          <figure class="photo span2">
+          <figure class="photo">
             <img src="../assets/osaka_v2_room_ad.webp" loading="lazy" decoding="async" width="1024" height="1024" alt="個室寮のビジュアル" />
             <span class="cap">個室</span>
           </figure>
@@ -697,8 +711,9 @@ h1 em{
           </figure>
           <figure class="photo">
             <img src="../assets/osaka_v2_sauna_ad.webp" loading="lazy" decoding="async" width="1024" height="1024" alt="サウナ" />
+            <span class="cap">サウナ</span>
           </figure>
-          <figure class="photo span2">
+          <figure class="photo">
             <img src="../assets/osaka_v2_facility_ad.webp" loading="lazy" decoding="async" width="1080" height="1080" alt="設備" />
             <span class="cap">設備</span>
           </figure>
