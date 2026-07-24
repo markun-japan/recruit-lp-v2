@@ -55,6 +55,12 @@ a.btn-call, a.btn.btn-call, a.cta.call, .cta a.btn-call {
 #lp-line-help .lp-line-help-close{background:transparent;color:#9ca3af;min-height:36px;font-size:12px;font-weight:700}
 #lp-line-help .lp-line-help-note{margin:8px 0 0;font-size:11.5px;color:#9ca3af;min-height:1.2em}
 
+
+/* tel CTA 2026-07-24 */
+a.btn-tel,.btn.btn-tel,a.cta.tel,.btn-tel{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:100%;padding:14px 16px;border-radius:14px;background:linear-gradient(180deg,#1f6feb 0%,#1558c0 100%);color:#fff!important;font-weight:800;font-size:15px;line-height:1.25;text-decoration:none;border:1px solid rgba(255,255,255,.2);box-shadow:0 10px 28px rgba(21,88,192,.25);margin:0 0 10px;text-align:center}
+a.btn-tel small,.btn.btn-tel small,a.cta.tel small,.btn-tel .btn-sub{display:block;font-size:11px;font-weight:600;opacity:.92;margin-top:2px}
+.cta-stack a.btn-tel,.cta-buttons a.btn-tel,.cta-group a.btn-tel{order:0}
+.lp-sticky a[data-cta="tel"],.sticky a[data-cta="tel"],.fixed-bar a[data-cta="tel"]{padding:10px 12px;font-size:13px;border-radius:12px;margin:0;background:linear-gradient(180deg,#1f6feb,#1558c0);color:#fff!important;font-weight:800;text-decoration:none;text-align:center}
 </style>
 </head>
 <body>
@@ -148,7 +154,8 @@ a.btn-call, a.btn.btn-call, a.cta.call, .cta a.btn-call {
   </div>
 </footer>
 <div class="sticky-space" aria-hidden="true"></div>
-<div class="sticky" id="sticky" aria-label="固定LINEボタン"><a class="btn btn-line" data-cta="line" href="https://lin.ee/XEVQvbw" rel="noopener">LINEで空き確認 → 今日中に返事</a></div>
+<div class="sticky" id="sticky" aria-label="固定LINEボタン"><a href="tel:0726433456" data-cta="tel" class="btn-tel sticky-tel" aria-label="電話で応募">電話で応募</a>
+<a class="btn btn-line" data-cta="line" href="https://lin.ee/XEVQvbw" rel="noopener">LINEで空き確認 → 今日中に返事</a></div>
 
 <!-- ANALYTICS_SLOT -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9XED4QV41"></script>
@@ -163,8 +170,8 @@ gtag('config','G-L9XED4QV41',{transport_type:'beacon'});
     var a=e.target&&e.target.closest?e.target.closest('a[data-cta]'):null;
     if(!a)return;
     var t=a.getAttribute('data-cta');
-    if(t!=='call'&&t!=='line')return;
-    try{var en = (t === 'call') ? 'cta_voice' : 'cta_line';
+    if (t !== 'call' && t !== 'line' && t !== 'tel') return;
+    try{var en = (t === 'call') ? 'cta_voice' : (t === 'tel') ? 'cta_tel' : 'cta_line';
       gtag('event', en, {
         src: LANE,
         transport_type: 'beacon'
@@ -206,6 +213,7 @@ gtag('config','G-L9XED4QV41',{transport_type:'beacon'});
     var t = a.getAttribute('data-cta');
     if (t === 'call') fire('cta_voice');
     else if (t === 'line') fire('cta_line');
+    else if (t === 'tel') fire('cta_tel');
   }, true);
 })();
 </script>

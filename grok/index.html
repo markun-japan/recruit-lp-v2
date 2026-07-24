@@ -41,6 +41,12 @@ img{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:non
 @media(min-width:860px){.page{max-width:1100px}.hero{padding:34px;min-height:860px}.hero-copy{max-width:720px}h1{font-size:92px}.chapter{padding:108px 9vw}.chapter-inner{grid-template-columns:.92fr 1.08fr;gap:56px;align-items:center}.chapter-inner.reverse{grid-template-columns:1.08fr .92fr}.chapter-inner.reverse .copy{order:2}.chapter-inner.reverse .visual{order:1}.album,.conditions{grid-template-columns:repeat(2,1fr)}.faq-list{grid-template-columns:repeat(2,1fr)}.photo img{aspect-ratio:4/5}.final-cta{display:grid;grid-template-columns:.86fr 1.14fr}.cta-img{height:auto;min-height:420px}.cta-body{padding:42px}.issue-strip{max-width:1040px}}
 @media(max-width:380px){.chapter{padding-inline:15px}.headline{font-size:29px}.story-grid{gap:9px}.btn{font-size:14px;padding-inline:13px}.mini-ai{display:block;margin-left:0;margin-top:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
+
+/* tel CTA 2026-07-24 */
+.btn.btn-tel{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;padding:16px 18px;border-radius:16px;background:linear-gradient(180deg,#2f7dff,#1a5fd0);color:#fff8ea!important;font-weight:900;font-size:16px;text-decoration:none;border:1px solid rgba(255,255,255,.22);box-shadow:0 14px 34px rgba(26,95,208,.28);margin:0 0 12px}
+.btn.btn-tel small{display:block;font-size:11px;font-weight:700;opacity:.92;margin-top:4px;letter-spacing:.02em}
+.cta-buttons{display:flex;flex-direction:column;gap:10px}
+.mini-tel{display:inline-flex;margin:10px 10px 0 0;padding:8px 12px;border-radius:999px;background:rgba(47,125,255,.16);border:1px solid rgba(47,125,255,.35);color:#dce9ff;font-size:12px;font-weight:700;text-decoration:none}
 </style>
 </head>
 <body data-variant="fishing_bplus_20260722" data-lane="grok">
@@ -59,7 +65,9 @@ img{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:non
       <span class="not-job">※もちろん仕事は建設現場の応援です。</span>
       <div class="scroll">SCROLL FIELD NOTES</div>
     </div>
-  </section>
+  
+    <div class="hero-cta-tel" style="margin-top:18px"><a class="btn btn-tel" href="tel:0726433456" data-cta="tel" id="cta-tel-fv" aria-label="今すぐ電話で応募">今すぐ電話で応募<small>072-643-3456｜タップで発信</small></a></div>
+</section>
 
   <section class="chapter light" data-no="01">
     <div class="chapter-inner">
@@ -212,6 +220,7 @@ img{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:non
         <h2 class="mincho">一緒に働く前に、まず話そう。</h2>
         <p class="body" style="color:#dce7e2">「釣り好きです」「寮に入りたい」「未経験です」だけでOK。応募するかどうかは、話してから決めてください。</p>
         <div class="cta-buttons">
+          <a class="btn btn-tel" href="tel:0726433456" data-cta="tel" id="cta-tel-1" aria-label="今すぐ電話で応募">今すぐ電話で応募<small>072-643-3456｜タップで発信</small></a>
           <a class="btn btn-line" href="https://lin.ee/XEVQvbw" data-cta="line" rel="noopener" aria-label="LINEで相談または応募する">LINEで相談／応募する<small>1分で送信・電話不要・履歴書いらない</small></a>
           <a class="btn btn-call" href="https://voice.kuro-ai.org/?src=grok" data-cta="call" aria-label="AI音声相談を開く">AI音声で30秒だけ聞く<small>ブラウザだけ・24時間・応募じゃなくてOK</small></a>
         </div>
@@ -266,9 +275,9 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
     var a = e.target && e.target.closest ? e.target.closest('a[data-cta]') : null;
     if (!a) return;
     var t = a.getAttribute('data-cta');
-    if (t !== 'call' && t !== 'line') return;
+    if (t !== 'call' && t !== 'line' && t !== 'tel') return;
     try {
-      var en = (t === 'call') ? 'cta_voice' : 'cta_line';
+      var en = (t === 'call') ? 'cta_voice' : (t === 'tel') ? 'cta_tel' : 'cta_line';
       gtag('event', en, { src: LANE, lp_variant: VARIANT, transport_type: 'beacon' });
     } catch(_){ }
   }, true);
@@ -295,6 +304,7 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
     var t = a.getAttribute('data-cta');
     if (t === 'call') fire('cta_voice');
     else if (t === 'line') fire('cta_line');
+    else if (t === 'tel') fire('cta_tel');
   }, true);
 })();
 </script>

@@ -426,6 +426,11 @@ body.lp-has-sticky{padding-bottom:88px}
 #lp-line-help .lp-line-help-close{background:transparent;color:#9ca3af;min-height:36px;font-size:12px;font-weight:700}
 #lp-line-help .lp-line-help-note{margin:8px 0 0;font-size:11.5px;color:#9ca3af;min-height:1.2em}
 
+
+/* tel CTA 2026-07-24 */
+.btn-tel{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;padding:14px 16px;border-radius:14px;background:linear-gradient(180deg,#1f6feb,#1558c0);color:#fff;font-weight:800;font-size:16px;text-decoration:none;border:1px solid rgba(255,255,255,.18);box-shadow:0 10px 28px rgba(21,88,192,.28);margin:0 0 10px}
+.btn-tel .btn-sub{display:block;font-size:11px;font-weight:600;opacity:.92;margin-top:3px}
+.lp-sticky .btn-tel, .sticky .btn-tel{padding:10px 12px;font-size:13px;border-radius:12px;margin:0}
 </style>
 </head>
 <body>
@@ -469,7 +474,15 @@ body.lp-has-sticky{padding-bottom:88px}
       <p class="cta-lead">応募を決めてなくて大丈夫。空きだけ先に確認してOK。</p>
 
       <!-- メインCTA: LINE -->
-      <a href="https://lin.ee/XEVQvbw"
+            <!-- 電話CTA 2026-07-24 -->
+      <a href="tel:0726433456"
+         class="btn-tel"
+         data-cta="tel"
+         id="cta-tel-1">
+        今すぐ電話で応募
+        <span class="btn-sub">072-643-3456｜タップで発信</span>
+      </a>
+<a href="https://lin.ee/XEVQvbw"
          class="btn-line"
          data-cta="line"
          id="cta-line-1"
@@ -686,9 +699,9 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
     var a = e.target && e.target.closest ? e.target.closest('a[data-cta]') : null;
     if (!a) return;
     var t = a.getAttribute('data-cta');
-    if (t !== 'call' && t !== 'line') return;
+    if (t !== 'call' && t !== 'line' && t !== 'tel') return;
     try {
-      var en = (t === 'call') ? 'cta_voice' : 'cta_line';
+      var en = (t === 'call') ? 'cta_voice' : (t === 'tel') ? 'cta_tel' : 'cta_line';
       gtag('event', en, {
         src: LANE,
         transport_type: 'beacon'
@@ -726,13 +739,15 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
     var t = a.getAttribute('data-cta');
     if (t === 'call') fire('cta_voice');
     else if (t === 'line') fire('cta_line');
+    else if (t === 'tel') fire('cta_tel');
   }, true);
 })();
 </script>
 
 <!-- sticky LINE CTA 2026-07-20 -->
 <div class="lp-sticky-line" id="lp-sticky-line" aria-label="LINEで空き確認">
-  <a href="https://lin.ee/XEVQvbw" data-cta="line" rel="noopener">LINEで空き確認 → 今日中に返事</a>
+  <a href="tel:0726433456" data-cta="tel" class="btn-tel sticky-tel" aria-label="電話で応募">電話で応募</a>
+<a href="https://lin.ee/XEVQvbw" data-cta="line" rel="noopener">LINEで空き確認 → 今日中に返事</a>
 </div>
 <script>
 (function(){

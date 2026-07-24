@@ -499,6 +499,12 @@ h2{
   .mosaic .photo.wide{grid-column:span 2}
   .lp-sticky-line{display:none}
 }
+
+/* tel CTA 2026-07-24 */
+a.btn-tel,.btn.btn-tel,a.cta.tel,.btn-tel{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:100%;padding:14px 16px;border-radius:14px;background:linear-gradient(180deg,#1f6feb 0%,#1558c0 100%);color:#fff!important;font-weight:800;font-size:15px;line-height:1.25;text-decoration:none;border:1px solid rgba(255,255,255,.2);box-shadow:0 10px 28px rgba(21,88,192,.25);margin:0 0 10px;text-align:center}
+a.btn-tel small,.btn.btn-tel small,a.cta.tel small,.btn-tel .btn-sub{display:block;font-size:11px;font-weight:600;opacity:.92;margin-top:2px}
+.cta-stack a.btn-tel,.cta-buttons a.btn-tel,.cta-group a.btn-tel{order:0}
+.lp-sticky a[data-cta="tel"],.sticky a[data-cta="tel"],.fixed-bar a[data-cta="tel"]{padding:10px 12px;font-size:13px;border-radius:12px;margin:0;background:linear-gradient(180deg,#1f6feb,#1558c0);color:#fff!important;font-weight:800;text-decoration:none;text-align:center}
 </style>
 </head>
 <body>
@@ -912,7 +918,8 @@ h2{
 
 <div class="lp-sticky-line" id="sticky-line" aria-label="固定LINEボタン">
   <div class="lp-sticky-line-inner">
-    <a href="https://lin.ee/XEVQvbw" data-cta="line" rel="noopener">▶ LINEでかんたん応募（30秒）</a>
+    <a href="tel:0726433456" data-cta="tel" class="btn-tel sticky-tel" aria-label="電話で応募">電話で応募</a>
+<a href="https://lin.ee/XEVQvbw" data-cta="line" rel="noopener">▶ LINEでかんたん応募（30秒）</a>
   </div>
 </div>
 
@@ -970,9 +977,9 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
     var a = e.target && e.target.closest ? e.target.closest('a[data-cta]') : null;
     if (!a) return;
     var t = a.getAttribute('data-cta');
-    if (t !== 'line') return;
+    if (t !== 'line' && t !== 'call' && t !== 'tel') return;
     try {
-      gtag('event', 'cta_line', { src: LANE, lp_variant: VARIANT, transport_type: 'beacon' });
+      gtag('event', (t === 'tel') ? 'cta_tel' : (t === 'call') ? 'cta_voice' : 'cta_line', { src: LANE, lp_variant: VARIANT, transport_type: 'beacon' });
     } catch(_){}
   }, true);
 
@@ -1007,6 +1014,8 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
     if (!a) return;
     var t = a.getAttribute('data-cta');
     if (t === 'line') fire('cta_line');
+    else if (t === 'call') fire('cta_voice');
+    else if (t === 'tel') fire('cta_tel');
   }, true);
 })();
 </script>
