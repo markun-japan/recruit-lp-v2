@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -546,6 +546,18 @@ body.lp-has-sticky{padding-bottom:88px}
     max-height: 40vh;
   }
 }
+
+/* Indeed CTA 2026-07-30 */
+.btn-indeed{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;min-height:64px;padding:16px 18px 14px;border-radius:14px;background:linear-gradient(180deg,#2d6cdf,#1b4fbf);color:#fff!important;font-weight:900;font-size:18px;letter-spacing:.02em;text-decoration:none;border:1px solid rgba(255,255,255,.22);box-shadow:0 12px 32px rgba(27,79,191,.45);margin:0 0 10px;-webkit-tap-highlight-color:transparent;transition:transform .15s, opacity .15s;text-align:center;box-sizing:border-box}
+.btn-indeed:active{transform:scale(0.98);opacity:.92}
+.btn-indeed .btn-sub,.btn-indeed small{display:block;font-size:12px;font-weight:700;opacity:.95;margin-top:4px;letter-spacing:0;color:inherit}
+.btn.btn-indeed{color:#fff!important}
+.z2-cta .btn-indeed,.cta-buttons .btn-indeed,.cta .btn-indeed,.closing .btn-indeed,.final .btn-indeed{box-shadow:0 10px 28px rgba(27,79,191,.35);margin-bottom:8px}
+a.cta.indeed,a.cta.btn-indeed{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;min-height:64px;padding:16px 18px 14px;border-radius:14px;background:linear-gradient(180deg,#2d6cdf,#1b4fbf);color:#fff!important;font-weight:900;font-size:18px;letter-spacing:.02em;text-decoration:none;border:1px solid rgba(255,255,255,.22);box-shadow:0 12px 32px rgba(27,79,191,.45);margin:0 0 10px;text-align:center;box-sizing:border-box}
+a.cta.indeed small,a.cta.btn-indeed small{display:block;font-size:12px;font-weight:700;opacity:.95;margin-top:4px}
+@media (min-width: 768px) {
+  .btn-indeed, a.cta.indeed, a.cta.btn-indeed { padding: 14px 18px 12px; font-size: 17px; min-height: 60px; }
+}
 </style>
 </head>
 <body>
@@ -588,7 +600,19 @@ body.lp-has-sticky{padding-bottom:88px}
 
       <p class="cta-lead">応募を決めてなくて大丈夫。空きだけ先に確認してOK。</p>
 
-      <!-- メインCTA: LINE -->
+      
+      <!-- Indeed CTA 2026-07-30 -->
+<a href="https://jp.indeed.com/job/%E5%BB%BA%E8%A8%AD%E7%8F%BE%E5%A0%B4%E3%82%B9%E3%82%BF%E3%83%83%E3%83%95%E7%8F%BE%E5%A0%B4%E3%82%A2%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%88%E5%90%84%E7%A8%AE%E8%81%B7%E4%BA%BA-6c2c0cd8f02589c0"
+   class="btn-indeed"
+   data-cta="indeed"
+   id="cta-indeed-1"
+   target="_blank"
+   rel="noopener"
+   aria-label="Indeedで応募する">
+  Indeedで応募する
+  <span class="btn-sub">Indeedアカウントをお持ちの方はこちら</span>
+</a>
+<!-- メインCTA: LINE -->
             <!-- 電話CTA 2026-07-24 -->
       <a href="tel:0726433456"
          class="btn-tel"
@@ -767,7 +791,19 @@ body.lp-has-sticky{padding-bottom:88px}
   <!-- 締めCTA（ゾーン1と同一） -->
   <div class="z2-cta">
 
-    <!-- メインCTA（再掲）: AI通話 — 同一タブ遷移 -->
+    
+    <!-- Indeed CTA 2026-07-30 -->
+<a href="https://jp.indeed.com/job/%E5%BB%BA%E8%A8%AD%E7%8F%BE%E5%A0%B4%E3%82%B9%E3%82%BF%E3%83%83%E3%83%95%E7%8F%BE%E5%A0%B4%E3%82%A2%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%88%E5%90%84%E7%A8%AE%E8%81%B7%E4%BA%BA-6c2c0cd8f02589c0"
+   class="btn-indeed"
+   data-cta="indeed"
+   id="cta-indeed-2"
+   target="_blank"
+   rel="noopener"
+   aria-label="Indeedで応募する">
+  Indeedで応募する
+  <span class="btn-sub">Indeedアカウントをお持ちの方はこちら</span>
+</a>
+<!-- メインCTA（再掲）: AI通話 — 同一タブ遷移 -->
     <a href="https://lin.ee/XEVQvbw"
        class="btn-line"
        data-cta="line"
@@ -814,9 +850,9 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
     var a = e.target && e.target.closest ? e.target.closest('a[data-cta]') : null;
     if (!a) return;
     var t = a.getAttribute('data-cta');
-    if (t !== 'call' && t !== 'line' && t !== 'tel') return;
+    if (t !== 'call' && t !== 'line' && t !== 'tel' && t !== 'indeed') return;
     try {
-      var en = (t === 'call') ? 'cta_voice' : (t === 'tel') ? 'cta_tel' : 'cta_line';
+      var en = (t === 'call') ? 'cta_voice' : (t === 'tel') ? 'cta_tel' : (t === 'indeed') ? 'indeed_click' : 'cta_line';
       gtag('event', en, {
         src: LANE,
         transport_type: 'beacon'
@@ -855,6 +891,7 @@ gtag('config', 'G-L9XED4QV41', { transport_type: 'beacon' });
     if (t === 'call') fire('cta_voice');
     else if (t === 'line') fire('cta_line');
     else if (t === 'tel') fire('cta_tel');
+    else if (t === 'indeed') fire('indeed_click');
   }, true);
 })();
 </script>
